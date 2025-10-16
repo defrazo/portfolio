@@ -1,0 +1,51 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+	min-height: 100svh;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Exo 2', 'Arial Unicode MS', sans-serif;
+	color: var(--color-primary);
+	background: radial-gradient(circle at top right, #4e4e4e, #222222), url('../assets/icons/system/noise.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: overlay;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	html {
+		scrollbar-gutter: stable;
+	}
+
+	html,
+	body {
+		scrollbar-width: thin;
+		scrollbar-color: var(--bg-primary) var(--bg-tertiary);
+	}
+
+	html::-webkit-scrollbar,
+	body::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	html::-webkit-scrollbar-thumb,
+	body::-webkit-scrollbar-thumb {
+		border-radius: 6px;
+		background-color: var(--bg-primary);
+	}
+
+	html::-webkit-scrollbar-track,
+	body::-webkit-scrollbar-track {
+		border-radius: 6px;
+		background-color: var(--bg-tertiary);
+	}
+}
