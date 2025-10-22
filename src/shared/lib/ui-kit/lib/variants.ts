@@ -5,73 +5,78 @@ import type { Component } from '../model';
 export const variants: Record<Component, Record<string, string>> = {
 	button: {
 		default: cn(
-			'rounded-xl ring-inset',
-			'bg-[var(--bg-tertiary)] ring-[var(--accent-default)]',
-			'hover:bg-[var(--accent-hover)] hover:text-[var(--accent-text)] focus-visible:ring-1'
+			'rounded-4xl ring-inset',
+			'bg-(--bg-tertiary) ring-(--accent-primary-hover)',
+			'hover:bg-(--accent-primary-hover) hover:text-(--accent-primary-text) focus-visible:ring-1'
 		),
 		ghost: cn(
-			'rounded-xl border border-solid',
-			'border-[var(--border-color)] bg-transparent',
-			'hover:border-[var(--accent-hover)] hover:bg-[var(--accent-hover)] hover:text-[var(--bg-accent-text)] focus-visible:border-[var(--accent-default)]'
+			'rounded-4xl border border-solid',
+			'border-(--border-color) bg-transparent',
+			'hover:border-(--accent-primary-hover) hover:bg-(--accent-primary-hover) hover:text-(--accent-primary-text) focus-visible:border-(--accent-primary-hover)'
+		),
+		outline: cn(
+			'rounded-4xl border border-solid',
+			'border-transparent bg-(--bg-secondary)',
+			'hover:border-(--accent-primary-hover) hover:text-(--color-accent) focus-visible:border-(--accent-primary-hover)'
 		),
 		accent: cn(
-			'rounded-xl border border-solid ring-inset',
-			'border-[var(--border-light)] bg-[var(--accent-default)] text-[var(--accent-text)] ring-[var(--color-primary)]',
-			'hover:bg-[var(--accent-hover)] hover:text-[var(--accent-text)] focus-visible:ring-1'
+			'rounded-4xl border border-solid ring-inset',
+			'border-(--border-light) bg-(--accent-primary) text-(--accent-primary-text) ring-(--accent-primary-hover)',
+			'hover:bg-(--accent-primary-hover) focus-visible:ring-1'
 		),
 		rounded: cn(
 			'aspect-square w-fit rounded-full p-2 ring-inset',
-			'bg-[var(--bg-tertiary)] text-[var(--accent-text)] ring-[var(--color-primary)]',
-			'hover:bg-[var(--accent-hover)] hover:text-[var(--accent-text)] focus-visible:ring-1'
+			'bg-(--bg-tertiary) ring-(--accent-primary-hover)',
+			'hover:bg-(--accent-primary-hover) hover:text-(--accent-primary-text) focus-visible:ring-1'
 		),
 		warning: cn(
-			'rounded-xl border border-solid',
-			'border-[var(--border-color)] bg-[var(--bg-tertiary)] text-[var(--color-disabled)]',
-			'hover:border-[var(--status-error)] hover:bg-[var(--status-error)] hover:text-[var(--accent-text)]'
+			'rounded-4xl border border-solid',
+			'border-(--border-color) bg-(--bg-tertiary) text-(--color-disabled)',
+			'hover:border-(--status-error) hover:bg-(--status-error) hover:text-(--accent-text)'
 		),
-		mobile: 'bg-transparent text-[var(--color-primary)]',
+		mobile: 'bg-transparent text-(--color-primary) hover:text-(--color-accent)',
 		custom: '',
 	},
 	input: {
 		default: cn(
 			'ring-inset',
-			'bg-[var(--bg-tertiary)] ring-[var(--accent-default)]',
+			'bg-(--bg-tertiary) ring-(--accent-primary-hover)',
 			'focus:ring-1 hover:enabled:ring-1'
 		),
 		ghost: cn(
 			'border border-solid',
-			'border-[var(--border-color)] bg-transparent',
-			'hover:border-[var(--accent-hover)] focus:border-[var(--accent-default)]'
+			'border-(--border-color) bg-transparent',
+			'hover:border-(--accent-primary-hover) focus:border-(--accent-primary-hover)'
 		),
 		custom: '',
 	},
 	textarea: {
-		default: cn('ring-inset', 'bg-[var(--bg-tertiary)] ring-[var(--accent-default)]', 'hover:ring-1 focus:ring-1'),
+		default: cn('ring-inset', 'bg-(--bg-tertiary) ring-(--accent-primary-hover)', 'hover:ring-1 focus:ring-1'),
 		ghost: cn(
 			'border border-solid',
-			'border-[var(--border-color)] bg-transparent',
-			'hover:border-[var(--accent-hover)] focus:border-[var(--accent-default)]'
+			'border-(--border-color) bg-transparent',
+			'hover:border-(--accent-primary-hover) focus:border-(--accent-primary-hover)'
 		),
 		custom: '',
 	},
 	checkbox: { default: '' },
 	checkboxBool: { default: '' },
-	radio: { default: 'border-[var(--border-color)]', custom: '' },
+	radio: { default: 'border-(--border-color)', custom: '' },
 	select: {
-		default: cn('ring-inset', 'bg-[var(--bg-tertiary)] ring-[var(--accent-default)]', 'hover:ring-1 focus:ring-1'),
+		default: cn('ring-inset', 'bg-(--bg-tertiary) ring-(--accent-primary-hover)', 'hover:ring-1 focus:ring-1'),
 		ghost: cn(
 			'border border-solid',
-			'border-[var(--border-color)] bg-transparent',
-			'hover:border-[var(--accent-hover)] focus:border-[var(--accent-default)]'
+			'border-(--border-color) bg-transparent',
+			'hover:border-(--accent-primary-hover) focus:border-(--accent-primary-hover)'
 		),
 		custom: '',
 	},
 	selectExt: {
-		default: cn('ring-inset', 'bg-[var(--bg-tertiary)] ring-[var(--accent-default)]', 'hover:ring-1 focus:ring-1'),
+		default: cn('ring-inset', 'bg-(--bg-tertiary) ring-(--accent-primary-hover)', 'hover:ring-1 focus:ring-1'),
 		embedded: cn(
 			'border border-solid',
-			'border-[var(--border-color)] bg-transparent',
-			'hover:border-[var(--accent-hover-op)] focus:border-[var(--accent-default-op)]'
+			'border-(--border-color) bg-transparent',
+			'hover:border-(--accent-primary-hover) focus:border-(--accent-primary-hover)'
 		),
 		detached: '',
 		custom: '',

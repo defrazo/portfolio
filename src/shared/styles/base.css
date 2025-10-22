@@ -15,10 +15,13 @@ html {
 body {
 	font-family: 'Exo 2', 'Arial Unicode MS', sans-serif;
 	color: var(--color-primary);
-	background: radial-gradient(circle at top right, #4e4e4e, #222222), url('../assets/icons/system/noise.svg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-blend-mode: overlay;
+	background: radial-gradient(circle at top right, #4e4e4e, #222222) ;
+	/* background: pink; */
+	background-repeat: repeat;
+	background-image: url('../assets/icons/system/noise.svg');
+	/* background-size: cover; */
+	/* background-blend-mode: overlay; */
+	background-size: 256px 256px;
 }
 
 @media (hover: hover) and (pointer: fine) {

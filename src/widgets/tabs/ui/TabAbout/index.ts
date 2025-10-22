@@ -1,4 +1,4 @@
-export { TabAbout } from './TabAbout';
+export { AboutBage } from './AboutBage';
 export { Education } from './Education';
-export { Table } from './Table';
-export { Workplace } from './Workplace';
+export { Experience } from './Experience';
+export { TabAbout } from './TabAbout';

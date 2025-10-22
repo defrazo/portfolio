@@ -1,6 +1,8 @@
-import { cn } from '@/shared/lib/utils';
-import type { Justify, SelectExtOption } from '../model';
 import type { Dispatch, SetStateAction } from 'react';
+
+import { cn } from '@/shared/lib/utils';
+
+import type { Justify, SelectExtOption } from '../model';
 
 interface SelectListProps {
 	options: SelectExtOption[];
@@ -36,7 +38,7 @@ export const SelectList = ({
 	return (
 		<ul
 			className={cn(
-				'core-base hide-scrollbar absolute right-0 z-30 -my-px max-h-48 w-full min-w-max overflow-y-auto rounded-xl border-solid border-[var(--accent-default-op)] text-center',
+				'core-base hide-scrollbar absolute right-0 z-30 -my-px max-h-48 w-full min-w-max overflow-y-auto rounded-xl border-solid border-(--accent-default-op) text-center',
 				addStyle,
 				openUpwards
 					? `bottom-full border ${variant === 'embedded' && 'rounded-b-none border-b-0'}`
@@ -49,7 +51,7 @@ export const SelectList = ({
 				<li
 					aria-selected={value === ''}
 					className={cn(
-						'flex w-full cursor-pointer items-center gap-2 p-2 text-sm whitespace-nowrap hover:bg-[var(--accent-hover)] hover:text-[var(--color-primary)]',
+						'flex w-full cursor-pointer items-center gap-2 p-2 text-sm whitespace-nowrap hover:bg-(--accent-hover) hover:text-(--color-primary)',
 						justifies[justify],
 						value === '' && 'opacity-70'
 					)}
@@ -67,9 +69,9 @@ export const SelectList = ({
 					key={opt.value}
 					aria-selected={opt.value === value}
 					className={cn(
-						'flex w-full cursor-pointer items-center gap-2 p-2 text-sm whitespace-nowrap hover:bg-[var(--accent-hover)] hover:text-[var(--accent-text)]',
+						'flex w-full cursor-pointer items-center gap-2 p-2 text-sm whitespace-nowrap hover:bg-(--accent-hover) hover:text-(--accent-text)',
 						justifies[justify],
-						opt.value === value && 'text-[var(--accent-hover)]'
+						opt.value === value && 'text-(--accent-hover)'
 					)}
 					role="option"
 					onClick={() => {

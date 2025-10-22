@@ -1,1 +1,1 @@
-export { technologies } from './model';
+export { technologies, type Technology } from './model';

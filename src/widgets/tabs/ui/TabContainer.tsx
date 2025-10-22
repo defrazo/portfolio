@@ -1,13 +1,9 @@
+import { JSX } from 'react';
 import { observer } from 'mobx-react-lite';
 
 import { useStore } from '@/app/providers';
 
-import { JSX } from 'react';
-import { TabHome } from './TabHome';
-import { TabAbout } from './TabAbout/TabAbout';
-import { TabProjects } from './TabProjects';
-import { TabContacts } from './TabContacts';
-import { TabSkills } from './TabSkills';
+import { TabAbout, TabContacts, TabHome, TabProjects, TabSkills } from '.';
 
 const TabContainer = observer(() => {
 	const { tabsStore } = useStore();
@@ -19,12 +15,11 @@ const TabContainer = observer(() => {
 		projects: <TabProjects />,
 		contacts: <TabContacts />,
 	};
-
 	const targetTab = tabComponents[tabsStore.tab];
 
 	return (
-		<div className="core-base core-border hide-scrollbar flex cursor-default flex-col gap-4 overflow-auto rounded-xl p-6 shadow-[var(--shadow)] select-none">
-			{targetTab}
+		<div className="core-base hide-scrollbar core-border flex min-h-[600px] cursor-default flex-col gap-4 overflow-auto p-6 shadow-(--shadow)">
+			<section className="flex flex-1 flex-col gap-4">{targetTab}</section>
 		</div>
 	);
 });

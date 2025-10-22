@@ -12,11 +12,19 @@ const AppInitializer = observer(() => {
 
 	useEffect(() => {
 		themeStore.setTheme(themeStore.theme);
-		const preload = setTimeout(() => setIsLoading(false), 1000);
+		// const preload = setTimeout(() => setIsLoading(false), 3500);
+		const preload = setTimeout(() => setIsLoading(false), 100);
 		return () => clearTimeout(preload);
 	}, []);
 
-	return isLoading ? <PreloaderExt /> : <App />;
+	return (
+		<div className="relative">
+			{isLoading && <PreloaderExt />}
+			<div className={`transition-opacity duration-700 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+				<App />
+			</div>
+		</div>
+	);
 });
 
 const StartupProvider = () => {

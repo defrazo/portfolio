@@ -1,15 +1,14 @@
+import { useSearchParams } from 'react-router-dom';
 import { observer } from 'mobx-react-lite';
 
-import { cn } from '@/shared/lib/utils';
-import { Button, Divider, ZoomOnHover } from '@/shared/ui';
-
-import Avatar from '@/entities/avatar';
-import type { NavButton } from '../model';
 import { useStore } from '@/app/providers';
-import { useSearchParams } from 'react-router-dom';
-import { TabId } from '@/shared/stores';
-import ThemeSwitcher from '@/features/theme-switcher/ui/ThemeSwitcher';
+import ThemeSwitcher from '@/features/theme-switcher';
+import { Avatar } from '@/shared/content';
+import { cn } from '@/shared/lib/utils';
+import { Button, ImageViewer } from '@/shared/ui';
+import type { TabId } from '@/widgets/tabs/model';
 
+import type { NavButton } from '../model';
 const tabs: NavButton[] = [
 	{ id: 'home', title: 'Главная' },
 	{ id: 'about', title: 'Обо мне' },
@@ -19,8 +18,8 @@ const tabs: NavButton[] = [
 ];
 
 const Sidebar = observer(() => {
-	const { tabsStore } = useStore();
-	const [searchParams, setSearchParams] = useSearchParams();
+	const { modalStore, tabsStore } = useStore();
+	const [_, setSearchParams] = useSearchParams();
 
 	const handleTabClick = (tab: TabId) => {
 		tabsStore.setTab(tab);
@@ -28,27 +27,35 @@ const Sidebar = observer(() => {
 	};
 
 	return (
-		<div className="flex flex-col gap-4">
-			<div className="core-base core-border sticky top-4 flex h-[536px] w-full flex-col justify-evenly gap-4 p-4 shadow-[var(--shadow)] select-none">
-				<div className="flex flex-col items-center gap-4">
-					<ZoomOnHover>
-						<Avatar className="size-36 rounded-full border-2 border-transparent transition-all duration-300 hover:border-[var(--accent-default)]" />
-					</ZoomOnHover>
-					<div className="flex cursor-default flex-col items-center justify-center gap-2 leading-4">
+		<div className="sticky top-4">
+			<div className="core-base core-border flex h-[600px] flex-col justify-between p-4 shadow-(--shadow) select-none">
+				<div className="flex flex-col gap-3">
+					<div className="group relative p-2">
+						<div className="absolute inset-0 rounded-full bg-linear-to-r from-(--accent-default-op) to-(--accent-hover-op) opacity-0 blur-lg transition-all duration-500 group-hover:opacity-100 group-hover:blur-lg" />
+						<img
+							alt="Фотография"
+							className="rounded-full border-2 border-solid border-(--border-color) shadow-lg transition-transform duration-500 group-hover:scale-[1.02]"
+							src={Avatar}
+							onClick={() => modalStore.setModal(<ImageViewer src={Avatar} />)}
+						/>
+					</div>
+					<div className="flex cursor-default flex-col items-center justify-center leading-4">
 						<span className="text-2xl font-bold">Евгений Летунов</span>
-						<span className="text-lg text-[var(--color-disabled)]">Frontend Developer</span>
+						<span className="text-lg text-(--color-tertiary)">Frontend Developer</span>
 					</div>
 				</div>
-				<Divider />
-				<div className="flex flex-col gap-2">
+				<div className="flex flex-col gap-3">
 					{tabs.map((item) => {
 						return (
 							<Button
 								key={item.id}
 								className={cn(
-									'core-border transition-all duration-200 hover:translate-x-1 hover:shadow-md',
-									tabsStore.tab === item.id && 'bg-[var(--accent-default)] text-[var(--accent-text)]'
+									// 'rounded-2xl transition-all duration-300 hover:translate-x-1 hover:shadow-md',
+									'rounded-4xl border border-solid border-transparent bg-(--bg-secondary) transition-all duration-300 ease-in-out hover:translate-x-1 hover:border-(--border-accent-op) hover:text-(--color-accent) hover:shadow-md',
+									tabsStore.tab === item.id &&
+										'bg-sky-600 text-(--text-accent) hover:text-(--text-accent)'
 								)}
+								variant="custom"
 								onClick={() => handleTabClick(item.id)}
 							>
 								{item.title}
@@ -57,8 +64,9 @@ const Sidebar = observer(() => {
 					})}
 				</div>
 			</div>
-			<ThemeSwitcher className="ml-auto" />
+			<ThemeSwitcher />
 		</div>
 	);
 });
+
 export default Sidebar;

@@ -1,4 +1,4 @@
-import type { TabId } from '@/shared/stores';
+import type { TabId } from '@/widgets/tabs/model';
 
 export type NavButton = {
 	id: TabId;

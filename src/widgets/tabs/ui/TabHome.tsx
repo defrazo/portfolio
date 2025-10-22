@@ -1,40 +1,44 @@
-import { observer } from 'mobx-react-lite';
-
-import { Button } from '@/shared/ui';
-
-import { IconEmail, IconGit, IconTG, IconVK } from '@/shared/assets/icons';
 import { Download, Printer } from 'lucide-react';
 
-// const buttons: NavButton[] = [
-// 	{ id: 'home', title: 'Главная' },
-// 	{ id: 'about', title: 'Обо мне' },
-// 	{ id: 'projects', title: 'Проекты' },
-// 	{ id: 'contacts', title: 'Контакты' },
-// ];
+import { IconEmail, IconGit, IconTG, IconVK } from '@/shared/assets/icons';
+import { Button } from '@/shared/ui';
 
-export const TabHome = observer(() => {
+const socialButtons = [
+	{ id: 'home', icon: IconVK },
+	{ id: 'about', icon: IconTG },
+	{ id: 'projects', icon: IconEmail },
+	{ id: 'contacts', icon: IconGit },
+];
+
+export const TabHome = () => {
 	return (
-		<div className="flex flex-1 flex-col">
-			<div className="flex flex-1 flex-col items-center justify-center gap-4">
-				<div className="text-center">
-					<h1 className="text-5xl font-bold">Евгений Летунов</h1>
-					<h2 className="text-3xl text-[var(--color-disabled)]">Frontend Developer</h2>
-				</div>
-				<div className="flex gap-4">
-					<Button variant="rounded" centerIcon={<IconVK className="size-7" />}></Button>
-					<Button variant="rounded" centerIcon={<IconTG className="size-7" />}></Button>
-					<Button variant="rounded" centerIcon={<IconEmail className="size-7" />}></Button>
-					<Button variant="rounded" centerIcon={<IconGit className="size-7" />}></Button>
+		<>
+			<div className="flex flex-1 flex-col items-center justify-center gap-4 select-none">
+				<h1 className="text-6xl font-semibold tracking-[0.2em]">L E T U N O V</h1>
+				<h2 className="text-3xl text-(--color-tertiary)">Frontend Developer</h2>
+				<div className="h-1 w-32 animate-pulse rounded-full bg-linear-to-r from-(--accent-secondary-hover) to-(--accent-secondary)" />
+				<div className="flex gap-6">
+					{socialButtons.map(({ id, icon }) => {
+						const Icon = icon;
+						return (
+							<Button
+								key={id}
+								centerIcon={<Icon className="size-7" />}
+								className="rounded-full p-4"
+								variant="outline"
+							/>
+						);
+					})}
 				</div>
 			</div>
-			<div className="flex w-full justify-between">
-				<Button className="rounded-4xl" leftIcon={<Download className="size-8" />}>
+			<div className="flex justify-between">
+				<Button leftIcon={<Download className="size-8" />} variant="outline">
 					Скачать резюме
 				</Button>
-				<Button className="rounded-4xl" leftIcon={<Printer className="size-8" />}>
+				<Button leftIcon={<Printer className="size-8" />} variant="outline">
 					Распечатать резюме
 				</Button>
 			</div>
-		</div>
+		</>
 	);
-});
+};

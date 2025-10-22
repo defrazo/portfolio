@@ -1,14 +1,9 @@
-import IconArrows from './arrows.svg?react';
-import IconDots from './dots.svg?react';
-import IconLocation from './location.svg?react';
-import IconScroll from './scroll.svg?react';
-import IconDesktop from './desktop.svg?react';
-import IconPhone from './phone.svg?react';
+import IconBolt from './bolt.svg?react';
 import IconEmail from './email.svg?react';
-import IconPass from './password.svg?react';
-import IconMask from './mask.svg?react';
+import IconLocation from './location.svg?react';
+import IconWebsite from './website.svg?react';
 
-export { IconArrows, IconMask, IconDots, IconLocation, IconScroll, IconPhone, IconDesktop, IconEmail, IconPass };
+export { IconBolt, IconEmail, IconLocation, IconWebsite };
 export * from './social';
-export * from './tech';
 export * from './status';
+export * from './tech';

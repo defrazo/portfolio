@@ -3,6 +3,7 @@ import {
 	IconCSS,
 	IconDocker,
 	IconFigma,
+	IconFSD,
 	IconGithub,
 	IconHTML,
 	IconJS,
@@ -17,6 +18,7 @@ import {
 	IconVite,
 	IconVS,
 } from '@/shared/assets/icons';
+
 import type { Technology } from '.';
 
 export const technologies: Technology[] = [
@@ -24,8 +26,9 @@ export const technologies: Technology[] = [
 	{ name: 'CSS3', icon: IconCSS },
 	{ name: 'React', icon: IconReact },
 	{ name: 'TypeScript', icon: IconTS },
+	{ name: 'FSD', icon: IconFSD },
 	{ name: 'JavaScript', icon: IconJS },
-	{ name: 'Tailwind CSS', icon: IconTW },
+	{ name: 'Tailwind', icon: IconTW },
 	{ name: 'MobX', icon: IconMobX },
 	{ name: 'Supabase', icon: IconSB },
 	{ name: 'Vite', icon: IconVite },

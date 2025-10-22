@@ -1,1 +1,1 @@
-export { OnematePage } from './ui';
+export { OnematePage, PortfolioPage } from './ui';

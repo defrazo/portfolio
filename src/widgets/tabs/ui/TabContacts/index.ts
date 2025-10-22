@@ -1,0 +1,1 @@
+export { TabContacts } from './ui';
