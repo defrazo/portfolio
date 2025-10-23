@@ -1,1 +1,1 @@
-export { Gallery, MobileGallery } from './ui';
+export { DesktopGallery, MobileGallery } from './ui';

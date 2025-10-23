@@ -1,2 +1,2 @@
-export { Gallery } from './Gallery';
+export { DesktopGallery } from './DesktopGallery';
 export { MobileGallery } from './MobileGallery';

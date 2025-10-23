@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 
 import { IconBack, IconForward } from '@/shared/assets/icons';
 import { cn } from '@/shared/lib/utils';
-import { Button } from '@/shared/ui/inputs';
+import { Button } from '@/shared/ui';
 
 interface MobileGalleryProps {
 	images: string[];
@@ -10,18 +10,13 @@ interface MobileGalleryProps {
 }
 
 export const MobileGallery = ({ images, className }: MobileGalleryProps) => {
-	const [current, setCurrent] = useState(0);
-	// const containerRef = useRef<HTMLDivElement>(null);
-
+	const [current, setCurrent] = useState<number>(0);
 	const startX = useRef<number | null>(null);
 
-	// Свайпы
-	const handleTouchStart = (e: React.TouchEvent) => {
-		startX.current = e.touches[0].clientX;
-	};
-
+	const handleTouchStart = (e: React.TouchEvent) => (startX.current = e.touches[0].clientX);
 	const handleTouchEnd = (e: React.TouchEvent) => {
 		if (startX.current === null) return;
+
 		const diff = startX.current - e.changedTouches[0].clientX;
 		if (diff > 50) next();
 		else if (diff < -50) prev();
@@ -32,30 +27,25 @@ export const MobileGallery = ({ images, className }: MobileGalleryProps) => {
 	const prev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
 
 	return (
-		<div
-			className={cn(
-				'relative flex flex-col items-center gap-2 rounded-xl bg-(--bg-secondary) p-2 pr-1',
-				className
-			)}
-		>
+		<div className={cn('relative flex flex-col items-center gap-3 rounded-2xl bg-(--bg-secondary) p-3', className)}>
 			<div
-				className="project-scroll h-[500px] w-full max-w-xs overflow-x-hidden scroll-auto rounded-xs shadow-lg"
+				className="project-scroll max-h-[500px] max-w-xs overflow-x-hidden overscroll-contain scroll-auto"
 				onTouchEnd={handleTouchEnd}
 				onTouchStart={handleTouchStart}
 			>
 				<div
-					className="flex h-fit transition-transform duration-500"
+					className="flex transition-transform duration-500"
 					style={{ transform: `translateX(-${current * 100}%)` }}
 				>
-					{images.map((img, i) => (
-						<img key={i} alt={`Mobile Screenshot ${i}`} className="w-full object-contain" src={img} />
+					{images.map((img, idx) => (
+						<img key={idx} alt={`Slide ${idx}`} className="core-border w-full object-contain" src={img} />
 					))}
 				</div>
 			</div>
-			<div className="flex w-full items-center justify-between gap-2 py-1 pr-3 pl-2">
+			<div className="flex w-full items-center justify-between gap-2 px-2 py-1">
 				<Button
-					centerIcon={<IconBack className="size-4" />}
-					className="transform text-(--accent-text) hover:text-(--accent-hover)"
+					centerIcon={<IconBack className="size-5" />}
+					className="pr-2 text-(--color-secondary) hover:text-(--color-accent)"
 					size="custom"
 					variant="mobile"
 					onClick={prev}
@@ -64,14 +54,17 @@ export const MobileGallery = ({ images, className }: MobileGalleryProps) => {
 					{images.map((_, idx) => (
 						<span
 							key={idx}
-							className={`h-3 w-3 cursor-pointer rounded-full hover:bg-(--accent-hover) ${idx === current ? 'bg-(--accent-default)' : 'bg-gray-400'}`}
+							className={cn(
+								'mr-2 size-3 cursor-pointer rounded-full hover:bg-(--color-accent)',
+								idx === current ? 'bg-(--color-accent)' : 'bg-(--color-secondary)'
+							)}
 							onClick={() => setCurrent(idx)}
 						/>
 					))}
 				</div>
 				<Button
-					centerIcon={<IconForward className="size-4" />}
-					className="transform text-(--accent-text) hover:text-(--accent-hover)"
+					centerIcon={<IconForward className="size-5" />}
+					className="pl-2 text-(--color-secondary) hover:text-(--color-accent)"
 					size="custom"
 					variant="mobile"
 					onClick={next}

@@ -1,10 +1,10 @@
 import React from 'react';
 import { ExternalLink, SquareMousePointer } from 'lucide-react';
 
+import { PROJECTS } from '@/entities/project';
 import { cn } from '@/shared/lib/utils';
 import { Button, Divider, Link } from '@/shared/ui';
 
-import { projects } from '../lib';
 import { SectionTitle } from '.';
 
 export const TabProjects = () => {
@@ -12,9 +12,9 @@ export const TabProjects = () => {
 		<>
 			<SectionTitle title="Проекты" />
 			<div className="flex flex-col gap-4">
-				{projects.map((project, idx) => (
+				{PROJECTS.map((project, idx) => (
 					<React.Fragment key={project.id}>
-						<div className={cn('flex items-center gap-4', idx !== projects.length - 1 && 'mb-2')}>
+						<div className={cn('flex items-center gap-4', idx !== PROJECTS.length - 1 && 'mb-2')}>
 							<div className="flex-1 overflow-hidden rounded-4xl bg-(--bg-primary)">
 								<Link className="bg-black" to={`/project/${project.id}`} variant="custom">
 									<img
@@ -63,7 +63,7 @@ export const TabProjects = () => {
 								</div>
 							</div>
 						</div>
-						{idx !== projects.length - 1 && <Divider />}
+						{idx !== PROJECTS.length - 1 && <Divider />}
 					</React.Fragment>
 				))}
 			</div>

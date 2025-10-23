@@ -1,22 +1,6 @@
-import { getSkills } from '../../lib';
-import type { SkillGroup } from '../../model';
+import { SKILL_GROUP } from '../../model';
 import { SectionTitle } from '..';
 import { SkillSection } from '.';
-
-const skillGroup: SkillGroup[] = [
-	{
-		id: 'frontend',
-		title: 'Frontend',
-		/*prettier-ignore*/
-		skills: getSkills(['React', 'TypeScript', 'JavaScript', 'MobX', 'FSD', 'HTML5', 'CSS3', 'SASS', 'Tailwind CSS']),
-	},
-	{
-		id: 'workflow',
-		title: 'Workflow',
-		skills: getSkills(['Supabase', 'PostgreSQL', 'Vite', 'GitHub', 'Docker', 'VS Code']),
-	},
-	{ id: 'design', title: 'Design', skills: getSkills(['Figma', 'Photoshop', 'Illustrator']) },
-];
 
 export const TabSkills = () => {
 	return (
@@ -28,7 +12,7 @@ export const TabSkills = () => {
 					производительность и поддерживаемость. Пишу код, который легко читать, просто развивать и не стыдно
 					передавать коллегам.
 				</p>
-				{skillGroup.map(({ id, skills, title }) => (
+				{SKILL_GROUP.map(({ id, skills, title }) => (
 					<SkillSection key={id} skills={skills} title={title} />
 				))}
 			</div>

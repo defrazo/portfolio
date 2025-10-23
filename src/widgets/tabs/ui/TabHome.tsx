@@ -1,14 +1,7 @@
-import { Download, Printer } from 'lucide-react';
-
-import { IconEmail, IconGit, IconTG, IconVK } from '@/shared/assets/icons';
+// import { Download, Printer } from 'lucide-react';
 import { Button } from '@/shared/ui';
 
-const socialButtons = [
-	{ id: 'home', icon: IconVK },
-	{ id: 'about', icon: IconTG },
-	{ id: 'projects', icon: IconEmail },
-	{ id: 'contacts', icon: IconGit },
-];
+import { SOCIAL_BUTTONS } from '../model';
 
 export const TabHome = () => {
 	return (
@@ -18,7 +11,7 @@ export const TabHome = () => {
 				<h2 className="text-3xl text-(--color-tertiary)">Frontend Developer</h2>
 				<div className="h-1 w-32 animate-pulse rounded-full bg-linear-to-r from-(--accent-secondary-hover) to-(--accent-secondary)" />
 				<div className="flex gap-6">
-					{socialButtons.map(({ id, icon }) => {
+					{SOCIAL_BUTTONS.map(({ id, icon }) => {
 						const Icon = icon;
 						return (
 							<Button
@@ -31,14 +24,14 @@ export const TabHome = () => {
 					})}
 				</div>
 			</div>
-			<div className="flex justify-between">
+			{/* <div className="flex justify-between">
 				<Button leftIcon={<Download className="size-8" />} variant="outline">
 					Скачать резюме
 				</Button>
 				<Button leftIcon={<Printer className="size-8" />} variant="outline">
 					Распечатать резюме
 				</Button>
-			</div>
+			</div> */}
 		</>
 	);
 };

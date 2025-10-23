@@ -1,28 +1,15 @@
 import { FC, JSX, SVGProps } from 'react';
 
-import type { Technology } from '@/entities/tecnology';
-
 export type TabId = 'home' | 'about' | 'skills' | 'projects' | 'contacts';
 export type Tab = {
 	id: TabId;
 	title: string;
 };
 
-export type Projects = {
+export type AboutBage = {
 	id: string;
 	title: string;
-	date: string;
-	description: string;
-	img: string;
-	techs: (Technology | undefined)[];
-	git: string;
-	link: string;
-};
-
-export type AboutBageItem = {
-	id: string;
-	title: string;
-	content: JSX.Element;
+	content: string | JSX.Element;
 	href?: string;
 	icon: JSX.Element;
 };
@@ -32,14 +19,6 @@ export type WorkItem = {
 	company: string;
 	period: string;
 	bullets: string[];
-};
-
-export type EducationItem = {
-	degree: string;
-	period: string;
-	major: string;
-	university: string;
-	focus: string;
 };
 
 export type Skill = {
@@ -55,8 +34,10 @@ export type SkillGroup = {
 	skills: Skill[];
 };
 
-export type MapButton = {
+export type ContactsBage = {
 	id: string;
 	title: string;
-	link: string;
+	content: string;
+	href: string;
+	icon: JSX.Element;
 };

@@ -6,10 +6,9 @@ import ThemeSwitcher from '@/features/theme-switcher';
 import { Avatar } from '@/shared/content';
 import { cn } from '@/shared/lib/utils';
 import { Button, ImageViewer } from '@/shared/ui';
-import type { TabId } from '@/widgets/tabs/model';
+import type { TabId } from '@/widgets/tabs';
 
-import type { NavButton } from '../model';
-const tabs: NavButton[] = [
+const tabs = [
 	{ id: 'home', title: 'Главная' },
 	{ id: 'about', title: 'Обо мне' },
 	{ id: 'skills', title: 'Навыки' },
@@ -31,7 +30,7 @@ const Sidebar = observer(() => {
 			<div className="core-base core-border flex h-[600px] flex-col justify-between p-4 shadow-(--shadow) select-none">
 				<div className="flex flex-col gap-3">
 					<div className="group relative p-2">
-						<div className="absolute inset-0 rounded-full bg-linear-to-r from-(--accent-default-op) to-(--accent-hover-op) opacity-0 blur-lg transition-all duration-500 group-hover:opacity-100 group-hover:blur-lg" />
+						<div className="absolute inset-0 rounded-full bg-linear-to-r from-(--accent-primary-op) to-(--accent-primary-hover-op) opacity-0 blur-md transition-all duration-500 group-hover:opacity-100 group-hover:blur-md" />
 						<img
 							alt="Фотография"
 							className="rounded-full border-2 border-solid border-(--border-color) shadow-lg transition-transform duration-500 group-hover:scale-[1.02]"
@@ -56,7 +55,7 @@ const Sidebar = observer(() => {
 										'bg-sky-600 text-(--text-accent) hover:text-(--text-accent)'
 								)}
 								variant="custom"
-								onClick={() => handleTabClick(item.id)}
+								onClick={() => handleTabClick(item.id as TabId)}
 							>
 								{item.title}
 							</Button>

@@ -1,2 +1,2 @@
-export { technologies } from './technologies';
+export { technologies } from './data';
 export type { Technology } from './types';

@@ -25,20 +25,20 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
 			<Moon
 				className={cn(
 					'absolute left-2.5 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100',
-					isDark ? 'z-10 text-[#7d6fe4]' : 'text-[#7d6fe480] opacity-0'
+					isDark ? 'z-10 text-(--accent-primary)' : 'text-(--accent-primary-op) opacity-0'
 				)}
 				size={20}
 			/>
 			<Sun
 				className={cn(
 					'absolute right-2.5 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100',
-					!isDark ? 'z-10 text-[#e18127]' : 'text-[#e1812780] opacity-0'
+					!isDark ? 'z-10 text-(--accent-secondary)' : 'text-(--accent-secondary-op) opacity-0'
 				)}
 				size={20}
 			/>
 			<div
 				className={cn(
-					'size-9 transform rounded-full border border-solid border-transparent bg-(--bg-secondary) shadow-md transition-all duration-500 group-hover:border-(--border-color)',
+					'size-9 transform rounded-full border border-solid border-(--border-color) bg-(--bg-secondary) shadow-md transition-all duration-500 group-hover:border-(--border-accent-op)',
 					isDark
 						? 'translate-x-0 translate-y-0 group-hover:translate-x-0'
 						: 'translate-x-0 translate-y-0 group-hover:translate-x-10'

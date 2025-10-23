@@ -1,29 +1,5 @@
-import type { EducationItem } from '../../model';
+import { EDUCATION_HISTORY } from '../../model';
 import { SectionTitle } from '..';
-
-const educationHistory: EducationItem[] = [
-	{
-		degree: 'Аспирантура',
-		period: '2020 – 2023',
-		major: '41.06.01 Политические науки и регионоведение',
-		university: 'Гуманитарный университет, Екатеринбург',
-		focus: 'Исследовательская методология, визуализация данных, преподавание',
-	},
-	{
-		degree: 'Магистратура',
-		period: '2018 – 2020',
-		major: '40.04.01 Юриспруденция',
-		university: 'Гуманитарный университет, Екатеринбург',
-		focus: 'Нормативные требования, работа с документами',
-	},
-	{
-		degree: 'Бакалавриат',
-		period: '2014 – 2018',
-		major: '09.03.03 Прикладная информатика в экономике',
-		university: 'Гуманитарный университет, Екатеринбург',
-		focus: 'Основы программирования, базы данных, анализ данных',
-	},
-];
 
 export const Education = () => {
 	return (
@@ -35,7 +11,7 @@ export const Education = () => {
 				того, как интерфейс воспринимает пользователь.
 			</p>
 			<div className="flex flex-col gap-4">
-				{educationHistory.map(({ degree, period, major, university, focus }, idx) => (
+				{EDUCATION_HISTORY.map(({ degree, period, major, university, focus }, idx) => (
 					<div
 						key={idx}
 						className="flex flex-col gap-1.5 rounded-2xl border border-transparent bg-(--bg-accent) p-4 transition hover:border-(--accent-primary-hover)"

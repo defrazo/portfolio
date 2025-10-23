@@ -4,7 +4,7 @@ interface AboutBageProps {
 	icon: JSX.Element;
 	title: string;
 	href?: string;
-	content: React.ReactElement;
+	content: string | React.ReactElement;
 }
 
 export const AboutBage = ({ icon, title, href, content }: AboutBageProps) => {

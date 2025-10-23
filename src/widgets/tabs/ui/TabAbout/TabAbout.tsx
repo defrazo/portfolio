@@ -1,22 +1,10 @@
 import { Button } from '@/shared/ui';
 
-import { aboutBages } from '../../lib';
+import { ABOUT_BAGES, KEY_AREAS } from '../../model';
 import { SectionTitle } from '..';
 import { AboutBage, Education, Experience } from '.';
 
 export const TabAbout = () => {
-	const areas = [
-		'React',
-		'TypeScript',
-		'Feature-Sliced Design',
-		'Tailwind CSS',
-		'State Management (MobX)',
-		'Web Performance',
-		'Clean Code',
-		'Responsive Design',
-		'Full-Cycle Frontend',
-	];
-
 	return (
 		<>
 			<SectionTitle title="Обо мне" />
@@ -39,14 +27,14 @@ export const TabAbout = () => {
 					</p>
 				</div>
 				<div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-					{aboutBages.map(({ icon, title, href, content }) => (
+					{ABOUT_BAGES.map(({ icon, title, href, content }) => (
 						<AboutBage key={title} content={content} href={href} icon={icon} title={title} />
 					))}
 				</div>
 				<div className="flex flex-col gap-2">
 					<h4 className="text-sm tracking-wider text-(--color-secondary) uppercase">Ключевые области</h4>
 					<div className="flex flex-wrap gap-2">
-						{areas.map((tag) => (
+						{KEY_AREAS.map((tag) => (
 							<Button className="cursor-default" size="sm" variant="outline">
 								{tag}
 							</Button>
