@@ -12,7 +12,7 @@ export const ProjectPageLayout = ({ children, title }: ProjectPageLayoutProps) =
 	usePageTitle(title);
 
 	return (
-		<div className="core-base core-border hide-scrollbar relative mx-auto my-12 flex flex-1 cursor-default flex-col gap-4 overflow-auto rounded-xl shadow-(--shadow) select-none xl:max-w-6xl">
+		<div className="core-base core-border hide-scrollbar relative m-2 flex flex-1 cursor-default flex-col gap-4 overflow-auto rounded-xl shadow-(--shadow) select-none md:mx-auto md:my-12 xl:max-w-6xl">
 			{children}
 			<ScrollToTop />
 		</div>

@@ -1,4 +1,5 @@
 import { FC, JSX, SVGProps } from 'react';
+import type { LucideIcon } from 'lucide-react';
 
 export type TabId = 'home' | 'about' | 'skills' | 'projects' | 'contacts';
 export type Tab = {
@@ -11,10 +12,11 @@ export type AboutBage = {
 	title: string;
 	content: string | JSX.Element;
 	href?: string;
-	icon: JSX.Element;
+	icon: LucideIcon;
 };
 
 export type WorkItem = {
+	id: string;
 	role: string;
 	company: string;
 	period: string;
@@ -39,5 +41,5 @@ export type ContactsBage = {
 	title: string;
 	content: string;
 	href: string;
-	icon: JSX.Element;
+	icon: LucideIcon;
 };

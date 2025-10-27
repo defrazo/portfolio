@@ -17,7 +17,7 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
 	return (
 		<div
 			className={cn(
-				'group absolute -bottom-14 flex size-10 cursor-pointer items-center rounded-full bg-(--bg-tertiary) p-0.5 transition-all duration-500 hover:w-20',
+				'group relative flex size-10 cursor-pointer items-center rounded-full bg-(--bg-tertiary) p-0.5 transition-all duration-500 hover:w-20 md:absolute md:-bottom-14',
 				className
 			)}
 			onClick={handleToogle}

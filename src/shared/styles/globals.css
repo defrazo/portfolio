@@ -1,0 +1,6 @@
+/* Радиальный градиент с фолбэком */
+.bg-radial {
+	background: #333;
+	background: -webkit-radial-gradient(circle, #4e4e4e, #222222);
+	background: radial-gradient(circle, #4e4e4e, #222222);
+}

@@ -38,7 +38,13 @@ export const MobileGallery = ({ images, className }: MobileGalleryProps) => {
 					style={{ transform: `translateX(-${current * 100}%)` }}
 				>
 					{images.map((img, idx) => (
-						<img key={idx} alt={`Slide ${idx}`} className="core-border w-full object-contain" src={img} />
+						<img
+							key={idx}
+							alt={`Slide ${idx}`}
+							className="core-border w-full object-contain"
+							loading="lazy"
+							src={img}
+						/>
 					))}
 				</div>
 			</div>

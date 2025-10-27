@@ -40,6 +40,7 @@
 
 	/* Статусные цвета */
 	--status-success: #2a8d30;
+	--status-success-op: rgba(0, 201, 81, 0.1);
 	--status-error: #ff2828;
 	--status-warning: #ffa515;
 	--status-info: #2c90c7;

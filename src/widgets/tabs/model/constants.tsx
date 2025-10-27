@@ -1,5 +1,6 @@
-import { BriefcaseBusiness, Globe, IdCard, Mail, MapPin, Send } from 'lucide-react';
+import { BriefcaseBusiness } from 'lucide-react';
 
+import { USER_PROFILE } from '@/entities/user';
 import {
 	IconAI,
 	IconCSS,
@@ -34,22 +35,22 @@ export const ABOUT_BAGES: AboutBage[] = [
 	{
 		id: 'email',
 		title: 'Email',
-		content: 'defrazo@yandex.ru',
-		href: 'mailto:defrazo@yandex.ru',
-		icon: <Mail className="size-5" />,
+		content: USER_PROFILE.contacts.email.value,
+		href: USER_PROFILE.contacts.email.href,
+		icon: USER_PROFILE.contacts.email.icon,
 	},
 	{
 		id: 'telegram',
 		title: 'Telegram',
-		content: '@defrazo',
-		href: 'https://t.me/defrazo',
-		icon: <Send className="size-5" />,
+		content: USER_PROFILE.contacts.telegram.value,
+		href: USER_PROFILE.contacts.telegram.href,
+		icon: USER_PROFILE.contacts.telegram.icon,
 	},
 	{
 		id: 'location',
 		title: 'Локация',
-		content: 'Екатеринбург, Россия',
-		icon: <MapPin className="size-5" />,
+		content: USER_PROFILE.contacts.location.value,
+		icon: USER_PROFILE.contacts.location.icon,
 	},
 	{
 		id: 'status',
@@ -58,14 +59,14 @@ export const ABOUT_BAGES: AboutBage[] = [
 			<>
 				<span className="flex items-center gap-2 text-gray-300">
 					<span className="relative flex h-2 w-2">
-						<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-						<span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+						<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+						<span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
 					</span>
 					Открыт к предложениям
 				</span>
 			</>
 		),
-		icon: <BriefcaseBusiness className="size-5" />,
+		icon: BriefcaseBusiness,
 	},
 ];
 
@@ -73,35 +74,36 @@ export const CONTACTS_BAGES: ContactsBage[] = [
 	{
 		id: 'email',
 		title: 'Email',
-		content: 'defrazo@yandex.ru',
-		href: 'mailto:defrazo@yandex.ru',
-		icon: <Mail className="size-5" />,
+		content: USER_PROFILE.contacts.email.value,
+		href: USER_PROFILE.contacts.email.href,
+		icon: USER_PROFILE.contacts.email.icon,
 	},
 	{
 		id: 'telegram',
 		title: 'Telegram',
-		content: '@defrazo',
-		href: 'https://t.me/defrazo',
-		icon: <Send className="size-5" />,
+		content: USER_PROFILE.contacts.telegram.value,
+		href: USER_PROFILE.contacts.telegram.href,
+		icon: USER_PROFILE.contacts.telegram.icon,
 	},
 	{
 		id: 'site',
 		title: 'Сайт',
-		content: 'letunoff.ru',
-		href: 'https://letunoff.ru/',
-		icon: <Globe className="size-5" />,
+		content: USER_PROFILE.contacts.site.value,
+		href: USER_PROFILE.contacts.site.href,
+		icon: USER_PROFILE.contacts.site.icon,
 	},
 	{
 		id: 'vcard',
 		title: 'vCard',
-		content: 'vCard',
-		href: '#',
-		icon: <IdCard className="size-5" />,
+		content: USER_PROFILE.vcard.label,
+		href: USER_PROFILE.vcard.href,
+		icon: USER_PROFILE.vcard.icon,
 	},
 ];
 
 export const EDUCATION_HISTORY = [
 	{
+		id: 'phd',
 		degree: 'Аспирантура',
 		period: '2020 – 2023',
 		major: '41.06.01 Политические науки и регионоведение',
@@ -109,6 +111,7 @@ export const EDUCATION_HISTORY = [
 		focus: 'Исследовательская методология, визуализация данных, преподавание',
 	},
 	{
+		id: 'master',
 		degree: 'Магистратура',
 		period: '2018 – 2020',
 		major: '40.04.01 Юриспруденция',
@@ -116,6 +119,7 @@ export const EDUCATION_HISTORY = [
 		focus: 'Нормативные требования, работа с документами',
 	},
 	{
+		id: 'bachelor',
 		degree: 'Бакалавриат',
 		period: '2014 – 2018',
 		major: '09.03.03 Прикладная информатика в экономике',
@@ -127,9 +131,9 @@ export const EDUCATION_HISTORY = [
 export const KEY_AREAS = [
 	'React',
 	'TypeScript',
-	'Feature-Sliced Design',
 	'Tailwind CSS',
-	'State Management (MobX)',
+	'Feature-Sliced Design',
+	'MobX',
 	'Web Performance',
 	'Clean Code',
 	'Responsive Design',
@@ -195,6 +199,7 @@ export const SOCIAL_BUTTONS = [
 
 export const WORK_HISTORY: WorkItem[] = [
 	{
+		id: 'personal-project',
 		role: 'Frontend-разработчик',
 		company: 'Личный проект',
 		period: 'Январь 2025 – по настоящее время',
@@ -205,6 +210,7 @@ export const WORK_HISTORY: WorkItem[] = [
 		],
 	},
 	{
+		id: 'rosstat',
 		role: 'Бригадир-инструктор территориального уровня',
 		company: 'Управление Федеральной службы государственной статистики по Свердловской обл. и Курганской обл.',
 		period: 'Июль 2020 – Ноябрь 2022',
@@ -215,6 +221,7 @@ export const WORK_HISTORY: WorkItem[] = [
 		],
 	},
 	{
+		id: 'am-global',
 		role: 'Менеджер по закупкам и логистике',
 		company: 'ООО «АМ ГЛОБАЛ»',
 		period: 'Июнь 2018 – Июнь 2019',

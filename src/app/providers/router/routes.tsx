@@ -5,7 +5,7 @@ import MainPage from '@/pages/main';
 import NotFoundPage from '@/pages/not-found';
 import { OnematePage, PortfolioPage } from '@/pages/projects';
 import { Layout, ProjectPageLayout } from '@/shared/layouts';
-import Sidebar from '@/widgets/sidebar';
+import { Sidebar } from '@/widgets/sidebar';
 
 export const routes: RouteObject[] = [
 	{
@@ -27,7 +27,7 @@ export const routes: RouteObject[] = [
 	{
 		path: '/',
 		element: (
-			<Layout rightSide={<Sidebar />}>
+			<Layout hideRightOnMobile rightSide={<Sidebar />}>
 				<MainPage />
 			</Layout>
 		),

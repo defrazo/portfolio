@@ -51,7 +51,13 @@ export const DesktopGallery = ({ images, className }: DesktopGalleryProps) => {
 					style={{ transform: `translateX(-${current * 100}%)` }}
 				>
 					{images.map((img, idx) => (
-						<img key={idx} alt={`Slide ${idx}`} className="shrink-0 object-cover" src={img} />
+						<img
+							key={idx}
+							alt={`Slide ${idx}`}
+							className="shrink-0 object-cover"
+							loading="lazy"
+							src={img}
+						/>
 					))}
 				</div>
 				<Button
@@ -70,7 +76,7 @@ export const DesktopGallery = ({ images, className }: DesktopGalleryProps) => {
 				/>
 				<Button
 					centerIcon={<IconForward className="size-6" />}
-					className="absolute top-1/2 right-0 -translate-y-1/2 px-2 py-1 text-(--color-secondary) opacity-70 hover:text-(--color-accentt)"
+					className="absolute top-1/2 right-0 -translate-y-1/2 px-2 py-1 text-(--color-secondary) opacity-70 hover:text-(--color-accent)"
 					size="custom"
 					variant="mobile"
 					onClick={next}

@@ -1,18 +1,18 @@
-import { JSX } from 'react';
+import type { LucideIcon } from 'lucide-react';
 
 interface AboutBageProps {
-	icon: JSX.Element;
+	icon: LucideIcon;
 	title: string;
 	href?: string;
 	content: string | React.ReactElement;
 }
 
-export const AboutBage = ({ icon, title, href, content }: AboutBageProps) => {
+export const AboutBage = ({ icon: Icon, title, href, content }: AboutBageProps) => {
 	return (
-		<div className="group rounded-2xl border border-transparent bg-(--bg-accent) p-4 shadow-(--shadow) transition-colors hover:border-(--border-accent-op) hover:text-(--color-accent)">
+		<div className="group rounded-2xl border border-(--accent-primary-hover) bg-(--bg-accent) p-3 shadow-(--shadow) transition-[colors,border] hover:border-(--accent-primary-hover) hover:text-(--color-accent) md:border-transparent md:p-4">
 			<div className="flex items-start gap-3">
-				<div className="size-5 text-(--color-secondary) transition-colors group-hover:text-(--color-accent)">
-					{icon}
+				<div className="size-5 text-(--color-secondary) group-hover:text-(--color-accent)">
+					<Icon className="size-5" />
 				</div>
 				<div className="flex flex-col">
 					<span className="text-xs font-semibold tracking-wider text-(--color-secondary) uppercase">
@@ -20,7 +20,7 @@ export const AboutBage = ({ icon, title, href, content }: AboutBageProps) => {
 					</span>
 					{href ? (
 						<a
-							className="transition-colors hover:text-(--color-accent)"
+							className="group-hover:text-(--color-accent)"
 							href={href}
 							rel="noopener noreferrer"
 							target="_blank"
@@ -28,7 +28,7 @@ export const AboutBage = ({ icon, title, href, content }: AboutBageProps) => {
 							{content}
 						</a>
 					) : (
-						<span className="transition-colors hover:text-(--color-accent)">{content}</span>
+						<span className="group-hover:text-(--color-accent)">{content}</span>
 					)}
 				</div>
 			</div>

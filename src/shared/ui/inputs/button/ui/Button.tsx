@@ -7,6 +7,7 @@ import { Preloader } from '@/shared/ui';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	navigateTo?: string;
+	href?: string;
 	loading?: boolean;
 	active?: boolean;
 	leftIcon?: ReactNode;
@@ -15,10 +16,13 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant?: keyof typeof variants.button;
 	size?: keyof typeof sizes.button;
 	error?: boolean;
+	target?: string;
+	rel?: string;
 }
 
 const Button = ({
 	navigateTo,
+	href,
 	onClick,
 	loading = false,
 	active = false,
@@ -30,6 +34,8 @@ const Button = ({
 	size = 'md',
 	error = false,
 	className,
+	target,
+	rel,
 	...props
 }: ButtonProps) => {
 	const navigate = useNavigate();
@@ -46,6 +52,22 @@ const Button = ({
 
 		onClick?.(e);
 	};
+
+	if (href) {
+		return (
+			<a className={cn(styles, className, 'group')} href={href} rel={rel} target={target}>
+				{loading ? (
+					<Preloader className="size-6 border-3 border-t-(--border-alt)" />
+				) : (
+					<>
+						{leftIcon && <span className="mr-2">{leftIcon}</span>}
+						{centerIcon ? <span>{centerIcon}</span> : children}
+						{rightIcon && <span className="ml-2">{rightIcon}</span>}
+					</>
+				)}
+			</a>
+		);
+	}
 
 	return (
 		<button
