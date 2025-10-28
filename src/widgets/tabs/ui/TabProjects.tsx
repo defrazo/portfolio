@@ -15,8 +15,8 @@ export const TabProjects = () => {
 		<>
 			<SectionTitle title="Проекты" />
 			<div className="flex flex-col gap-4">
-				{PROJECTS.map((project, idx) => (
-					<React.Fragment key={project.id}>
+				{PROJECTS.map(({ id, title, date, description, img, git, link }, idx) => (
+					<React.Fragment key={id}>
 						{idx > 0 && <Divider />}
 						<div
 							className={cn(
@@ -25,51 +25,56 @@ export const TabProjects = () => {
 							)}
 						>
 							<div className="flex-1 overflow-hidden rounded-4xl border border-solid border-(--border-color) bg-(--bg-primary)">
-								<Link className="bg-black" to={`/project/${project.id}`} variant="custom">
+								<Link className="bg-black" to={`/project/${id}`} variant="custom">
 									<img
-										alt={`Иллюстрация: главный экран ${project.title}`}
-										className="scale-135 transition-transform duration-500 hover:scale-110"
+										alt={`Иллюстрация: главный экран ${title}`}
+										className="scale-[1.35] transition-transform duration-500 hover:scale-110"
+										decoding="async"
 										height={277}
 										loading="lazy"
-										src={project.img}
+										src={img}
 										width={490}
 									/>
 								</Link>
 							</div>
-							<div className="flex flex-1 flex-col justify-between gap-4">
-								<div className="border-b border-solid border-(--accent-secondary) pb-1.5">
-									<h2 className="text-2xl font-bold md:text-3xl">
-										{project.title}
+							<div className="flex flex-1 flex-col justify-between gap-3 md:gap-4">
+								<div className="border-solid border-(--accent-secondary) md:border-b md:pb-1.5">
+									<h2 className="text-2xl leading-tight font-bold md:text-3xl md:leading-normal">
+										{title}
 										<span className="ml-1.5 align-super text-xs text-(--color-disabled) md:text-sm">
-											{project.date}
+											{date}
 										</span>
 									</h2>
 								</div>
-								<p className="text-justify text-sm md:text-base">{project.description}</p>
+								<p className="text-justify text-sm md:text-base">{description}</p>
 								<div className="flex justify-between gap-2">
 									<Link
 										className="flex-1 px-3 py-2 text-xs md:px-4 md:text-sm"
 										rightIcon={device !== 'mobile' && <SquareMousePointer className="size-5" />}
 										size="custom"
-										to={`/project/${project.id}`}
+										to={`/project/${id}`}
 										variant="accent"
 									>
 										Подробнее
 									</Link>
 									<Button
 										className="shrink-0 px-3 py-2 text-xs md:px-4 md:text-sm"
-										href={project.link}
+										href={link}
+										rel="noopener noreferrer"
 										rightIcon={device !== 'mobile' && <ExternalLink className="size-5" />}
 										size="custom"
+										target="_blank"
 										variant="outline"
 									>
 										Live Demo
 									</Button>
 									<Button
 										className="shrink-0 px-3 py-2 text-xs md:px-4 md:text-sm"
-										href={project.git}
+										href={git}
+										rel="noopener noreferrer"
 										rightIcon={device !== 'mobile' && <ExternalLink className="size-5" />}
 										size="custom"
+										target="_blank"
 										variant="outline"
 									>
 										GitHub

@@ -13,7 +13,7 @@ interface DesktopGalleryProps {
 export const DesktopGallery = ({ images, className }: DesktopGalleryProps) => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const [current, setCurrent] = useState<number>(0);
-	const [autoscroll, setAutoscroll] = useState<boolean>(true);
+	const [autoscroll, setAutoscroll] = useState<boolean>(false);
 
 	const startX = useRef<number | null>(null);
 
@@ -29,7 +29,7 @@ export const DesktopGallery = ({ images, className }: DesktopGalleryProps) => {
 
 	const next = () => setCurrent((prev) => (prev + 1) % images.length);
 	const prev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
-	const toogleScroll = () => setAutoscroll((prev) => !prev);
+	const toggleScroll = () => setAutoscroll((prev) => !prev);
 
 	useEffect(() => {
 		if (autoscroll) {
@@ -55,6 +55,7 @@ export const DesktopGallery = ({ images, className }: DesktopGalleryProps) => {
 							key={idx}
 							alt={`Slide ${idx}`}
 							className="shrink-0 object-cover"
+							decoding="async"
 							loading="lazy"
 							src={img}
 						/>
@@ -62,15 +63,17 @@ export const DesktopGallery = ({ images, className }: DesktopGalleryProps) => {
 				</div>
 				<Button
 					centerIcon={autoscroll ? <Pause className="size-6" /> : <Play className="size-6" />}
-					className="absolute top-6 right-1 -translate-y-1/2 px-2 py-1 text-(--color-secondary) opacity-70 hover:text-(--color-accent)"
+					className="absolute top-6 right-1 hidden -translate-y-1/2 px-2 py-1 text-(--color-secondary) opacity-70 hover:text-(--color-accent) md:block"
 					size="custom"
+					title="Включить автопрокрутку"
 					variant="mobile"
-					onClick={toogleScroll}
+					onClick={toggleScroll}
 				/>
 				<Button
 					centerIcon={<IconBack className="size-6" />}
 					className="absolute top-1/2 left-0 -translate-y-1/2 px-2 py-1 text-(--color-secondary) opacity-70 hover:text-(--color-accent)"
 					size="custom"
+					title="Предыдущий слайд"
 					variant="mobile"
 					onClick={prev}
 				/>
@@ -78,6 +81,7 @@ export const DesktopGallery = ({ images, className }: DesktopGalleryProps) => {
 					centerIcon={<IconForward className="size-6" />}
 					className="absolute top-1/2 right-0 -translate-y-1/2 px-2 py-1 text-(--color-secondary) opacity-70 hover:text-(--color-accent)"
 					size="custom"
+					title="Следующий слайд"
 					variant="mobile"
 					onClick={next}
 				/>

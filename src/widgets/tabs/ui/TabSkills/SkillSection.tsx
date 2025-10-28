@@ -1,5 +1,5 @@
 import type { Skill } from '../../model';
-import { SkillBage } from '.';
+import { SkillBadge } from '.';
 
 interface SkillSectionProps {
 	title: string;
@@ -16,7 +16,7 @@ export const SkillSection = ({ title, skills }: SkillSectionProps) => {
 			</div>
 			<div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4">
 				{skills.map(({ label, color, icon, value }) => (
-					<SkillBage key={label} color={color} icon={icon} label={label} value={value} />
+					<SkillBadge key={label} color={color} icon={icon} label={label} value={value} />
 				))}
 			</div>
 		</div>

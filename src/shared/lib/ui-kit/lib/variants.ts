@@ -20,8 +20,8 @@ export const variants: Record<Component, Record<string, string>> = {
 			'hover:border-(--accent-primary-hover) hover:text-(--color-accent) focus-visible:border-(--accent-primary-hover)'
 		),
 		accent: cn(
-			'rounded-4xl border border-solid ring-inset',
-			'border-(--border-light) bg-(--accent-primary) text-(--accent-primary-text) ring-(--accent-primary-hover)',
+			'rounded-4xl ring-inset',
+			'bg-(--accent-primary) text-(--accent-primary-text) ring-(--accent-primary-hover)',
 			'hover:bg-(--accent-primary-hover) focus-visible:ring-1'
 		),
 		rounded: cn(

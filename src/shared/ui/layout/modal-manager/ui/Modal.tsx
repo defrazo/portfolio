@@ -17,7 +17,7 @@ export const Modal = observer(({ children, onBack, onClose }: ModalProps) => {
 
 	return ReactDOM.createPortal(
 		<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-			<div className="core-base core-card core-border max-w-fit flex-col shadow-2xl">
+			<div className="core-border max-w-fit flex-col rounded-4xl bg-(--bg-secondary) p-12 shadow-2xl">
 				<div className="top-4 flex h-4 w-full justify-between">
 					{onBack && <IconBack className="w-5 cursor-pointer hover:text-(--accent-hover)" onClick={onBack} />}
 					{onClose && (

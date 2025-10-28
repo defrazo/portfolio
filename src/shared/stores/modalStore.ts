@@ -12,7 +12,7 @@ export class ModalStore {
 
 	setModal(
 		content: ReactNode,
-		type: ModalType = 'auto',
+		type: ModalType = 'modal',
 		options?: { back?: () => void; position?: { top: number; left: number }; onClose?: () => void }
 	): void {
 		this.modal = {

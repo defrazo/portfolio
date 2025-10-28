@@ -1,8 +1,12 @@
-import { Button } from '@/shared/ui';
-
-import { ABOUT_BAGES, KEY_AREAS } from '../../model';
+import { ABOUT_BADGES, KEY_AREAS } from '../../model';
 import { SectionTitle } from '..';
-import { AboutBage, Education, Experience } from '.';
+import { AboutBadge, Education, Experience } from '.';
+
+const Tag = ({ children }: { children: React.ReactNode }) => (
+	<span className="rounded-4xl border border-solid border-transparent bg-(--bg-secondary) px-2.5 py-1 text-xs hover:border-(--accent-primary-hover) hover:text-(--color-accent) md:text-sm">
+		{children}
+	</span>
+);
 
 export const TabAbout = () => {
 	return (
@@ -10,7 +14,7 @@ export const TabAbout = () => {
 			<SectionTitle title="Обо мне" />
 			<div className="flex flex-col gap-4">
 				<div className="mx-auto flex flex-col items-center md:gap-4">
-					<h2 className="text-2xl font-bold md:text-5xl md:leading-5">Евгений Летунов</h2>
+					<h2 className="text-2xl leading-4 font-bold md:text-5xl md:leading-tight">Евгений Летунов</h2>
 					<div className="flex items-center gap-3">
 						<div className="h-px w-10 bg-linear-to-l from-(--color-accent) to-transparent md:w-16" />
 						<h3 className="my-2 font-light text-nowrap text-(--color-secondary) md:text-2xl">
@@ -27,17 +31,15 @@ export const TabAbout = () => {
 					</p>
 				</div>
 				<div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4">
-					{ABOUT_BAGES.map(({ icon, title, href, content }) => (
-						<AboutBage key={title} content={content} href={href} icon={icon} title={title} />
+					{ABOUT_BADGES.map(({ icon, title, href, content }) => (
+						<AboutBadge key={title} content={content} href={href} icon={icon} title={title} />
 					))}
 				</div>
 				<div className="flex flex-col gap-2">
 					<h4 className="text-sm tracking-wider text-(--color-secondary) uppercase">Ключевые области</h4>
 					<div className="flex flex-wrap gap-2">
 						{KEY_AREAS.map((tag) => (
-							<Button key={tag} className="cursor-default text-xs md:text-sm" size="sm" variant="outline">
-								{tag}
-							</Button>
+							<Tag key={tag}>{tag}</Tag>
 						))}
 					</div>
 				</div>

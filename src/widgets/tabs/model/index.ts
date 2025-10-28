@@ -1,6 +1,6 @@
 export {
-	ABOUT_BAGES,
-	CONTACTS_BAGES,
+	ABOUT_BADGES,
+	CONTACTS_BADGES,
 	EDUCATION_HISTORY,
 	KEY_AREAS,
 	MAP_LINKS,
@@ -10,4 +10,4 @@ export {
 	WORK_HISTORY,
 } from './constants';
 export { TabsStore } from './tabsStore';
-export type { AboutBage, ContactsBage, Skill, SkillGroup, Tab, TabId, WorkItem } from './types';
+export type { AboutBadge, ContactsBadge, Skill, SkillGroup, Tab, TabId, WorkItem } from './types';

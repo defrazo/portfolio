@@ -1,35 +1,4 @@
 @layer utilities {
-	/* Стили для печати */
-	.print-container {
-		@apply print:mx-0 print:my-8 print:w-full print:max-w-none print:gap-2 print:p-0 print:font-serif print:text-black;
-	}
-
-	.print-header {
-		@apply print:gap-0 print:text-2xl;
-	}
-
-	.print-content {
-		@apply print:gap-0 print:text-base;
-	}
-
-	.print-content h2 {
-		@apply print:text-base;
-	}
-
-	/* Маркер точка */
-	.list-default {
-		@apply list-none;
-	}
-
-	.list-default li {
-		@apply relative pl-4;
-	}
-
-	.list-default li::before {
-		content: '•';
-		@apply absolute left-0;
-	}
-
 	/* Маркер тире */
 	.list-dash {
 		@apply list-none;

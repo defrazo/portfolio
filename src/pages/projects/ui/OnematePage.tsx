@@ -28,12 +28,14 @@ export const OnematePage = () => {
 				/>
 				<div className="flex flex-col justify-between gap-4 md:flex-row">
 					<div className="flex flex-1 flex-col gap-4">
-						<h2 className="text-2xl font-bold md:text-3xl">Ключевые возможности</h2>
+						<h2 className="text-2xl leading-5 font-bold md:text-3xl md:leading-normal">
+							Ключевые возможности
+						</h2>
 						<div className="grid flex-1 grid-cols-1 gap-4 md:grid-cols-2">
 							{FEATURES.map(({ title, icon: Icon, lead, bullets }) => (
 								<div
 									key={title}
-									className="group flex flex-col justify-between rounded-2xl border border-solid border-(--accent-primary-hover) bg-(--bg-accent) p-3 shadow-(--shadow) transition-colors hover:border-(--border-accent-op) md:border-transparent md:p-4"
+									className="group flex flex-col justify-between rounded-2xl border border-solid border-(--accent-primary-hover-op) bg-(--bg-accent) p-3 shadow-(--shadow) transition-colors hover:border-(--accent-primary-hover-op) md:border-transparent md:p-4"
 								>
 									<div className="flex flex-col gap-2">
 										<div className="flex items-center gap-2">

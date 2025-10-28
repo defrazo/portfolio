@@ -1,5 +1,4 @@
-import Construction from './construction.webp';
 import Logo from './logo.png';
-import NotFound from './notfound.webp';
+import NotFound from './notfound.svg?react';
 
-export { Construction, Logo, NotFound };
+export { Logo, NotFound };

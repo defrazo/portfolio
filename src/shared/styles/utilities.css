@@ -1,26 +1,6 @@
 @layer utilities {
-	.core-card {
-		@apply rounded-4xl p-12;
-	}
-
-	.core-base {
-		@apply bg-(--bg-secondary) text-(--color-primary);
-	}
-
-	.core-elements {
-		@apply border border-solid border-(--border-light) bg-(--bg-tertiary);
-	}
-
 	.core-border {
-		@apply rounded-2xl border border-solid border-(--border-color);
-	}
-
-	.core-border-ac {
-		@apply rounded-2xl border border-solid border-(--border-accent-op);
-	}
-
-	.core-header {
-		@apply text-center text-xl leading-tight font-bold select-none md:mr-auto md:ml-0 md:text-2xl md:leading-normal;
+		@apply rounded-2xl border border-(--border-color);
 	}
 
 	/* Отключение touch эффекта на элементе */
@@ -28,12 +8,5 @@
 		@apply select-none;
 		-webkit-touch-callout: none;
 		-webkit-tap-highlight-color: transparent;
-	}
-
-	.loader {
-		@apply aspect-square w-16 animate-spin rounded-full bg-(--accent-default);
-		mask-image: radial-gradient(circle closest-side at 50% 40%, transparent 94%, black);
-		-webkit-mask-image: radial-gradient(circle closest-side at 50% 40%, transparent 94%, black);
-		transform-origin: 50% 40%;
 	}
 }

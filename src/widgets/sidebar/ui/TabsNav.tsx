@@ -5,7 +5,7 @@ import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui';
 import type { TabId } from '@/widgets/tabs';
 
-const tabs = [
+const TABS: ReadonlyArray<{ id: TabId; title: string }> = [
 	{ id: 'home', title: 'Главная' },
 	{ id: 'about', title: 'Обо мне' },
 	{ id: 'skills', title: 'Навыки' },
@@ -23,26 +23,26 @@ export const TabsNav = ({ onTabClick }: TabsNavProps) => {
 
 	const handleClick = (tab: TabId) => {
 		tabsStore.setTab(tab);
-		setSearchParams({ tab });
+		setSearchParams({ tab }, { replace: true });
 		onTabClick?.();
 	};
 
 	return (
 		<>
 			<div className="flex flex-col gap-3">
-				{tabs.map((item) => {
+				{TABS.map(({ id, title }) => {
 					return (
 						<Button
-							key={item.id}
+							key={id}
 							className={cn(
-								'rounded-xl border border-solid border-transparent bg-(--bg-secondary) transition-all duration-300 ease-in-out hover:translate-x-1 hover:border-(--border-accent-op) hover:text-(--color-accent) hover:shadow-md md:rounded-4xl',
-								tabsStore.tab === item.id &&
-									'bg-sky-600 text-(--text-accent) hover:text-(--text-accent)'
+								'rounded-xl border border-solid border-transparent bg-(--bg-secondary) transition-all duration-300 ease-in-out hover:translate-x-1 hover:border-(--accent-primary-hover) hover:text-(--color-accent) hover:shadow-md md:rounded-4xl',
+								tabsStore.tab === id &&
+									'bg-(--accent-primary) text-(--text-accent) hover:text-(--text-accent)'
 							)}
 							variant="custom"
-							onClick={() => handleClick(item.id as TabId)}
+							onClick={() => handleClick(id)}
 						>
-							{item.title}
+							{title}
 						</Button>
 					);
 				})}

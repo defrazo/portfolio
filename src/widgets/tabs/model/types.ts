@@ -1,26 +1,19 @@
-import { FC, JSX, SVGProps } from 'react';
+import { type FC, JSX, type SVGProps } from 'react';
 import type { LucideIcon } from 'lucide-react';
 
 export type TabId = 'home' | 'about' | 'skills' | 'projects' | 'contacts';
+
 export type Tab = {
 	id: TabId;
 	title: string;
 };
 
-export type AboutBage = {
+export type AboutBadge = {
 	id: string;
 	title: string;
 	content: string | JSX.Element;
 	href?: string;
 	icon: LucideIcon;
-};
-
-export type WorkItem = {
-	id: string;
-	role: string;
-	company: string;
-	period: string;
-	bullets: string[];
 };
 
 export type Skill = {
@@ -36,7 +29,15 @@ export type SkillGroup = {
 	skills: Skill[];
 };
 
-export type ContactsBage = {
+export type WorkItem = {
+	id: string;
+	role: string;
+	company: string;
+	period: string;
+	bullets: string[];
+};
+
+export type ContactsBadge = {
 	id: string;
 	title: string;
 	content: string;

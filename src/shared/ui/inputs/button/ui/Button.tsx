@@ -57,7 +57,7 @@ const Button = ({
 		return (
 			<a className={cn(styles, className, 'group')} href={href} rel={rel} target={target}>
 				{loading ? (
-					<Preloader className="size-6 border-3 border-t-(--border-alt)" />
+					<Preloader className="size-6 border-3 border-t-(--border-color)" />
 				) : (
 					<>
 						{leftIcon && <span className="mr-2">{leftIcon}</span>}
@@ -78,7 +78,7 @@ const Button = ({
 			{...props}
 		>
 			{loading ? (
-				<Preloader className="size-6 border-3 border-t-(--border-alt)" />
+				<Preloader className="size-6 border-3 border-t-(--border-color)" />
 			) : (
 				<>
 					{leftIcon && <span className="mr-2">{leftIcon}</span>}

@@ -27,11 +27,11 @@ import {
 } from '@/shared/assets/icons';
 
 import { getSkills } from '../lib';
-import type { AboutBage, ContactsBage, Skill, SkillGroup, WorkItem } from '.';
+import type { AboutBadge, ContactsBadge, Skill, SkillGroup, WorkItem } from '.';
 
 const COORD = { lat: 56.8389, lon: 60.6057 };
 
-export const ABOUT_BAGES: AboutBage[] = [
+export const ABOUT_BADGES: AboutBadge[] = [
 	{
 		id: 'email',
 		title: 'Email',
@@ -70,7 +70,7 @@ export const ABOUT_BAGES: AboutBage[] = [
 	},
 ];
 
-export const CONTACTS_BAGES: ContactsBage[] = [
+export const CONTACTS_BADGES: ContactsBadge[] = [
 	{
 		id: 'email',
 		title: 'Email',

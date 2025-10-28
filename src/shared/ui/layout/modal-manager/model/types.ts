@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-export type ModalType = 'modal' | 'sheet' | 'dropdown' | 'auto' | 'none';
+export type ModalType = 'modal' | 'none';
 
 export type ModalConfig = {
 	content: ReactNode;

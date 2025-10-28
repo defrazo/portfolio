@@ -42,6 +42,7 @@ export const MobileGallery = ({ images, className }: MobileGalleryProps) => {
 							key={idx}
 							alt={`Slide ${idx}`}
 							className="core-border w-full object-contain"
+							decoding="async"
 							loading="lazy"
 							src={img}
 						/>

@@ -8,7 +8,7 @@ const NotFoundPage = () => {
 	return (
 		<div className="flex flex-1 flex-col justify-evenly select-none lg:flex-row lg:justify-between">
 			<div className="flex flex-col items-center justify-center gap-4 xl:flex-1 xl:gap-8">
-				<h1 className="text-center text-2xl leading-tight font-medium md:text-6xl">
+				<h1 className="text-center text-2xl leading-tight font-medium md:text-5xl">
 					Странно... <br /> такой страницы нет
 				</h1>
 				<div className="leading-relaxed md:w-2xl md:text-xl">
@@ -19,7 +19,7 @@ const NotFoundPage = () => {
 					<ul className="list-dash">
 						<li className="flex items-center">
 							<Link
-								className="text-(--accent-default) hover:text-(--accent-hover) hover:underline"
+								className="text-(--accent-primary) hover:text-(--accent-primary-hover) hover:underline"
 								size="custom"
 								to="/"
 								variant="mobile"
@@ -33,12 +33,7 @@ const NotFoundPage = () => {
 				</div>
 			</div>
 			<div className="flex items-center justify-center md:flex-1">
-				<img
-					alt="Иллюстрация: страница не найдена"
-					className="no-touch-callout max-h-[45vh] xl:max-h-[65vh]"
-					src={NotFound}
-					onContextMenu={(e) => e.preventDefault()}
-				/>
+				<NotFound className="text-black md:pt-20" />
 			</div>
 		</div>
 	);

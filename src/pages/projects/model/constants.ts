@@ -1,6 +1,6 @@
 import { LayoutGrid, PanelsTopLeft, ShieldCheck, UserCog } from 'lucide-react';
 
-import { Feature } from '.';
+import type { Feature } from '.';
 
 export const FEATURES: Feature[] = [
 	{
