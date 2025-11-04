@@ -1,4 +1,5 @@
 // import { Download, Printer } from 'lucide-react';
+
 import { Button } from '@/shared/ui';
 
 import { SOCIAL_BUTTONS } from '../model';
@@ -7,7 +8,7 @@ const SocialButtons = SOCIAL_BUTTONS.map(({ id, icon: Icon }) => (
 	<Button
 		key={id}
 		centerIcon={<Icon className="size-5 md:size-7" />}
-		className="rounded-full p-4"
+		className="rounded-full p-4 shadow-(--shadow)"
 		variant="outline"
 	/>
 ));
@@ -24,10 +25,10 @@ export const TabHome = () => {
 				<div className="flex gap-4 md:gap-6">{SocialButtons}</div>
 			</div>
 			{/* <div className="flex justify-between">
-				<Button leftIcon={<Download className="size-8" />} variant="outline">
+				<Button className="shadow-(--shadow)" leftIcon={<Download className="size-8" />} variant="outline">
 					Скачать резюме
 				</Button>
-				<Button leftIcon={<Printer className="size-8" />} variant="outline">
+				<Button className="shadow-(--shadow)" leftIcon={<Printer className="size-8" />} variant="outline">
 					Распечатать резюме
 				</Button>
 			</div> */}

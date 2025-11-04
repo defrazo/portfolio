@@ -2,6 +2,8 @@ import { observer } from 'mobx-react-lite';
 
 import { useStore } from '@/app/providers';
 
+import { useEscapeClose } from '../model';
+
 interface ImageViewerProps {
 	src: string;
 	alt?: string;
@@ -9,6 +11,7 @@ interface ImageViewerProps {
 
 export const ImageViewer = observer(({ src, alt }: ImageViewerProps) => {
 	const { modalStore } = useStore();
+	useEscapeClose(() => modalStore.closeModal());
 
 	return (
 		<div

@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Евгений Летунов
+N:Летунов;Евгений;;;
+TITLE:Frontend-разработчик
+EMAIL;TYPE=WORK:defrazo@yandex.ru
+URL:https://letunoff.ru
+NOTE:GitHub: https://github.com/defrazo
+ADR;TYPE=WORK:;;Екатеринбург;Свердловская область;Россия;;
+PHOTO;VALUE=URI:https://letunoff.ru/avatar.webp
+END:VCARD

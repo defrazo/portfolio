@@ -52,7 +52,7 @@ export const ProjectMain = ({
 				<div className="mx-auto flex items-center gap-3">
 					<div className="h-px w-10 bg-linear-to-l from-(--color-accent) to-transparent md:w-16" />
 					<Button
-						className="text-sm leading-tight font-semibold md:text-base md:leading-normal"
+						className="text-sm leading-tight font-semibold shadow-(--shadow) md:text-base md:leading-normal"
 						href={demoLink}
 						rel="noopener noreferrer"
 						rightIcon={device !== 'mobile' && <ExternalLink className="size-5" />}
@@ -72,7 +72,7 @@ export const ProjectMain = ({
 						return (
 							<Button
 								key={name}
-								className="group min-w-36 border border-solid border-(--accent-primary-hover-op) bg-(--bg-accent) px-4 py-2 text-sm transition-all duration-700 hover:-translate-y-4 hover:border-(--accent-primary-hover-op) hover:shadow-lg md:border-transparent md:px-6 md:py-3 md:text-base"
+								className="group min-w-36 border border-solid border-(--accent-primary-hover-op) bg-(--bg-accent) px-4 py-2 text-sm shadow-(--shadow) transition-all duration-700 hover:-translate-y-4 hover:border-(--accent-primary-hover-op) hover:shadow-lg md:border-transparent md:px-6 md:py-3 md:text-base"
 								leftIcon={
 									<Icon className="size-6 transition-transform duration-700 group-hover:scale-125" />
 								}

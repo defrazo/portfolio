@@ -8,10 +8,10 @@ const NotFoundPage = () => {
 	return (
 		<div className="flex flex-1 flex-col justify-evenly select-none lg:flex-row lg:justify-between">
 			<div className="flex flex-col items-center justify-center gap-4 xl:flex-1 xl:gap-8">
-				<h1 className="text-center text-2xl leading-tight font-medium md:text-5xl">
+				<h1 className="text-center text-2xl leading-[1.1] font-medium md:text-5xl">
 					Странно... <br /> такой страницы нет
 				</h1>
-				<div className="leading-relaxed md:w-2xl md:text-xl">
+				<div className="leading-relaxed md:w-xl md:text-lg">
 					<p>
 						Страница, на которую вы попали, не существует. Возможно, она была удалена или перемещена. Вы
 						можете попробовать:

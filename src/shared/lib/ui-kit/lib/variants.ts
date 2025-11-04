@@ -21,7 +21,7 @@ export const variants: Record<Component, Record<string, string>> = {
 		),
 		accent: cn(
 			'rounded-4xl ring-inset',
-			'bg-(--accent-primary) text-(--accent-primary-text) ring-(--accent-primary-hover)',
+			'bg-(--accent-primary) text-(--accent-secondary-text) ring-(--accent-primary-hover)',
 			'hover:bg-(--accent-primary-hover) focus-visible:ring-1'
 		),
 		rounded: cn(

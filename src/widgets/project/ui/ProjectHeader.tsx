@@ -25,7 +25,7 @@ export const ProjectHeader = ({ linkDemo, linkGit }: ProjectHeaderProps) => {
 				</Link>
 				<div className="flex gap-4">
 					<Button
-						className="text-sm leading-tight md:text-base md:leading-normal"
+						className="text-sm leading-tight shadow-(--shadow) md:text-base md:leading-normal"
 						href={linkDemo}
 						leftIcon={device !== 'mobile' && <ExternalLink className="size-4" />}
 						rel="noopener noreferrer"
@@ -35,7 +35,7 @@ export const ProjectHeader = ({ linkDemo, linkGit }: ProjectHeaderProps) => {
 						Live Demo
 					</Button>
 					<Button
-						className="text-sm leading-tight md:text-base md:leading-normal"
+						className="text-sm leading-tight shadow-(--shadow) md:text-base md:leading-normal"
 						href={linkGit}
 						leftIcon={device !== 'mobile' && <Github className="size-4" />}
 						rel="noopener noreferrer"

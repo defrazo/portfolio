@@ -14,7 +14,7 @@ export const MapSection = () => {
 					return (
 						<Button
 							key={id}
-							className="pointer-events-auto inline-flex items-center rounded-xl bg-[#191820b3]"
+							className="pointer-events-auto inline-flex items-center rounded-xl bg-(--bg-global-op) hover:text-(--accent-secondary-text)"
 							href={link}
 							rel="noreferrer"
 							rightIcon={<ExternalLink className="size-4" />}
@@ -26,7 +26,7 @@ export const MapSection = () => {
 					);
 				})}
 			</div>
-			<div className="relative w-full overflow-hidden rounded-2xl md:h-96">
+			<div className="relative w-full overflow-hidden rounded-2xl border border-(--border-light) shadow-(--shadow) md:h-96">
 				<a href={MAP_LINKS[1].link} rel="noopener noreferrer" target="_blank">
 					<img
 						alt="Пионерский район"
@@ -48,7 +48,7 @@ export const MapSection = () => {
 				</div>
 				<div className="flex justify-between gap-2">
 					<Button
-						className="w-full rounded-xl px-0.5 py-1.5 text-xs md:w-fit md:px-3 md:py-1.5 md:text-sm"
+						className="w-full rounded-xl px-0.5 py-1.5 text-xs shadow-(--shadow) md:w-fit md:px-3 md:py-1.5 md:text-sm"
 						href={USER_PROFILE.contacts.telegram.href}
 						size="custom"
 						variant="accent"
@@ -56,7 +56,7 @@ export const MapSection = () => {
 						Связаться в Telegram
 					</Button>
 					<Button
-						className="w-full rounded-xl px-0.5 py-1.5 text-xs md:w-fit md:px-3 md:py-1.5 md:text-sm"
+						className="w-full rounded-xl px-0.5 py-1.5 text-xs shadow-(--shadow) md:w-fit md:px-3 md:py-1.5 md:text-sm"
 						href={USER_PROFILE.contacts.email.href}
 						size="custom"
 						variant="outline"

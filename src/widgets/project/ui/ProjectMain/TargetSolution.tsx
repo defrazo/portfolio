@@ -28,10 +28,10 @@ export const TargetSolution = ({ target, solution }: TargetSolutionProps) => {
 			{INFO_BLOCKS.map(({ label, value, Icon, bg, color }) => (
 				<div
 					key={label}
-					className="group rounded-2xl border border-(--accent-primary-hover-op) bg-(--bg-accent) p-4 shadow-(--shadow) transition-colors hover:border-(--accent-primary-hover-op) md:border-transparent"
+					className="group flex-1 rounded-2xl border border-(--accent-primary-hover-op) bg-(--bg-accent) p-4 shadow-(--shadow) transition-colors hover:border-(--accent-primary-hover-op) md:border-transparent"
 				>
 					<div className="mb-3 flex items-center gap-3">
-						<div className={`flex size-8 items-center justify-center rounded-xl ${bg}`}>
+						<div className={`flex size-8 items-center justify-center rounded-xl shadow-(--shadow) ${bg}`}>
 							<Icon
 								className={`size-4 transition-transform duration-500 group-hover:scale-125 ${color}`}
 							/>

@@ -1,5 +1,4 @@
 import { useStore } from '@/app/providers';
-import { Avatar } from '@/shared/content';
 import { ImageViewer } from '@/shared/ui';
 
 export const UserCard = () => {
@@ -7,16 +6,18 @@ export const UserCard = () => {
 
 	return (
 		<div className="flex flex-col gap-3">
-			<div className="group relative cursor-pointer p-2">
-				<div className="absolute inset-0 rounded-full bg-linear-to-r from-(--accent-primary-op) to-(--accent-primary-hover-op) opacity-0 blur-md transition-all duration-500 group-hover:opacity-100 group-hover:blur-md" />
-				<img
-					alt="Фотография"
-					className="mx-auto max-h-[25svh] rounded-full border-2 border-solid border-(--border-color) shadow-lg transition-transform duration-500 group-hover:scale-[1.02] md:max-h-full"
-					decoding="async"
-					loading="lazy"
-					src={Avatar}
-					onClick={() => modalStore.setModal(<ImageViewer src={Avatar} />)}
-				/>
+			<div className="group relative mx-auto inline-flex size-52 cursor-pointer items-center justify-center">
+				<div className="pointer-events-none absolute -inset-2 rounded-full bg-linear-to-r from-(--accent-primary-op) to-(--accent-primary-hover-op) opacity-0 blur-md transition-all duration-500 group-hover:opacity-100" />
+				<div className="relative z-10 size-full overflow-hidden rounded-full border-2 border-solid border-(--border-color) shadow-lg">
+					<img
+						alt="Фотография"
+						className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+						decoding="async"
+						loading="lazy"
+						src="/avatar.webp"
+						onClick={() => modalStore.setModal(<ImageViewer src="/avatar.webp" />)}
+					/>
+				</div>
 			</div>
 			<div className="flex cursor-default flex-col items-center justify-center leading-4">
 				<span className="text-2xl font-bold">Евгений Летунов</span>

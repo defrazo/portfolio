@@ -28,9 +28,7 @@ export const OnematePage = () => {
 				/>
 				<div className="flex flex-col justify-between gap-4 md:flex-row">
 					<div className="flex flex-1 flex-col gap-4">
-						<h2 className="text-2xl leading-5 font-bold md:text-3xl md:leading-normal">
-							Ключевые возможности
-						</h2>
+						<h2 className="text-2xl font-bold md:text-3xl">Ключевые возможности</h2>
 						<div className="grid flex-1 grid-cols-1 gap-4 md:grid-cols-2">
 							{FEATURES.map(({ title, icon: Icon, lead, bullets }) => (
 								<div
@@ -39,7 +37,7 @@ export const OnematePage = () => {
 								>
 									<div className="flex flex-col gap-2">
 										<div className="flex items-center gap-2">
-											<div className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-(--bg-secondary)">
+											<div className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-(--bg-secondary) shadow-(--shadow)">
 												<Icon className="size-4 text-(--accent-secondary) transition-transform duration-500 group-hover:scale-125" />
 											</div>
 											<h4 className="w-full text-lg leading-4 font-semibold text-(--color-primary) group-hover:text-(--color-accent) md:text-xl">
@@ -53,7 +51,7 @@ export const OnematePage = () => {
 												{bullets.map((bullet, idx) => (
 													<li
 														key={idx}
-														className="flex gap-2 text-sm leading-relaxed text-(--color-secondary) hover:text-(--color-primary) md:text-base"
+														className="flex items-center gap-2 text-sm leading-relaxed text-(--color-secondary) hover:text-(--color-primary) md:text-base"
 													>
 														<CheckCircle2 className="mt-0.5 size-4 shrink-0 text-(--accent-secondary)" />
 														{bullet}

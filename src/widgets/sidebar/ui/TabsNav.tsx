@@ -1,4 +1,4 @@
-import { useSearchParams } from 'react-router-dom';
+import { observer } from 'mobx-react-lite';
 
 import { useStore } from '@/app/providers';
 import { cn } from '@/shared/lib/utils';
@@ -17,13 +17,11 @@ interface TabsNavProps {
 	onTabClick?: () => void;
 }
 
-export const TabsNav = ({ onTabClick }: TabsNavProps) => {
+export const TabsNav = observer(({ onTabClick }: TabsNavProps) => {
 	const { tabsStore } = useStore();
-	const [_, setSearchParams] = useSearchParams();
 
 	const handleClick = (tab: TabId) => {
 		tabsStore.setTab(tab);
-		setSearchParams({ tab }, { replace: true });
 		onTabClick?.();
 	};
 
@@ -35,9 +33,9 @@ export const TabsNav = ({ onTabClick }: TabsNavProps) => {
 						<Button
 							key={id}
 							className={cn(
-								'rounded-xl border border-solid border-transparent bg-(--bg-secondary) transition-all duration-300 ease-in-out hover:translate-x-1 hover:border-(--accent-primary-hover) hover:text-(--color-accent) hover:shadow-md md:rounded-4xl',
+								'rounded-xl border border-solid border-transparent bg-(--bg-secondary) shadow-(--shadow) transition-all duration-300 ease-in-out hover:translate-x-1 hover:border-(--accent-primary-hover) hover:text-(--color-accent) hover:shadow-md md:rounded-4xl',
 								tabsStore.tab === id &&
-									'bg-(--accent-primary) text-(--text-accent) hover:text-(--text-accent)'
+									'bg-(--accent-primary) text-(--accent-secondary-text) hover:text-(--accent-secondary-text)'
 							)}
 							variant="custom"
 							onClick={() => handleClick(id)}
@@ -49,4 +47,4 @@ export const TabsNav = ({ onTabClick }: TabsNavProps) => {
 			</div>
 		</>
 	);
-};
+});

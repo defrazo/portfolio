@@ -10,7 +10,7 @@ interface SkillBadgeProps {
 export const SkillBadge = ({ label, icon: Icon, value, color }: SkillBadgeProps) => {
 	return (
 		<div className="grid grid-cols-[auto_1fr] items-center gap-x-2 rounded-2xl bg-(--bg-secondary) p-3 shadow-(--shadow) transition-transform duration-500 select-none hover:z-10 hover:scale-110">
-			<div className="row-span-2 flex size-12 items-center justify-center rounded-xl bg-(--bg-primary)">
+			<div className="row-span-2 flex size-12 items-center justify-center rounded-xl border border-(--border-light) bg-(--bg-accent)">
 				<Icon className="aspect-square size-6" />
 			</div>
 			<h2 className="font-bold">{label}</h2>

@@ -19,7 +19,9 @@ export const StatusPanel = ({ date, status, statusLink }: StatusPanelProps) => {
 					<Calendar className="size-4" />
 					<span>{date}</span>
 				</div>
-				<div className="rounded-full border border-transparent bg-(--status-success-op) px-3 py-1 font-medium text-[#05df72] transition-colors hover:border-[#05df72]">
+				<div
+					className={`cursor-pointer rounded-full border border-transparent ${status === 'Завершено' ? 'bg-(--status-success-op) text-(--status-success) hover:border-(--status-success)' : 'bg-(--status-warning-op) text-(--status-warning) hover:border-(--status-warning)'} px-3 py-1 font-medium transition-colors`}
+				>
 					{statusLink ? (
 						<a href={statusLink} rel="noopener noreferrer" target="_blank">
 							{status}

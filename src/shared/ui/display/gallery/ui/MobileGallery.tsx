@@ -27,7 +27,12 @@ export const MobileGallery = ({ images, className }: MobileGalleryProps) => {
 	const prev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
 
 	return (
-		<div className={cn('relative flex flex-col items-center gap-3 rounded-2xl bg-(--bg-secondary) p-3', className)}>
+		<div
+			className={cn(
+				'relative flex flex-col items-center gap-3 rounded-2xl bg-(--bg-accent) p-3 shadow-(--shadow)',
+				className
+			)}
+		>
 			<div
 				className="project-scroll max-h-[500px] max-w-xs overflow-x-hidden overscroll-contain scroll-auto"
 				onTouchEnd={handleTouchEnd}
@@ -63,7 +68,7 @@ export const MobileGallery = ({ images, className }: MobileGalleryProps) => {
 							key={idx}
 							className={cn(
 								'mr-2 size-3 cursor-pointer rounded-full hover:bg-(--color-accent)',
-								idx === current ? 'bg-(--color-accent)' : 'bg-(--color-secondary)'
+								idx === current ? 'bg-(--color-accent)' : 'bg-(--accent-primary-text-disabled)'
 							)}
 							onClick={() => setCurrent(idx)}
 						/>

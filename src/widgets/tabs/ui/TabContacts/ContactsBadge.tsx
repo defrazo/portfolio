@@ -17,8 +17,15 @@ export const ContactsBadge = ({ icon: Icon, title, href, content }: ContactsBadg
 	const handleButton = () => {
 		if (!isVCard) {
 			copy(content, 'Данные скопированы!');
+			return;
 		}
-		// vCard: здесь будет логика скачивания
+
+		const link = document.createElement('a');
+		link.href = '/Letunov.vcf';
+		link.download = 'Letunov.vcf';
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
 	};
 
 	return (
@@ -41,7 +48,7 @@ export const ContactsBadge = ({ icon: Icon, title, href, content }: ContactsBadg
 							{content}
 						</a>
 						<Button
-							className="rounded-xl px-3 py-1.5 text-xs opacity-70 hover:opacity-100"
+							className="min-w-28 rounded-xl px-3 py-1.5 text-xs opacity-70 hover:text-(--accent-secondary-text) hover:opacity-100"
 							leftIcon={isVCard ? <Download className="size-3.5" /> : <Copy className="size-3.5" />}
 							size="custom"
 							variant="ghost"

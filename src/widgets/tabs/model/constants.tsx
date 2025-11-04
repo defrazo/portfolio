@@ -57,7 +57,7 @@ export const ABOUT_BADGES: AboutBadge[] = [
 		title: 'Статус',
 		content: (
 			<>
-				<span className="flex items-center gap-2 text-gray-300">
+				<span className="flex items-center gap-2 text-(--color-secondary)">
 					<span className="relative flex h-2 w-2">
 						<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
 						<span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
@@ -131,13 +131,18 @@ export const EDUCATION_HISTORY = [
 export const KEY_AREAS = [
 	'React',
 	'TypeScript',
-	'Tailwind CSS',
 	'Feature-Sliced Design',
 	'MobX',
-	'Web Performance',
-	'Clean Code',
+	'Tailwind CSS',
+	'Supabase',
+	'Docker',
+	'VPS Deployment',
+	'GitHub',
+	'Vite',
 	'Responsive Design',
-	'Full-Cycle Frontend',
+	'Code-Splitting',
+	'Performance Optimization',
+	'UI/UX Implementation',
 ];
 
 export const MAP_LINKS = [
@@ -168,7 +173,7 @@ export const SKILLS: Skill[] = [
 	{ label: 'PostgreSQL', value: 35, icon: IconPost, color: '#336791' },
 	{ label: 'Docker', value: 25, icon: IconDocker, color: '#2496ED' },
 	{ label: 'FSD', value: 25, icon: IconFSD, color: '#3193FF' },
-	{ label: 'GitHub', value: 45, icon: IconGithub, color: '#FFF' },
+	{ label: 'GitHub', value: 45, icon: IconGithub, color: '#0969DA' },
 	{ label: 'VS Code', value: 70, icon: IconVS, color: '#007ACC' },
 	{ label: 'Figma', value: 55, icon: IconFigma, color: '#F24E1E' },
 	{ label: 'Photoshop', value: 40, icon: IconPS, color: '#31A8FF' },
@@ -204,9 +209,11 @@ export const WORK_HISTORY: WorkItem[] = [
 		company: 'Личный проект',
 		period: 'Январь 2025 – по настоящее время',
 		bullets: [
-			'Спроектировал приложение по Feature-Sliced Design, вынес состояние в MobX',
-			'Интегрировал Supabase (Auth/DB), сделал адаптив и микровзаимодействия',
-			'Разбивка по чанкам + lazy routes → TTI –35%',
+			'Спроектировал и реализовал веб-приложение по Feature-Sliced Design на React + TypeScript с MobX',
+			'Интегрировал Supabase (Auth/DB) с E-mail/OAuth авторизацией и личным кабинетом пользователя',
+			'Разработал адаптивный UI на Tailwind CSS с поддержкой темизации и микроанимаций',
+			'Контейнеризировал приложение в Docker и развернул на VPS с настройкой собственного домена',
+			'Реализовал юридический модуль (Demo-режим, Политика конфиденциальности, Пользовательское соглашение)',
 		],
 	},
 	{
@@ -215,9 +222,9 @@ export const WORK_HISTORY: WorkItem[] = [
 		company: 'Управление Федеральной службы государственной статистики по Свердловской обл. и Курганской обл.',
 		period: 'Июль 2020 – Ноябрь 2022',
 		bullets: [
-			'Координировал сбор и валидацию данных сельскохозяйственной микропереписи',
-			'Создал шаблоны отчётности и автоматизированные таблицы → время подготовки –40%',
-			'Готовил графики и визуализации для публичных отчётов',
+			'Координировал работу территориальных органов по проведению Сельскохозяйственной микропереписи-2021',
+			'Разработал шаблоны отчётной документации и автоматизировал процессы подготовки документов',
+			'Создавал графики и визуализации данных для официальных публикаций (пресс-релизов) регионального уровня',
 		],
 	},
 	{
@@ -226,8 +233,9 @@ export const WORK_HISTORY: WorkItem[] = [
 		company: 'ООО «АМ ГЛОБАЛ»',
 		period: 'Июнь 2018 – Июнь 2019',
 		bullets: [
-			'Оптимизировал цепочку поставок → срок поставки –2–3 дня',
-			'Перевёл операционку в табличные модели и дашборды для контроля KPI',
+			'Анализировал рынок и отбирал товары с высоким потенциалом для оптовой реализации',
+			'Оптимизировал цепочки поставок и логистику, ускоряя доставку товаров клиентам',
+			'Координировал взаимодействие с поставщиками и контролировал выполнение заказов',
 		],
 	},
 ];

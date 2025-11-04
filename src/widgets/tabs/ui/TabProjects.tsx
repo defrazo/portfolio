@@ -49,7 +49,7 @@ export const TabProjects = () => {
 								<p className="text-justify text-sm md:text-base">{description}</p>
 								<div className="flex justify-between gap-2">
 									<Link
-										className="flex-1 px-3 py-2 text-xs md:px-4 md:text-sm"
+										className="flex-1 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
 										rightIcon={device !== 'mobile' && <SquareMousePointer className="size-5" />}
 										size="custom"
 										to={`/project/${id}`}
@@ -58,7 +58,7 @@ export const TabProjects = () => {
 										Подробнее
 									</Link>
 									<Button
-										className="shrink-0 px-3 py-2 text-xs md:px-4 md:text-sm"
+										className="shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
 										href={link}
 										rel="noopener noreferrer"
 										rightIcon={device !== 'mobile' && <ExternalLink className="size-5" />}
@@ -69,7 +69,7 @@ export const TabProjects = () => {
 										Live Demo
 									</Button>
 									<Button
-										className="shrink-0 px-3 py-2 text-xs md:px-4 md:text-sm"
+										className="shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
 										href={git}
 										rel="noopener noreferrer"
 										rightIcon={device !== 'mobile' && <ExternalLink className="size-5" />}

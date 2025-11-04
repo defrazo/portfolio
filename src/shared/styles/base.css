@@ -10,15 +10,14 @@ body,
 
 html {
 	scroll-behavior: smooth;
+	background-color: var(--bg-global);
 }
 
 body {
 	font-family: 'Exo 2', 'Arial Unicode MS', sans-serif;
 	color: var(--color-primary);
-	background: radial-gradient(circle at top right, #4e4e4e, #222222);
+	background: url('../assets/icons/system/noise.svg');
 	background-repeat: repeat;
-	background-image: url('../assets/icons/system/noise.svg');
-	background-size: 256px 256px;
 }
 
 @media (hover: hover) and (pointer: fine) {

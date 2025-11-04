@@ -1,4 +1,4 @@
-import { makeAutoObservable } from 'mobx';
+import { makeAutoObservable, reaction } from 'mobx';
 
 import type { Theme } from '.';
 
@@ -28,5 +28,16 @@ export class ThemeStore {
 
 	constructor() {
 		makeAutoObservable(this);
+
+		const savedTheme = localStorage.getItem('theme') as Theme | null;
+		if (savedTheme) {
+			this.theme = savedTheme;
+			this.applyTheme(savedTheme);
+		}
+
+		reaction(
+			() => this.theme,
+			(theme) => localStorage.setItem('theme', theme)
+		);
 	}
 }

@@ -38,7 +38,7 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
 			/>
 			<div
 				className={cn(
-					'size-9 transform rounded-full border border-solid border-(--border-color) bg-(--bg-secondary) shadow-md transition-all duration-500 group-hover:border-(--accent-primary-hover)',
+					'size-9 transform rounded-full border border-solid border-transparent bg-(--bg-secondary) shadow-md transition-all duration-500 group-hover:border-(--accent-primary-hover)',
 					isDark
 						? 'translate-x-0 translate-y-0 group-hover:translate-x-0'
 						: 'translate-x-0 translate-y-0 group-hover:translate-x-10'

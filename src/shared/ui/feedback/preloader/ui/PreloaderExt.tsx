@@ -1,5 +1,6 @@
-import { cn } from '@/shared/lib/utils';
 import { useEffect, useState } from 'react';
+
+import { cn } from '@/shared/lib/utils';
 
 export const PreloaderExt = () => {
 	const [progress, setProgress] = useState(0);
@@ -23,7 +24,7 @@ export const PreloaderExt = () => {
 	return (
 		<div
 			className={cn(
-				'fixed inset-0 z-[9999] flex flex-col items-center justify-center text-white transition-opacity duration-700',
+				'fixed inset-0 z-9999 flex flex-col items-center justify-center text-white transition-opacity duration-700',
 				isVisible ? 'opacity-100' : 'pointer-events-none opacity-0'
 			)}
 		>
@@ -33,7 +34,7 @@ export const PreloaderExt = () => {
 
 			<div className="h-[3px] w-64 overflow-hidden rounded-full bg-gray-700">
 				<div
-					className="h-full bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 transition-all ease-out"
+					className="h-full bg-linear-to-r from-purple-400 via-pink-500 to-yellow-400 transition-all ease-out"
 					style={{ width: `${progress}%` }}
 				/>
 			</div>

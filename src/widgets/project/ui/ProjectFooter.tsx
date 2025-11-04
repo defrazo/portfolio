@@ -8,6 +8,8 @@ interface ProjectFooterProps {
 }
 
 export const ProjectFooter = ({ previous, next }: ProjectFooterProps) => {
+	const handleScrollTop = () => window.scrollTo({ top: 0, behavior: 'instant' });
+
 	return (
 		<div className="border-t border-(--border-color) bg-(--bg-secondary) md:mt-4">
 			<div className="mx-4 flex items-center justify-between py-2 md:mx-12 md:py-4">
@@ -17,6 +19,7 @@ export const ProjectFooter = ({ previous, next }: ProjectFooterProps) => {
 					size="custom"
 					to={`/project/${previous}`}
 					variant="mobile"
+					onClick={handleScrollTop}
 				>
 					Предыдущий проект
 				</Link>
@@ -26,6 +29,7 @@ export const ProjectFooter = ({ previous, next }: ProjectFooterProps) => {
 					size="custom"
 					to={`/project/${next}`}
 					variant="mobile"
+					onClick={handleScrollTop}
 				>
 					Следующий проект
 				</Link>

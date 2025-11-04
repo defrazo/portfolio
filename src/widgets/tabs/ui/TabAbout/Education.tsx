@@ -14,7 +14,7 @@ export const Education = () => {
 				{EDUCATION_HISTORY.map(({ id, degree, period, major, university, focus }) => (
 					<article
 						key={id}
-						className="flex flex-col gap-1.5 rounded-2xl border border-(--accent-primary-hover-op) bg-(--bg-accent) p-3 transition hover:border-(--accent-primary-hover-op) md:border-transparent md:p-4"
+						className="flex flex-col gap-1.5 rounded-2xl border border-(--accent-primary-hover-op) bg-(--bg-accent) p-3 shadow-(--shadow) transition hover:border-(--accent-primary-hover-op) md:border-transparent md:p-4"
 					>
 						<header className="flex items-baseline gap-2">
 							<h3 className="text-lg font-semibold">{degree}</h3>

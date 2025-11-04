@@ -10,7 +10,7 @@ export const Experience = () => {
 			{WORK_HISTORY.map(({ id, role, company, period, bullets }) => (
 				<article
 					key={id}
-					className="flex flex-col gap-1.5 rounded-2xl border border-(--accent-primary-hover-op) bg-(--bg-accent) p-3 transition hover:border-(--accent-primary-hover-op) md:border-transparent md:p-4"
+					className="flex flex-col gap-1.5 rounded-2xl border border-(--accent-primary-hover-op) bg-(--bg-accent) p-3 shadow-(--shadow) transition hover:border-(--accent-primary-hover-op) md:border-transparent md:p-4"
 				>
 					<header className="flex flex-col gap-2 md:gap-0">
 						<div className="flex flex-col items-baseline gap-2 md:flex-row">
@@ -19,10 +19,8 @@ export const Experience = () => {
 						</div>
 						<div className="flex text-sm text-(--color-accent) md:text-base">{company}</div>
 					</header>
-
 					<Divider />
-
-					<ul className="text-(--color-secondary)">
+					<ul className="space-y-1 text-(--color-secondary)">
 						{bullets.map((bullet, idx) => (
 							<li key={idx} className="relative pl-4 text-justify text-sm md:text-left md:text-base">
 								<span className="absolute top-2.5 left-0 size-1.5 rounded-full bg-(--color-accent)" />
