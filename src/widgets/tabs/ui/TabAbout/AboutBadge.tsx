@@ -12,7 +12,7 @@ export const AboutBadge = ({ icon: Icon, title, href, content }: AboutBadgeProps
 	const wrapperProps = href ? { href, target: '_blank', rel: 'noopener noreferrer' } : {};
 
 	return (
-		<div className="group rounded-2xl border border-(--accent-primary-hover-op) bg-(--bg-accent) p-3 shadow-(--shadow) transition-[colors,border] hover:border-(--accent-primary-hover-op) hover:text-(--color-accent) md:border-transparent md:p-4">
+		<div className="group card-surface hover:text-(--color-accent)">
 			<div className="flex items-start gap-3">
 				<div className="size-5 text-(--color-secondary) group-hover:text-(--color-accent)">
 					<Icon className="size-5" />

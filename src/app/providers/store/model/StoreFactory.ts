@@ -1,8 +1,8 @@
 import { ThemeStore } from '@/features/theme-switcher';
 import { ModalStore, NotifyStore } from '@/shared/stores';
+import { TabsStore } from '@/widgets/tabs';
 
 import { CoreStores } from '.';
-import { TabsStore } from '@/widgets/tabs';
 
 export class StoreFactory {
 	static createCore(): CoreStores {

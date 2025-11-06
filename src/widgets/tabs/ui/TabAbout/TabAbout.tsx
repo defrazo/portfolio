@@ -14,23 +14,25 @@ export const TabAbout = () => {
 			<SectionTitle title="Обо мне" />
 			<div className="flex flex-col gap-4">
 				<div className="mx-auto flex flex-col items-center">
-					<h2 className="text-2xl leading-4 font-bold md:text-5xl md:leading-tight">Евгений Летунов</h2>
+					<h2 className="text-2xl leading-4 font-bold md:text-3xl lg:text-5xl lg:leading-tight">
+						Евгений Летунов
+					</h2>
 					<div className="flex items-center gap-3">
 						<div className="h-px w-10 bg-linear-to-l from-(--color-accent) to-transparent md:w-16" />
-						<h3 className="my-2 font-light text-nowrap text-(--color-secondary) md:text-2xl">
+						<h3 className="my-2 font-light text-nowrap text-(--color-secondary) md:text-xl lg:text-2xl">
 							Frontend Developer
 						</h3>
 						<div className="h-px w-10 bg-linear-to-r from-(--color-accent) to-transparent md:w-16" />
 					</div>
 				</div>
 				<div className="flex flex-col gap-4">
-					<p className="-mt-3 text-justify text-base leading-snug md:text-lg">
+					<p className="-mt-3 text-justify text-base leading-snug lg:text-lg">
 						Создаю веб-интерфейсы на стыке технологий и эстетики. Научный бэкграунд научил меня системному
 						мышлению: взвешивать решения, продумывать детали и создавать по-настоящему функциональные
 						решения.
 					</p>
 				</div>
-				<div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4">
+				<div className="grid grid-cols-1 gap-2 lg:grid-cols-2 lg:gap-4">
 					{ABOUT_BADGES.map(({ icon, title, href, content }) => (
 						<AboutBadge key={title} content={content} href={href} icon={icon} title={title} />
 					))}

@@ -7,11 +7,11 @@ export const UserCard = () => {
 	return (
 		<div className="flex flex-col gap-3">
 			<div className="group relative mx-auto inline-flex size-52 cursor-pointer items-center justify-center">
-				<div className="pointer-events-none absolute -inset-2 rounded-full bg-linear-to-r from-(--accent-primary-op) to-(--accent-primary-hover-op) opacity-0 blur-md transition-all duration-500 group-hover:opacity-100" />
+				<div className="pointer-events-none absolute -inset-0.5 rounded-full bg-linear-to-r from-(--accent-primary-op) to-(--accent-primary-hover-op) opacity-0 blur-md transition-all duration-500 group-hover:opacity-100" />
 				<div className="relative z-10 size-full overflow-hidden rounded-full border-2 border-solid border-(--border-color) shadow-lg">
 					<img
 						alt="Фотография"
-						className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+						className="no-touch-callout object-cover transition-transform duration-500 group-hover:scale-[1.02]"
 						decoding="async"
 						loading="lazy"
 						src="/avatar.webp"

@@ -29,7 +29,7 @@ export const ContactsBadge = ({ icon: Icon, title, href, content }: ContactsBadg
 	};
 
 	return (
-		<div className="group rounded-2xl border border-(--accent-primary-hover-op) bg-(--bg-accent) p-3 shadow-(--shadow) transition-colors hover:border-(--accent-primary-hover-op) md:border-transparent md:p-4">
+		<div className="group card-surface">
 			<div className="flex gap-3">
 				<div className="text-(--color-secondary) transition-colors group-hover:text-(--color-accent)">
 					<Icon className="size-5" />
@@ -48,7 +48,7 @@ export const ContactsBadge = ({ icon: Icon, title, href, content }: ContactsBadg
 							{content}
 						</a>
 						<Button
-							className="min-w-28 rounded-xl px-3 py-1.5 text-xs opacity-70 hover:text-(--accent-secondary-text) hover:opacity-100"
+							className="min-w-28 rounded-xl px-3 py-1.5 text-xs hover:text-(--accent-secondary-text) hover:opacity-100 hover:shadow-(--shadow)"
 							leftIcon={isVCard ? <Download className="size-3.5" /> : <Copy className="size-3.5" />}
 							size="custom"
 							variant="ghost"

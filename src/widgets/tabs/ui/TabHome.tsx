@@ -16,8 +16,8 @@ const SocialButtons = SOCIAL_BUTTONS.map(({ id, icon: Icon }) => (
 export const TabHome = () => {
 	return (
 		<>
-			<div className="flex flex-1 flex-col items-center justify-center gap-4 select-none">
-				<h1 className="text-4xl font-semibold tracking-widest md:text-6xl md:tracking-[0.2em]">
+			<div className="flex min-h-[80svh] flex-1 flex-col items-center justify-center gap-4 select-none md:min-h-0">
+				<h1 className="text-4xl font-semibold tracking-widest md:text-5xl md:tracking-[0.2em] lg:text-6xl">
 					L E T U N O V
 				</h1>
 				<h2 className="text-xl text-(--color-tertiary) md:text-3xl">Frontend Developer</h2>

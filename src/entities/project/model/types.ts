@@ -13,4 +13,5 @@ export type Project = {
 	target: string;
 	solution: string;
 	gallery: string[];
+	galleryM?: string[];
 };

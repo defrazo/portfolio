@@ -141,8 +141,6 @@ export const KEY_AREAS = [
 	'Vite',
 	'Responsive Design',
 	'Code-Splitting',
-	'Performance Optimization',
-	'UI/UX Implementation',
 ];
 
 export const MAP_LINKS = [
@@ -160,7 +158,7 @@ export const MAP_LINKS = [
 ];
 
 export const SKILLS: Skill[] = [
-	{ label: 'React', value: 90, icon: IconReact, color: '#61DAFB' },
+	{ label: 'React', value: 90, icon: IconReact, color: '#55C2DF' },
 	{ label: 'TypeScript', value: 65, icon: IconTS, color: '#3178C6' },
 	{ label: 'JavaScript', value: 65, icon: IconJS, color: '#F7DF1E' },
 	{ label: 'MobX', value: 55, icon: IconMobX, color: '#FF9955' },

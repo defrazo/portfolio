@@ -4,11 +4,7 @@ import { observer } from 'mobx-react-lite';
 import { useStore } from '@/app/providers';
 import { cn } from '@/shared/lib/utils';
 
-interface ThemeSwitcherProps {
-	className?: string;
-}
-
-const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
+const ThemeSwitcher = ({ className }: { className?: string }) => {
 	const { themeStore } = useStore();
 
 	const isDark = themeStore.theme === 'dark';

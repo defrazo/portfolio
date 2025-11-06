@@ -18,8 +18,8 @@ export const MobileSidebar = () => {
 	return (
 		<>
 			<Button
-				centerIcon={<Menu className="size-6" />}
-				className="absolute top-0 right-0 z-50 rounded-2xl rounded-tl-none rounded-br-none bg-(--bg-secondary) p-2 shadow-md lg:hidden"
+				centerIcon={<Menu className="size-7" />}
+				className="absolute top-0 right-0 z-50 rounded-2xl rounded-tl-none rounded-br-none border border-(--border-color) bg-(--bg-secondary) p-2 shadow-md lg:hidden"
 				variant="custom"
 				onClick={() => setOpen(true)}
 			/>
@@ -33,11 +33,11 @@ export const MobileSidebar = () => {
 			<div
 				{...handlers}
 				className={cn(
-					'fixed top-0 left-0 z-50 mb-20 h-full w-64 transform overflow-y-auto bg-radial py-4 shadow-lg transition-transform duration-300',
+					'fixed top-0 bottom-0 left-0 z-50 w-64 transform overflow-y-auto bg-(--bg-global) py-4 shadow-lg transition-transform duration-300',
 					open ? 'translate-x-0' : '-translate-x-full'
 				)}
 			>
-				<div className="relative flex h-full flex-col justify-between gap-4 px-4">
+				<div className="relative flex flex-col justify-between gap-4 px-4">
 					<UserCard />
 					<TabsNav onTabClick={() => setOpen(false)} />
 					<ThemeSwitcher />

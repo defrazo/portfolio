@@ -2,9 +2,9 @@ import { ExternalLink } from 'lucide-react';
 
 import type { Technology } from '@/entities/tecnology';
 import { useDeviceType } from '@/shared/lib/hooks';
-import { Button, DesktopGallery } from '@/shared/ui';
+import { Button, DesktopGallery, MobileGallery } from '@/shared/ui';
 
-import { StatusPanel, TargetSolution } from '.';
+import { StatusPanel, TargetSolution, Technologies } from '.';
 
 interface ProjectMainProps {
 	title: string;
@@ -13,6 +13,7 @@ interface ProjectMainProps {
 	status: string;
 	statusLink?: string;
 	gallery: string[];
+	galleryM?: string[];
 	demoLink?: string;
 	target: string;
 	solution: string;
@@ -26,6 +27,7 @@ export const ProjectMain = ({
 	status,
 	statusLink,
 	gallery,
+	galleryM,
 	demoLink,
 	target,
 	solution,
@@ -34,17 +36,17 @@ export const ProjectMain = ({
 	const device = useDeviceType();
 
 	return (
-		<div className="flex flex-col gap-6 text-center">
-			<div className="flex flex-col gap-2.5">
-				<h1 className="text-3xl font-bold tracking-tight md:text-5xl">{title}</h1>
-				<div className="mx-auto h-1 w-24 animate-pulse rounded-full bg-linear-to-r from-(--accent-primary) to-(--color-accent)" />
+		<div className="flex flex-col gap-2 text-center md:gap-4 lg:gap-6">
+			<div className="flex flex-col gap-1.5 lg:gap-2.5">
+				<h1 className="text-2xl font-bold tracking-tight md:text-3xl lg:text-5xl">{title}</h1>
+				<div className="mx-auto h-1 w-16 animate-pulse rounded-full bg-linear-to-r from-(--accent-primary) to-(--color-accent) lg:w-24" />
 			</div>
-			<p className="mx-auto max-w-4xl leading-tight md:text-xl">{description}</p>
+			<p className="mx-auto max-w-4xl leading-tight md:text-lg lg:text-xl">{description}</p>
 			<StatusPanel date={date} status={status} statusLink={statusLink} />
 			<div className="group relative">
-				<div className="absolute inset-0 rounded-2xl bg-linear-to-r from-(--accent-primary-op) to-(--accent-primary-op) opacity-0 blur-2xl transition-all duration-500 group-hover:opacity-100 group-hover:blur-3xl" />
+				<div className="absolute -inset-3 rounded-2xl bg-linear-to-r from-(--accent-primary-op) to-(--accent-primary-op) opacity-0 blur-md transition-all duration-500 group-hover:opacity-100 group-hover:blur-md" />
 				<DesktopGallery
-					className="rounded-2xl border border-solid border-(--border-color) transition-transform duration-500 group-hover:scale-[1.035]"
+					className="rounded-2xl border border-solid border-(--border-color) transition-transform duration-500 group-hover:scale-[1.025]"
 					images={gallery}
 				/>
 			</div>
@@ -64,26 +66,17 @@ export const ProjectMain = ({
 					<div className="h-px w-10 bg-linear-to-r from-(--color-accent) to-transparent md:w-16" />
 				</div>
 			)}
-			<TargetSolution solution={solution} target={target} />
-			<div className="flex flex-col gap-4">
-				<h2 className="text-left text-2xl font-bold md:text-3xl">Технологии</h2>
-				<div className="flex flex-wrap justify-evenly gap-2 md:gap-4">
-					{techs.map(({ name, icon: Icon }) => {
-						return (
-							<Button
-								key={name}
-								className="group min-w-36 border border-solid border-(--accent-primary-hover-op) bg-(--bg-accent) px-4 py-2 text-sm shadow-(--shadow) transition-all duration-700 hover:-translate-y-4 hover:border-(--accent-primary-hover-op) hover:shadow-lg md:border-transparent md:px-6 md:py-3 md:text-base"
-								leftIcon={
-									<Icon className="size-6 transition-transform duration-700 group-hover:scale-125" />
-								}
-								size="custom"
-								variant="outline"
-							>
-								{name}
-							</Button>
-						);
-					})}
-				</div>
+			<div
+				className={`grid grid-rows-[auto_1fr] gap-2 lg:gap-4 ${galleryM ? 'grid-cols-1 md:grid-cols-[auto_1fr]' : 'grid-cols-2'} `}
+			>
+				<TargetSolution solution={solution} target={target} />
+				{galleryM && (
+					<div className="row-span-2 hidden flex-col gap-2 md:flex lg:gap-4">
+						<h2 className="project-header">Мобильная версия</h2>
+						<MobileGallery images={galleryM} />
+					</div>
+				)}
+				<Technologies techs={techs} />
 			</div>
 		</div>
 	);

@@ -20,7 +20,7 @@ const TabContainer = observer(() => {
 	const CurrentTab = TAB_COMPONENTS[tabsStore.tab as TabId] as () => JSX.Element;
 
 	return (
-		<div className="hide-scrollbar core-border flex min-h-svh cursor-default flex-col gap-4 overflow-auto bg-(--bg-secondary) p-3 shadow-(--shadow) md:min-h-[600px] md:p-6">
+		<div className="hide-scrollbar core-border flex flex-1 cursor-default flex-col gap-4 bg-(--bg-secondary) p-3 shadow-(--shadow) md:min-h-[600px] md:p-6">
 			<section className="flex flex-1 flex-col gap-4">
 				<CurrentTab />
 			</section>

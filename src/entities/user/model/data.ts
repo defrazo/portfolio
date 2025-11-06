@@ -1,6 +1,6 @@
 import { Globe, IdCard, Mail, MapPin, Send } from 'lucide-react';
 
-import type { UserProfile } from './types';
+import type { UserProfile } from '.';
 
 export const USER_PROFILE: UserProfile = {
 	contacts: {

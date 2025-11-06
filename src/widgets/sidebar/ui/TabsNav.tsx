@@ -13,11 +13,7 @@ const TABS: ReadonlyArray<{ id: TabId; title: string }> = [
 	{ id: 'contacts', title: 'Контакты' },
 ];
 
-interface TabsNavProps {
-	onTabClick?: () => void;
-}
-
-export const TabsNav = observer(({ onTabClick }: TabsNavProps) => {
+export const TabsNav = observer(({ onTabClick }: { onTabClick?: () => void }) => {
 	const { tabsStore } = useStore();
 
 	const handleClick = (tab: TabId) => {

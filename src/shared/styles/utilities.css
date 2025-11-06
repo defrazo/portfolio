@@ -3,6 +3,14 @@
 		@apply rounded-2xl border border-(--border-color);
 	}
 
+	.card-surface {
+		@apply rounded-2xl border border-(--accent-primary-hover-op) bg-(--bg-accent) p-3 shadow-(--shadow) transition-colors hover:border-(--accent-primary-hover-op) md:border-transparent md:p-4;
+	}
+
+	.project-header {
+		@apply text-left text-2xl font-bold lg:text-3xl;
+	}
+
 	/* Отключение touch эффекта на элементе */
 	.no-touch-callout {
 		@apply select-none;
