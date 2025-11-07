@@ -1,10 +1,9 @@
-import { useDeviceType, usePageTitle } from '@/shared/lib/hooks';
+import { useDeviceType } from '@/shared/lib/hooks';
 import Footer from '@/widgets/footer';
 import { MobileSidebar } from '@/widgets/sidebar';
 import TabContainer from '@/widgets/tabs';
 
 const MainPage = () => {
-	usePageTitle('Главная');
 	const device = useDeviceType();
 
 	return (

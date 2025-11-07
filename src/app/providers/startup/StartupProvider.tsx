@@ -12,8 +12,7 @@ const AppInitializer = observer(() => {
 
 	useEffect(() => {
 		themeStore.setTheme(themeStore.theme);
-		// const preload = setTimeout(() => setIsLoading(false), 3500);
-		const preload = setTimeout(() => setIsLoading(false), 100);
+		const preload = setTimeout(() => setIsLoading(false), 3500);
 		return () => clearTimeout(preload);
 	}, []);
 

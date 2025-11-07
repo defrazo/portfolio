@@ -14,7 +14,7 @@ export const Technologies = ({ techs }: { techs: Technology[] }) => {
 								'card-surface group flex items-center gap-2 transition-transform! duration-500 hover:z-10 hover:scale-105'
 							)}
 						>
-							<div className="flex size-10 items-center justify-center rounded-xl border border-(--border-light) bg-(--bg-secondary)">
+							<div className="flex size-10 items-center justify-center rounded-xl bg-(--bg-secondary) shadow-(--shadow)">
 								<Icon className="aspect-square size-5" />
 							</div>
 							<div className="flex flex-col items-start leading-snug">

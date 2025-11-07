@@ -31,26 +31,26 @@ export const TabProjects = () => {
 										className="no-touch-callout scale-[1.37] transition-transform duration-500 hover:scale-110"
 										decoding="async"
 										height={277}
-										loading="lazy"
+										loading="eager"
 										src={img}
 										width={490}
 									/>
 								</Link>
 							</div>
-							<div className="flex flex-col gap-3 lg:flex-1 lg:justify-between lg:gap-4">
+							<div className="flex flex-col gap-3 lg:flex-1 lg:justify-between lg:gap-2 xl:gap-4">
 								<div className="border-solid border-(--accent-secondary) lg:border-b lg:pb-1.5">
-									<h2 className="text-2xl leading-tight font-bold text-(--accent-secondary) lg:text-3xl lg:leading-normal lg:text-(--color-primary)">
+									<h2 className="text-2xl leading-tight font-bold text-(--accent-secondary) lg:text-(--color-primary) xl:text-3xl xl:leading-normal">
 										{title}
-										<span className="ml-1.5 align-super text-xs text-(--color-disabled) lg:text-sm">
+										<span className="ml-1.5 align-super text-xs text-(--color-disabled) xl:text-sm">
 											{date}
 										</span>
 									</h2>
 								</div>
-								<p className="-mt-2 text-justify text-sm lg:mt-0 lg:text-base">{description}</p>
+								<p className="-mt-2 text-justify text-sm xl:mt-0 xl:text-base">{description}</p>
 								<div className="flex justify-between gap-2">
 									<Link
 										className="flex-1 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
-										rightIcon={device !== 'mobile' && <SquareMousePointer className="size-5" />}
+										rightIcon={device === 'desktop' && <SquareMousePointer className="size-5" />}
 										size="custom"
 										to={`/project/${id}`}
 										variant="accent"
@@ -61,7 +61,7 @@ export const TabProjects = () => {
 										className="shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
 										href={link}
 										rel="noopener noreferrer"
-										rightIcon={device !== 'mobile' && <ExternalLink className="size-5" />}
+										rightIcon={device === 'desktop' && <ExternalLink className="size-5" />}
 										size="custom"
 										target="_blank"
 										variant="outline"
@@ -72,7 +72,7 @@ export const TabProjects = () => {
 										className="shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
 										href={git}
 										rel="noopener noreferrer"
-										rightIcon={device !== 'mobile' && <ExternalLink className="size-5" />}
+										rightIcon={device === 'desktop' && <ExternalLink className="size-5" />}
 										size="custom"
 										target="_blank"
 										variant="outline"

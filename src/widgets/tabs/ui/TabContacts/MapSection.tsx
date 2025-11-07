@@ -50,7 +50,9 @@ export const MapSection = () => {
 					<Button
 						className="w-full rounded-xl px-0.5 py-1.5 text-xs shadow-(--shadow) md:px-3 md:py-1.5 md:text-sm lg:w-fit"
 						href={USER_PROFILE.contacts.telegram.href}
+						rel="noopener noreferrer"
 						size="custom"
+						target="_blank"
 						variant="accent"
 					>
 						Связаться в Telegram
@@ -58,7 +60,9 @@ export const MapSection = () => {
 					<Button
 						className="w-full rounded-xl px-0.5 py-1.5 text-xs shadow-(--shadow) md:px-3 md:py-1.5 md:text-sm lg:w-fit"
 						href={USER_PROFILE.contacts.email.href}
+						rel="noopener noreferrer"
 						size="custom"
+						target="_blank"
 						variant="outline"
 					>
 						Написать на e-mail

@@ -8,7 +8,7 @@
 	}
 
 	.project-header {
-		@apply text-left text-2xl font-bold lg:text-3xl;
+		@apply text-left text-2xl font-bold xl:text-3xl;
 	}
 
 	/* Отключение touch эффекта на элементе */

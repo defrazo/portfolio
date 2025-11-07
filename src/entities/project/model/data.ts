@@ -22,7 +22,21 @@ import {
 	OSheetM,
 	OTermsD,
 } from '@/shared/content/onemate';
-import { PAboutD, PContactsD, PDetailsD, PHomeD, PProjectsD, PSkillsD } from '@/shared/content/portfolio';
+import {
+	PAboutD,
+	PAboutM,
+	PContactsD,
+	PContactsM,
+	PDetailsD,
+	PDetailsM,
+	PDrawerM,
+	PHomeD,
+	PHomeM,
+	PProjectsD,
+	PProjectsM,
+	PSkillsD,
+	PSkillsM,
+} from '@/shared/content/portfolio';
 
 import type { Project } from '.';
 
@@ -60,5 +74,6 @@ export const PROJECTS: Project[] = [
 		solution:
 			'Реализовано SPA на React + TypeScript с FSD-архитектурой, адаптивным интерфейсом, системой темизации и оптимальной производительностью.',
 		gallery: [PHomeD, PAboutD, PSkillsD, PProjectsD, PContactsD, PDetailsD],
+		galleryM: [PHomeM, PAboutM, PSkillsM, PProjectsM, PContactsM, PDetailsM, PDrawerM],
 	},
 ];

@@ -38,7 +38,7 @@ export const ContactsBadge = ({ icon: Icon, title, href, content }: ContactsBadg
 					<span className="text-xs font-semibold tracking-wider text-(--color-secondary) uppercase">
 						{title}
 					</span>
-					<div className="flex w-full flex-col justify-between gap-2 md:flex-row md:items-end">
+					<div className="flex w-full flex-col justify-between gap-2 xl:flex-row xl:items-end">
 						<a
 							className="transition-colors group-hover:text-(--color-accent)"
 							href={href}

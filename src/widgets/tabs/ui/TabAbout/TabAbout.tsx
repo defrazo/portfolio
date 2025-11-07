@@ -3,7 +3,7 @@ import { SectionTitle } from '..';
 import { AboutBadge, Education, Experience } from '.';
 
 const Tag = ({ children }: { children: React.ReactNode }) => (
-	<span className="rounded-4xl border border-solid border-(--border-light) bg-(--bg-secondary) px-2.5 py-1 text-xs hover:border-(--accent-primary-hover) hover:text-(--color-accent) md:text-sm">
+	<span className="rounded-4xl border border-solid border-(--border-light) bg-(--bg-secondary) px-2.5 py-1 text-xs transition-colors hover:border-(--accent-primary-hover) hover:text-(--color-accent) md:text-sm">
 		{children}
 	</span>
 );
@@ -14,19 +14,19 @@ export const TabAbout = () => {
 			<SectionTitle title="Обо мне" />
 			<div className="flex flex-col gap-4">
 				<div className="mx-auto flex flex-col items-center">
-					<h2 className="text-2xl leading-4 font-bold md:text-3xl lg:text-5xl lg:leading-tight">
+					<h2 className="text-2xl leading-4 font-bold md:text-3xl xl:text-5xl xl:leading-tight">
 						Евгений Летунов
 					</h2>
 					<div className="flex items-center gap-3">
 						<div className="h-px w-10 bg-linear-to-l from-(--color-accent) to-transparent md:w-16" />
-						<h3 className="my-2 font-light text-nowrap text-(--color-secondary) md:text-xl lg:text-2xl">
+						<h3 className="my-2 font-light text-nowrap text-(--color-secondary) md:text-xl xl:text-2xl">
 							Frontend Developer
 						</h3>
 						<div className="h-px w-10 bg-linear-to-r from-(--color-accent) to-transparent md:w-16" />
 					</div>
 				</div>
 				<div className="flex flex-col gap-4">
-					<p className="-mt-3 text-justify text-base leading-snug lg:text-lg">
+					<p className="-mt-3 text-justify text-base leading-snug xl:text-lg">
 						Создаю веб-интерфейсы на стыке технологий и эстетики. Научный бэкграунд научил меня системному
 						мышлению: взвешивать решения, продумывать детали и создавать по-настоящему функциональные
 						решения.
@@ -38,7 +38,9 @@ export const TabAbout = () => {
 					))}
 				</div>
 				<div className="flex flex-col gap-2">
-					<h4 className="text-sm tracking-wider text-(--color-secondary) uppercase">Ключевые области</h4>
+					<h4 className="text-xs tracking-wider text-(--color-secondary) uppercase xl:text-sm">
+						Ключевые области
+					</h4>
 					<div className="flex flex-wrap gap-2">
 						{KEY_AREAS.map((tag) => (
 							<Tag key={tag}>{tag}</Tag>

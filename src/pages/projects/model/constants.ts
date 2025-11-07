@@ -6,6 +6,7 @@ export const FEATURES: Feature[] = [
 	{
 		title: '6 виджетов',
 		icon: LayoutGrid,
+		color: 'text-[#3B82F6]',
 		lead: 'Ежедневные операции в одном месте',
 		bullets: [
 			'Калькулятор с историей',
@@ -19,6 +20,7 @@ export const FEATURES: Feature[] = [
 	{
 		title: 'Унифицированный UI',
 		icon: PanelsTopLeft,
+		color: 'text-[#8B5CF6]',
 		lead: 'Один визуальный язык для всех модулей',
 		bullets: [
 			'OAuth 2.0 + Email авторизация',
@@ -30,6 +32,7 @@ export const FEATURES: Feature[] = [
 	{
 		title: 'Личный кабинет',
 		icon: UserCog,
+		color: 'text-[#10B981]',
 		lead: 'Настройка аккаунта и безопасность',
 		bullets: [
 			'16 готовых аватарок',
@@ -41,6 +44,7 @@ export const FEATURES: Feature[] = [
 	{
 		title: 'Правовое обеспечение',
 		icon: ShieldCheck,
+		color: 'text-[#3B82F6]',
 		lead: 'Соответствие правовым требованиям',
 		bullets: ['Demo-режим (GDPR-friendly)', 'Политика конфиденциальности', 'Пользовательское соглашение'],
 	},

@@ -158,24 +158,24 @@ export const MAP_LINKS = [
 ];
 
 export const SKILLS: Skill[] = [
-	{ label: 'React', value: 90, icon: IconReact, color: '#55C2DF' },
-	{ label: 'TypeScript', value: 65, icon: IconTS, color: '#3178C6' },
-	{ label: 'JavaScript', value: 65, icon: IconJS, color: '#F7DF1E' },
-	{ label: 'MobX', value: 55, icon: IconMobX, color: '#FF9955' },
-	{ label: 'Tailwind CSS', value: 74, icon: IconTW, color: '#38B2AC' },
-	{ label: 'Supabase', value: 13, icon: IconSB, color: '#3ECF8E' },
-	{ label: 'Vite', value: 18, icon: IconVite, color: '#646CFF' },
-	{ label: 'HTML5', value: 85, icon: IconHTML, color: '#E34F26' },
-	{ label: 'CSS3', value: 80, icon: IconCSS, color: '#1572B6' },
-	{ label: 'SASS', value: 65, icon: IconSASS, color: '#CC6699' },
-	{ label: 'PostgreSQL', value: 35, icon: IconPost, color: '#336791' },
-	{ label: 'Docker', value: 25, icon: IconDocker, color: '#2496ED' },
-	{ label: 'FSD', value: 25, icon: IconFSD, color: '#3193FF' },
-	{ label: 'GitHub', value: 45, icon: IconGithub, color: '#0969DA' },
-	{ label: 'VS Code', value: 70, icon: IconVS, color: '#007ACC' },
-	{ label: 'Figma', value: 55, icon: IconFigma, color: '#F24E1E' },
-	{ label: 'Photoshop', value: 40, icon: IconPS, color: '#31A8FF' },
-	{ label: 'Illustrator', value: 35, icon: IconAI, color: '#FF9A00' },
+	{ label: 'React', value: 51, icon: IconReact, color: '#55C2DF' },
+	{ label: 'TypeScript', value: 57, icon: IconTS, color: '#3178C6' },
+	{ label: 'JavaScript', value: 55, icon: IconJS, color: '#F7DF1E' },
+	{ label: 'MobX', value: 43, icon: IconMobX, color: '#FF9955' },
+	{ label: 'Tailwind CSS', value: 82, icon: IconTW, color: '#38B2AC' },
+	{ label: 'Supabase', value: 51, icon: IconSB, color: '#3ECF8E' },
+	{ label: 'Vite', value: 50, icon: IconVite, color: '#646CFF' },
+	{ label: 'HTML5', value: 64, icon: IconHTML, color: '#E34F26' },
+	{ label: 'CSS3', value: 72, icon: IconCSS, color: '#1572B6' },
+	{ label: 'SASS', value: 34, icon: IconSASS, color: '#CC6699' },
+	{ label: 'PostgreSQL', value: 21, icon: IconPost, color: '#336791' },
+	{ label: 'Docker', value: 66, icon: IconDocker, color: '#2496ED' },
+	{ label: 'FSD', value: 85, icon: IconFSD, color: '#3193FF' },
+	{ label: 'GitHub', value: 35, icon: IconGithub, color: '#0969DA' },
+	{ label: 'VS Code', value: 57, icon: IconVS, color: '#007ACC' },
+	{ label: 'Figma', value: 15, icon: IconFigma, color: '#F24E1E' },
+	{ label: 'Illustrator', value: 28, icon: IconAI, color: '#FF9A00' },
+	{ label: 'Photoshop', value: 49, icon: IconPS, color: '#31A8FF' },
 ];
 
 export const SKILL_GROUP: SkillGroup[] = [
@@ -183,21 +183,21 @@ export const SKILL_GROUP: SkillGroup[] = [
 		id: 'frontend',
 		title: 'Frontend',
 		/*prettier-ignore*/
-		skills: getSkills(['React', 'TypeScript', 'JavaScript', 'MobX', 'FSD', 'HTML5', 'CSS3', 'SASS', 'Tailwind CSS']),
+		skills: getSkills(['React', 'TypeScript', 'JavaScript', 'FSD', 'Tailwind CSS', 'MobX', 'HTML5', 'CSS3', 'SASS']),
 	},
 	{
 		id: 'workflow',
 		title: 'Workflow',
-		skills: getSkills(['Supabase', 'PostgreSQL', 'Vite', 'GitHub', 'Docker', 'VS Code']),
+		skills: getSkills(['Supabase', 'Docker', 'VS Code', 'PostgreSQL', 'Vite', 'GitHub']),
 	},
-	{ id: 'design', title: 'Design', skills: getSkills(['Figma', 'Photoshop', 'Illustrator']) },
+	{ id: 'design', title: 'Design', skills: getSkills(['Figma', 'Illustrator', 'Photoshop']) },
 ];
 
 export const SOCIAL_BUTTONS = [
-	{ id: 'home', icon: IconVK },
-	{ id: 'about', icon: IconTG },
-	{ id: 'projects', icon: IconEmail },
-	{ id: 'contacts', icon: IconGit },
+	{ id: 'vk', href: USER_PROFILE.contacts.vk.href, icon: IconVK },
+	{ id: 'tg', href: USER_PROFILE.contacts.telegram.href, icon: IconTG },
+	{ id: 'email', href: USER_PROFILE.contacts.email.href, icon: IconEmail },
+	{ id: 'git', href: USER_PROFILE.contacts.git.href, icon: IconGit },
 ];
 
 export const WORK_HISTORY: WorkItem[] = [

@@ -6,8 +6,8 @@ export const TabSkills = () => {
 	return (
 		<>
 			<SectionTitle title="Навыки" />
-			<div className="flex flex-col gap-4 lg:gap-8">
-				<p className="text-justify leading-snug lg:-mb-4 lg:text-lg">
+			<div className="flex flex-col gap-4 xl:gap-8">
+				<p className="text-justify leading-snug xl:-mb-4 xl:text-lg">
 					Работаю с современным стеком фронтенд-разработки, в котором важны предсказуемость,
 					производительность и поддерживаемость. Пишу код, который легко читать, просто развивать и не стыдно
 					передавать коллегам.

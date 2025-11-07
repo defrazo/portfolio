@@ -33,7 +33,7 @@ export const MobileSidebar = () => {
 			<div
 				{...handlers}
 				className={cn(
-					'fixed top-0 bottom-0 left-0 z-50 w-64 transform overflow-y-auto bg-(--bg-global) py-4 shadow-lg transition-transform duration-300',
+					'fixed top-0 bottom-0 left-0 z-50 w-64 transform overflow-y-auto bg-(--bg-mobile-sidebar) py-4 shadow-lg transition-transform duration-300',
 					open ? 'translate-x-0' : '-translate-x-full'
 				)}
 			>

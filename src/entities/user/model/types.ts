@@ -25,6 +25,14 @@ type Contacts = {
 		icon: LucideIcon;
 		href: string;
 	};
+	vk: {
+		value: string;
+		href: string;
+	};
+	git: {
+		value: string;
+		href: string;
+	};
 };
 
 type VCard = {

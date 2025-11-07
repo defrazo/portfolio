@@ -20,7 +20,7 @@ const ScrollToTop = () => {
 		<Button
 			centerIcon={<ArrowUp className="size-6" />}
 			className={cn(
-				'fixed right-8 bottom-4 z-50 hidden rounded-full p-3 shadow transition-all lg:block',
+				'fixed right-8 bottom-4 z-50 hidden rounded-full p-3 shadow transition-all xl:block',
 				visible ? 'opacity-100' : 'pointer-events-none opacity-0'
 			)}
 			size="custom"

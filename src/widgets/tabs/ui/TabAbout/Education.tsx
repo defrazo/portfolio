@@ -5,7 +5,7 @@ export const Education = () => {
 	return (
 		<div className="flex flex-col gap-4">
 			<SectionTitle title="Образование" />
-			<p className="text-justify text-base leading-snug lg:text-lg">
+			<p className="text-justify text-base leading-snug xl:text-lg">
 				Сочетание IT-образования, юридической подготовки и научного опыта позволяет мне подходить к
 				фронтенд-разработке взвешенно: решать задачи с учетом технических ограничений, формальных требований и
 				того, как интерфейс воспринимает пользователь.

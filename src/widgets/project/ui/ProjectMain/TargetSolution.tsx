@@ -31,7 +31,7 @@ export const TargetSolution = ({ target, solution }: { target: string; solution:
 						</div>
 						<h3 className={`text-lg font-semibold lg:text-xl ${color}`}>{label}</h3>
 					</div>
-					<p className="text-justify text-sm leading-tight text-(--color-secondary) transition-colors group-hover:text-(--color-primary) md:text-center md:text-base lg:leading-snug">
+					<p className="text-justify text-sm leading-tight text-(--color-secondary) transition-colors group-hover:text-(--color-primary) md:text-base lg:leading-snug">
 						{value}
 					</p>
 				</div>

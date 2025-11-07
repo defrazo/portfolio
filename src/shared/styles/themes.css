@@ -50,6 +50,9 @@
 
 	/* Тени */
 	--shadow: none;
+
+	/* Особые стили */
+	--bg-mobile-sidebar: #252525;
 }
 
 .light-theme {
@@ -104,4 +107,7 @@
 
 	/* Тени */
 	--shadow: 0 1px 2px 0px rgb(40 66 75 / 22%);
+
+	/* Особые стили */
+	--bg-mobile-sidebar: #d5d5d5;
 }
