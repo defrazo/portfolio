@@ -4,7 +4,7 @@ import { ProjectFooter, ProjectHeader, ProjectMain } from '@/widgets/project';
 export const PortfolioPage = () => {
 	return (
 		<>
-			<ProjectHeader linkDemo={PROJECTS[1].link} linkGit={PROJECTS[1].link} />
+			<ProjectHeader linkDemo={PROJECTS[1].link} linkGit={PROJECTS[1].git} />
 			<div className="flex flex-col gap-2 px-4 lg:px-12 xl:gap-6">
 				<ProjectMain
 					date={PROJECTS[1].date}

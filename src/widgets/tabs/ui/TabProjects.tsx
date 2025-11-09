@@ -28,7 +28,7 @@ export const TabProjects = () => {
 								<Link className="bg-black" to={`/project/${id}`} variant="custom">
 									<img
 										alt={`Иллюстрация: главный экран ${title}`}
-										className="no-touch-callout scale-[1.37] transition-transform duration-500 hover:scale-110"
+										className="no-touch-callout aspect-(490/277) scale-130 object-cover transition-transform duration-500 hover:scale-110"
 										decoding="async"
 										height={277}
 										loading="eager"

@@ -1,4 +1,4 @@
-// import { Download, Printer } from 'lucide-react';
+import { Download, Printer } from 'lucide-react';
 
 import { Button } from '@/shared/ui';
 
@@ -17,6 +17,22 @@ const SocialButtons = SOCIAL_BUTTONS.map(({ id, icon: Icon, href }) => (
 ));
 
 export const TabHome = () => {
+	const handleDownload = () => {
+		const link = document.createElement('a');
+		link.href = '/resume.jpg';
+		link.download = 'Letunov E.D. Resume.jpg';
+		link.click();
+	};
+
+	const handlePrint = () => {
+		const pdfUrl = '/resume.pdf';
+		const iframe = document.createElement('iframe');
+		iframe.style.display = 'none';
+		iframe.src = pdfUrl;
+		iframe.onload = () => iframe.contentWindow?.print();
+		document.body.appendChild(iframe);
+	};
+
 	return (
 		<>
 			<div className="flex min-h-[80svh] flex-1 flex-col items-center justify-center gap-4 select-none md:min-h-0">
@@ -27,14 +43,24 @@ export const TabHome = () => {
 				<div className="h-1 w-32 animate-pulse rounded-full bg-linear-to-r from-(--accent-secondary-hover) to-(--accent-secondary)" />
 				<div className="flex gap-4 md:gap-4 xl:gap-6">{SocialButtons}</div>
 			</div>
-			{/* <div className="flex justify-between">
-				<Button className="shadow-(--shadow)" leftIcon={<Download className="size-8" />} variant="outline">
+			<div className="flex justify-between">
+				<Button
+					className="shadow-(--shadow)"
+					leftIcon={<Download className="size-8" />}
+					variant="outline"
+					onClick={handleDownload}
+				>
 					Скачать резюме
 				</Button>
-				<Button className="shadow-(--shadow)" leftIcon={<Printer className="size-8" />} variant="outline">
+				<Button
+					className="shadow-(--shadow)"
+					leftIcon={<Printer className="size-8" />}
+					variant="outline"
+					onClick={handlePrint}
+				>
 					Распечатать резюме
 				</Button>
-			</div> */}
+			</div>
 		</>
 	);
 };

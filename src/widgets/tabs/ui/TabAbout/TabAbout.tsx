@@ -29,7 +29,7 @@ export const TabAbout = () => {
 					<p className="-mt-3 text-justify text-base leading-snug xl:text-lg">
 						Создаю веб-интерфейсы на стыке технологий и эстетики. Научный бэкграунд научил меня системному
 						мышлению: взвешивать решения, продумывать детали и создавать по-настоящему функциональные
-						решения.
+						проекты.
 					</p>
 				</div>
 				<div className="grid grid-cols-1 gap-2 lg:grid-cols-2 lg:gap-4">

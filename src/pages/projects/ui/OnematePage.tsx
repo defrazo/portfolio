@@ -9,7 +9,7 @@ import { FEATURES } from '../model';
 export const OnematePage = () => {
 	return (
 		<>
-			<ProjectHeader linkDemo={PROJECTS[0].link} linkGit={PROJECTS[0].link} />
+			<ProjectHeader linkDemo={PROJECTS[0].link} linkGit={PROJECTS[0].git} />
 			<div className="flex flex-col gap-2 px-4 lg:px-12 xl:gap-6">
 				<ProjectMain
 					date={PROJECTS[0].date}
