@@ -1,5 +1,6 @@
 import { Download, Printer } from 'lucide-react';
 
+import { useDeviceType } from '@/shared/lib/hooks';
 import { Button } from '@/shared/ui';
 
 import { SOCIAL_BUTTONS } from '../model';
@@ -17,6 +18,8 @@ const SocialButtons = SOCIAL_BUTTONS.map(({ id, icon: Icon, href }) => (
 ));
 
 export const TabHome = () => {
+	const device = useDeviceType();
+
 	const handleDownload = () => {
 		const link = document.createElement('a');
 		link.href = '/resume.jpg';
@@ -43,18 +46,18 @@ export const TabHome = () => {
 				<div className="h-1 w-32 animate-pulse rounded-full bg-linear-to-r from-(--accent-secondary-hover) to-(--accent-secondary)" />
 				<div className="flex gap-4 md:gap-4 xl:gap-6">{SocialButtons}</div>
 			</div>
-			<div className="flex justify-between">
+			<div className="flex justify-between gap-4">
 				<Button
-					className="shadow-(--shadow)"
-					leftIcon={<Download className="size-8" />}
+					className="text-sm leading-4 shadow-(--shadow) md:min-w-[215px] md:px-4 md:text-base md:leading-normal"
+					leftIcon={device === 'desktop' && <Download className="size-4" />}
 					variant="outline"
 					onClick={handleDownload}
 				>
 					Скачать резюме
 				</Button>
 				<Button
-					className="shadow-(--shadow)"
-					leftIcon={<Printer className="size-8" />}
+					className="text-sm leading-4 shadow-(--shadow) md:min-w-[215px] md:px-4 md:text-base md:leading-normal"
+					leftIcon={device === 'desktop' && <Printer className="size-4" />}
 					variant="outline"
 					onClick={handlePrint}
 				>
