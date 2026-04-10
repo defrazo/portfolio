@@ -1,31 +1,31 @@
 import { CheckCircle2 } from 'lucide-react';
 
-import { FEATURES_ONEMATE, PROJECTS } from '@/entities/project';
+import { FEATURES_KANBAN, PROJECTS } from '@/entities/project';
 import { Divider } from '@/shared/ui';
 import { ProjectFooter, ProjectHeader, ProjectMain } from '@/widgets/project';
 
-export const OnematePage = () => {
+export const KanbanPage = () => {
 	return (
 		<>
-			<ProjectHeader linkDemo={PROJECTS[0].link} linkGit={PROJECTS[0].git} />
+			<ProjectHeader linkDemo={PROJECTS[2].link} linkGit={PROJECTS[2].git} />
 			<div className="flex flex-col gap-2 px-4 lg:px-12 xl:gap-6">
 				<ProjectMain
-					date={PROJECTS[0].date}
-					demoLink={PROJECTS[0].link}
-					description={PROJECTS[0].description}
-					gallery={PROJECTS[0].gallery}
-					galleryM={PROJECTS[0].galleryM}
-					solution={PROJECTS[0].solution}
-					status={PROJECTS[0].status}
-					statusLink={PROJECTS[0].git}
-					target={PROJECTS[0].target}
-					techs={PROJECTS[0].techs}
-					title={PROJECTS[0].title}
+					date={PROJECTS[2].date}
+					demoLink={PROJECTS[2].link}
+					description={PROJECTS[2].description}
+					gallery={PROJECTS[2].gallery}
+					galleryM={PROJECTS[2].galleryM}
+					solution={PROJECTS[2].solution}
+					status={PROJECTS[2].status}
+					statusLink={PROJECTS[2].git}
+					target={PROJECTS[2].target}
+					techs={PROJECTS[2].techs}
+					title={PROJECTS[2].title}
 				/>
 				<div className="flex flex-1 flex-col gap-2 lg:gap-4">
 					<h2 className="project-header">Ключевые возможности</h2>
 					<div className="grid flex-1 grid-cols-1 gap-2 md:grid-cols-2 lg:gap-4">
-						{FEATURES_ONEMATE.map(({ title, icon: Icon, color, lead, bullets }) => (
+						{FEATURES_KANBAN.map(({ title, icon: Icon, color, lead, bullets }) => (
 							<div key={title} className="group card-surface flex flex-col justify-between">
 								<div className="flex flex-col gap-2">
 									<div className="flex items-center gap-2">
@@ -61,7 +61,7 @@ export const OnematePage = () => {
 					</div>
 				</div>
 			</div>
-			<ProjectFooter next="portfolio" previous="kanban" />
+			<ProjectFooter next="onemate" previous="portfolio" />
 		</>
 	);
 };
