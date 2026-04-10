@@ -1,12 +1,13 @@
 import { ExternalLink } from 'lucide-react';
 
+import type { Feature } from '@/entities/project';
 import type { Technology } from '@/entities/tecnology';
 import { useDeviceType } from '@/shared/lib/hooks';
 import { Button, DesktopGallery, MobileGallery } from '@/shared/ui';
 
-import { StatusPanel, TargetSolution, Technologies } from '.';
+import { Features, StatusPanel, TargetSolution, Technologies } from '.';
 
-interface ProjectMainProps {
+interface ProjectOverviewProps {
 	title: string;
 	description: string;
 	date: string;
@@ -18,9 +19,10 @@ interface ProjectMainProps {
 	target: string;
 	solution: string;
 	techs: Technology[];
+	features?: Feature[];
 }
 
-export const ProjectMain = ({
+export const ProjectOverview = ({
 	title,
 	description,
 	date,
@@ -32,7 +34,8 @@ export const ProjectMain = ({
 	target,
 	solution,
 	techs,
-}: ProjectMainProps) => {
+	features,
+}: ProjectOverviewProps) => {
 	const device = useDeviceType();
 
 	return (
@@ -78,6 +81,7 @@ export const ProjectMain = ({
 				)}
 				<Technologies techs={techs} />
 			</div>
+			{features && <Features features={features} />}
 		</div>
 	);
 };
