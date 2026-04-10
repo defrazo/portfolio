@@ -34,7 +34,8 @@ export type WorkItem = {
 	role: string;
 	company: string;
 	period: string;
-	bullets: string[];
+	summary: string;
+	highlights: { title: string; desc: string }[];
 };
 
 export type ContactsBadge = {

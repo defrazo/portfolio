@@ -20,7 +20,7 @@ type Contacts = {
 		value: string;
 		icon: LucideIcon;
 	};
-	site: {
+	max: {
 		value: string;
 		icon: LucideIcon;
 		href: string;
