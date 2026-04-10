@@ -28,7 +28,7 @@ export const technologies: Technology[] = [
 	{ name: 'TypeScript', icon: IconTS, description: 'Типизация' },
 	{ name: 'FSD', icon: IconFSD, description: 'Модульность' },
 	{ name: 'JavaScript', icon: IconJS, description: 'Логика' },
-	{ name: 'Tailwind', icon: IconTW, description: 'Быстрая вёрстка' },
+	{ name: 'Tailwind CSS', icon: IconTW, description: 'Быстрая вёрстка' },
 	{ name: 'MobX', icon: IconMobX, description: 'Реактивность' },
 	{ name: 'Supabase', icon: IconSB, description: 'Бэкенд' },
 	{ name: 'Vite', icon: IconVite, description: 'Быстрая сборка' },

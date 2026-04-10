@@ -86,11 +86,11 @@ export const CONTACTS_BADGES: ContactsBadge[] = [
 		icon: USER_PROFILE.contacts.telegram.icon,
 	},
 	{
-		id: 'site',
-		title: 'Сайт',
-		content: USER_PROFILE.contacts.site.value,
-		href: USER_PROFILE.contacts.site.href,
-		icon: USER_PROFILE.contacts.site.icon,
+		id: 'max',
+		title: 'MAX',
+		content: USER_PROFILE.contacts.max.value,
+		href: USER_PROFILE.contacts.max.href,
+		icon: USER_PROFILE.contacts.max.icon,
 	},
 	{
 		id: 'vcard',
@@ -159,20 +159,20 @@ export const MAP_LINKS = [
 
 export const SKILLS: Skill[] = [
 	{ label: 'React', value: 51, icon: IconReact, color: '#55C2DF' },
-	{ label: 'TypeScript', value: 57, icon: IconTS, color: '#3178C6' },
-	{ label: 'JavaScript', value: 55, icon: IconJS, color: '#F7DF1E' },
+	{ label: 'TypeScript', value: 66, icon: IconTS, color: '#3178C6' },
+	{ label: 'JavaScript', value: 63, icon: IconJS, color: '#F7DF1E' },
 	{ label: 'MobX', value: 43, icon: IconMobX, color: '#FF9955' },
-	{ label: 'Tailwind CSS', value: 82, icon: IconTW, color: '#38B2AC' },
+	{ label: 'Tailwind CSS', value: 90, icon: IconTW, color: '#38B2AC' },
 	{ label: 'Supabase', value: 51, icon: IconSB, color: '#3ECF8E' },
 	{ label: 'Vite', value: 50, icon: IconVite, color: '#646CFF' },
-	{ label: 'HTML5', value: 64, icon: IconHTML, color: '#E34F26' },
+	{ label: 'HTML5', value: 66, icon: IconHTML, color: '#E34F26' },
 	{ label: 'CSS3', value: 72, icon: IconCSS, color: '#1572B6' },
 	{ label: 'SASS', value: 34, icon: IconSASS, color: '#CC6699' },
 	{ label: 'PostgreSQL', value: 21, icon: IconPost, color: '#336791' },
 	{ label: 'Docker', value: 66, icon: IconDocker, color: '#2496ED' },
 	{ label: 'FSD', value: 85, icon: IconFSD, color: '#3193FF' },
-	{ label: 'GitHub', value: 35, icon: IconGithub, color: '#0969DA' },
-	{ label: 'VS Code', value: 57, icon: IconVS, color: '#007ACC' },
+	{ label: 'GitHub', value: 54, icon: IconGithub, color: '#0969DA' },
+	{ label: 'VS Code', value: 64, icon: IconVS, color: '#007ACC' },
 	{ label: 'Figma', value: 15, icon: IconFigma, color: '#F24E1E' },
 	{ label: 'Illustrator', value: 28, icon: IconAI, color: '#FF9A00' },
 	{ label: 'Photoshop', value: 49, icon: IconPS, color: '#31A8FF' },
@@ -202,27 +202,67 @@ export const SOCIAL_BUTTONS = [
 
 export const WORK_HISTORY: WorkItem[] = [
 	{
-		id: 'personal-project',
+		id: 'kanban',
 		role: 'Frontend-разработчик',
-		company: 'Личный проект',
-		period: 'Январь 2025 – по настоящее время',
-		bullets: [
-			'Спроектировал и реализовал веб-приложение по Feature-Sliced Design на React + TypeScript с MobX',
-			'Интегрировал Supabase (Auth/DB) с E-mail/OAuth авторизацией и личным кабинетом пользователя',
-			'Разработал адаптивный UI на Tailwind CSS с поддержкой темизации и микроанимаций',
-			'Контейнеризировал приложение в Docker и развернул на VPS с настройкой собственного домена',
-			'Реализовал юридический модуль (Demo-режим, Политика конфиденциальности, Пользовательское соглашение)',
+		company: 'Kanban Board',
+		period: 'Январь 2026 – Апрель 2026',
+		summary:
+			'Разработал Kanban-модуль на чистом TypeScript. Реализовал локальный state, самописный drag-and-drop и lifecycle компонентов. Интегрировал в платформу OneMate без изменения её архитектуры.',
+		highlights: [
+			{ title: 'Построил независимый TS-модуль', desc: 'чистая архитектура без фреймворков' },
+			{ title: 'Разработал кастомный state', desc: 'на замыканиях и подписках, без сторонних библиотек' },
+			{ title: 'Реализовал drag-and-drop', desc: 'перемещение и сортировка колонок и задач' },
+			{ title: 'Спроектировал lifecycle', desc: '(init / destroy) с управлением подписками и очисткой ресурсов' },
+			{ title: 'Обеспечил тестируемость', desc: 'unit-тесты на Vitest для основной бизнес-логики' },
+			{ title: 'Интегрировал в React', desc: 'через прокси-страницу без изменения внешней архитектуры' },
+		],
+	},
+	{
+		id: 'portfolio',
+		role: 'Frontend-разработчик',
+		company: 'Портфолио',
+		period: 'Сентябрь 2025 – Октябрь 2025',
+		summary:
+			'Адаптировал архитектуру OneMate под статичный сайт, упростив FSD и state-менеджмент. Расширил дизайн-систему, оптимизировал производительность и развернул проект на VPS (Docker + Nginx).',
+		highlights: [
+			{ title: 'Адаптировал архитектуру', desc: 'упростил FSD-слои и state-менеджмент под статичный сайт' },
+			{ title: 'Расширил дизайн-систему', desc: 'переиспользовал и доработал UI компоненты OneMate' },
+			{ title: 'Оптимизировал производительность', desc: 'lazy loading, code splitting, минимизация бандла' },
+			{ title: 'Развернул на VPS', desc: 'Docker + Nginx + собственный домен' },
+		],
+	},
+	{
+		id: 'onemate',
+		role: 'Frontend-разработчик',
+		company: 'OneMate',
+		period: 'Январь 2025 – Сентябрь 2025',
+		summary:
+			'Спроектировал и реализовал масштабируемую веб-платформу на React + TypeScript. Разработал dashboard, интегрировал Supabase (Auth/DB) и внедрил дизайн-систему. Развернул на VPS.',
+		highlights: [
+			{ title: 'Спроектировал архитектуру', desc: 'React + TypeScript + MobX + FSD для модульной расширяемости' },
+			{
+				title: 'Разработал dashboard',
+				desc: 'калькулятор, календарь, заметки, погода, конвертер валют, переводчик',
+			},
+			{
+				title: 'Интегрировал backend через Supabase',
+				desc: 'Auth (OAuth/E-mail) + база данных + личный кабинет',
+			},
+			{ title: 'Создал дизайн-систему', desc: 'Tailwind CSS, адаптивность, темизация, микроанимации' },
+			{ title: 'Настроил production-инфраструктуру', desc: 'Docker + Nginx + деплой на VPS с доменом' },
 		],
 	},
 	{
 		id: 'rosstat',
 		role: 'Бригадир-инструктор территориального уровня',
-		company: 'Управление Федеральной службы государственной статистики по Свердловской обл. и Курганской обл.',
+		company: 'Свердловскстат',
 		period: 'Июль 2020 – Ноябрь 2022',
-		bullets: [
-			'Координировал работу территориальных органов по проведению Сельскохозяйственной микропереписи-2021',
-			'Разработал шаблоны отчётной документации и автоматизировал процессы подготовки документов',
-			'Создавал графики и визуализации данных для официальных публикаций (пресс-релизов) регионального уровня',
+		summary:
+			'Координировал работу территориальных подразделений в рамках СХМП-2021. Автоматизировал отчётную документацию и создавал аналитические материалы для региональных публикаций.',
+		highlights: [
+			{ title: 'Координировал региональные команды ', desc: 'организация работы и контроль сроков выполнения' },
+			{ title: 'Автоматизировал отчётность', desc: 'сокращение ручной подготовки отчётных документов' },
+			{ title: 'Разрабатывал аналитические материалы', desc: 'графики и отчёты для официальных пресс-релизов' },
 		],
 	},
 	{
@@ -230,10 +270,12 @@ export const WORK_HISTORY: WorkItem[] = [
 		role: 'Менеджер по закупкам и логистике',
 		company: 'ООО «АМ ГЛОБАЛ»',
 		period: 'Июнь 2018 – Июнь 2019',
-		bullets: [
-			'Анализировал рынок и отбирал товары с высоким потенциалом для оптовой реализации',
-			'Оптимизировал цепочки поставок и логистику, ускоряя доставку товаров клиентам',
-			'Координировал взаимодействие с поставщиками и контролировал выполнение заказов',
+		summary:
+			'Обеспечивал закупку товаров по минимальной цене: анализировал рынок, подбирал поставщиков и оптимизировал логистику. Контролировал выполнение заказов и сроки поставки.',
+		highlights: [
+			{ title: 'Анализировал рынок', desc: 'отбор поставщиков с выгодными условиями закупки' },
+			{ title: 'Оптимизировал логистику', desc: 'контроль сроков и процесса доставки' },
+			{ title: 'Работал с поставщиками', desc: 'согласование и контроль выполнения заказов' },
 		],
 	},
 ];
