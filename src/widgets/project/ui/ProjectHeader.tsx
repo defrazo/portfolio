@@ -1,6 +1,6 @@
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
-import { IconGithub } from '@/shared/assets/icons';
+import { IconGit } from '@/shared/assets/icons';
 import { useDeviceType } from '@/shared/lib/hooks';
 import { Button, Link } from '@/shared/ui';
 
@@ -33,7 +33,7 @@ export const ProjectHeader = ({ linkDemo, linkGit }: { linkDemo: string; linkGit
 					<Button
 						className="text-xs leading-tight shadow-(--shadow) md:text-base lg:leading-normal"
 						href={linkGit}
-						leftIcon={device !== 'mobile' && <IconGithub className="size-4" />}
+						leftIcon={device !== 'mobile' && <IconGit className="size-4" />}
 						rel="noopener noreferrer"
 						target="_blank"
 						variant="outline"

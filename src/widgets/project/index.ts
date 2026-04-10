@@ -1,1 +1,1 @@
-export { ProjectFooter, ProjectHeader, ProjectMain } from './ui';
+export { ProjectFooter, ProjectHeader, ProjectOverview } from './ui';

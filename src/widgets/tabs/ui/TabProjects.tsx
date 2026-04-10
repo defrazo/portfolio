@@ -1,16 +1,12 @@
 import React from 'react';
-import { ExternalLink, SquareMousePointer } from 'lucide-react';
 
 import { PROJECTS } from '@/entities/project';
-import { useDeviceType } from '@/shared/lib/hooks';
 import { cn } from '@/shared/lib/utils';
 import { Button, Divider, Link } from '@/shared/ui';
 
 import { SectionTitle } from '.';
 
 export const TabProjects = () => {
-	const device = useDeviceType();
-
 	return (
 		<>
 			<SectionTitle title="Проекты" />
@@ -41,7 +37,7 @@ export const TabProjects = () => {
 								<div className="border-solid border-(--accent-secondary) lg:border-b lg:pb-1.5">
 									<h2 className="text-2xl leading-tight font-bold text-(--accent-secondary) lg:text-(--color-primary) xl:text-3xl xl:leading-normal">
 										{title}
-										<span className="ml-1.5 align-super text-xs text-(--color-disabled) xl:text-sm">
+										<span className="ml-1.5 align-super text-xs font-normal text-(--color-disabled) xl:text-sm">
 											{date}
 										</span>
 									</h2>
@@ -50,7 +46,6 @@ export const TabProjects = () => {
 								<div className="flex justify-between gap-2">
 									<Link
 										className="flex-1 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
-										rightIcon={device === 'desktop' && <SquareMousePointer className="size-5" />}
 										size="custom"
 										to={`/project/${id}`}
 										variant="accent"
@@ -58,10 +53,9 @@ export const TabProjects = () => {
 										Подробнее
 									</Link>
 									<Button
-										className="shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
+										className="min-w-28 shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
 										href={link}
 										rel="noopener noreferrer"
-										rightIcon={device === 'desktop' && <ExternalLink className="size-5" />}
 										size="custom"
 										target="_blank"
 										variant="outline"
@@ -69,10 +63,9 @@ export const TabProjects = () => {
 										Live Demo
 									</Button>
 									<Button
-										className="shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
+										className="min-w-28 shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
 										href={git}
 										rel="noopener noreferrer"
-										rightIcon={device === 'desktop' && <ExternalLink className="size-5" />}
 										size="custom"
 										target="_blank"
 										variant="outline"

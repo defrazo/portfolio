@@ -48,7 +48,7 @@ export const TabHome = () => {
 			</div>
 			<div className="flex justify-between gap-4">
 				<Button
-					className="text-sm leading-4 shadow-(--shadow) md:min-w-[215px] md:px-4 md:text-base md:leading-normal"
+					className="text-sm leading-4 shadow-(--shadow) md:min-w-56 md:px-4 md:text-base md:leading-normal"
 					leftIcon={device === 'desktop' && <Download className="size-4" />}
 					variant="outline"
 					onClick={handleDownload}
@@ -56,7 +56,7 @@ export const TabHome = () => {
 					Скачать резюме
 				</Button>
 				<Button
-					className="text-sm leading-4 shadow-(--shadow) md:min-w-[215px] md:px-4 md:text-base md:leading-normal"
+					className="text-sm leading-4 shadow-(--shadow) md:min-w-56 md:px-4 md:text-base md:leading-normal"
 					leftIcon={device === 'desktop' && <Printer className="size-4" />}
 					variant="outline"
 					onClick={handlePrint}
