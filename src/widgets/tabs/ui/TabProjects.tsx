@@ -25,7 +25,6 @@ export const TabProjects = () => {
 									<img
 										alt={`Иллюстрация: главный экран ${title}`}
 										className="no-touch-callout aspect-(490/277) scale-130 object-cover transition-transform duration-500 hover:scale-110"
-										decoding="async"
 										height={277}
 										loading="eager"
 										src={img}

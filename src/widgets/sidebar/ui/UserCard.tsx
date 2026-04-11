@@ -12,7 +12,6 @@ export const UserCard = () => {
 					<img
 						alt="Фотография"
 						className="no-touch-callout object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-						decoding="async"
 						loading="lazy"
 						src="/avatar.webp"
 						onClick={() => modalStore.setModal(<ImageViewer src="/avatar.webp" />)}

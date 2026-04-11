@@ -28,7 +28,6 @@ export const MapSection = () => {
 					<img
 						alt="Пионерский район"
 						className="no-touch-callout scale-110 rounded-2xl object-cover opacity-70 transition-all duration-500 hover:scale-100 hover:opacity-100"
-						decoding="async"
 						loading="lazy"
 						src={Map}
 					/>

@@ -34,7 +34,7 @@ export const MobileGallery = ({ images }: { images: string[] }) => {
 					variant="mobile"
 					onClick={prev}
 				/>
-				<div className="flex w-[60%] items-center justify-between">
+				<div className="flex max-w-[60%] items-center justify-between gap-2">
 					{images.map((_, idx) => (
 						<span
 							key={idx}

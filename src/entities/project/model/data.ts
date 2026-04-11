@@ -20,62 +20,6 @@ import * as PF from '@/shared/content/portfolio';
 
 import type { Feature, Project } from '.';
 
-export const PROJECTS: Project[] = [
-	{
-		id: 'onemate',
-		title: 'Onemate',
-		date: 'Сентябрь 2025',
-		description:
-			'Модульная веб-платформа для личной продуктивности с расширяемой архитектурой и набором инструментов (заметки, календарь, погода, переводчик и др.), поддерживающая подключение независимых функциональных модулей.',
-		img: OM.OHomeD,
-		techs: getTechs(['React', 'TypeScript', 'FSD', 'Tailwind CSS', 'MobX', 'Supabase', 'Vite']),
-		git: 'https://github.com/defrazo/onemate',
-		link: 'https://letunoff.ru/onemate',
-		status: 'В разработке',
-		target: 'Создать масштабируемую платформу для личной продуктивности с фокусом на модульную архитектуру и расширяемость.',
-		solution:
-			'Реализовано модульное рабочее пространство с единой дизайн-системой, независимыми виджетами и Supabase для хранения и синхронизации пользовательских данных.',
-		/* prettier-ignore */
-		gallery: [OM.OHomeD, OM.ODashD, OM.OOverviewD, OM.OPersonalD, OM.OAvatarsD, OM.OContactsD, OM.OSecureD, OM.OLoginD, OM.ORegisterD, OM.OAboutD, OM.OTermsD],
-		/* prettier-ignore */
-		galleryM: [OM.OHomeM, OM.ODash1M, OM.ODash2M, OM.OSheetM, OM.OPersonalM, OM.OAvatarsM, OM.OSecureM, OM.OLoginM, OM.ORegisterM, OM.OAboutM],
-	},
-	{
-		id: 'portfolio',
-		title: 'Портфолио',
-		date: 'Октябрь 2025',
-		description:
-			'Персональное портфолио на React + TypeScript с адаптивным интерфейсом, темизацией и переиспользуемой дизайн-системой, созданное на базе архитектурных решений OneMate.',
-		img: PF.PHomeD,
-		techs: getTechs(['React', 'TypeScript', 'FSD', 'Tailwind CSS', 'MobX', 'Vite']),
-		git: 'https://github.com/defrazo/portfolio',
-		link: 'https://letunoff.ru',
-		status: 'Завершено',
-		target: 'Адаптировать архитектуру OneMate под статичный сайт, сохранив качество кода и дизайн-систему.',
-		solution:
-			'Переиспользована и расширена дизайн-система OneMate, упрощены FSD-слои, добавлены lazy loading и code splitting, выполнен деплой на VPS через Docker + Nginx.',
-		gallery: [PF.PHomeD, PF.PAboutD, PF.PSkillsD, PF.PProjectsD, PF.PContactsD, PF.PDetailsD],
-		galleryM: [PF.PHomeM, PF.PAboutM, PF.PSkillsM, PF.PProjectsM, PF.PContactsM, PF.PDetailsM, PF.PDrawerM],
-	},
-	{
-		id: 'kanban',
-		title: 'Kanban Board',
-		date: 'Апрель 2026',
-		description:
-			'Kanban-модуль на чистом TypeScript: собственный state, кастомный drag-and-drop и управляемый lifecycle компонентов. Спроектирован как изолированный модуль и интегрирован в OneMate.',
-		img: KB.KMainD,
-		techs: getTechs(['TypeScript', 'FSD', 'Tailwind CSS', 'Supabase', 'Vite']),
-		git: 'https://github.com/defrazo/onemate/tree/main/src/pages/kanban',
-		link: 'https://letunoff.ru/onemate/kanban',
-		status: 'Завершено',
-		target: 'Создать фреймворк-независимый модуль управления задачами с собственным state, drag-and-drop и lifecycle компонентов.',
-		solution:
-			'Разработан изолированный TS-модуль с локальным state на замыканиях и подписках, кастомным DnD и прозрачным жизненным циклом компонентов. Спроектирован для независимого использования и встроен в OneMate через прокси-страницу.',
-		gallery: [KB.KMainD, KB.KTaskD, KB.KViewD, KB.KColumnD, KB.KDeleteD],
-		galleryM: [KB.KMainM, KB.KTaskM, KB.KViewM, KB.KColumnM, KB.KDeleteM],
-	},
-];
-
 export const FEATURES_ONEMATE: Feature[] = [
 	{
 		title: '6 виджетов',
@@ -92,7 +36,6 @@ export const FEATURES_ONEMATE: Feature[] = [
 		],
 	},
 	{
-		// title: 'Унифицированный UI',
 		title: 'Платформа и доступ',
 		icon: PanelsTopLeft,
 		color: 'text-[#8B5CF6]',
@@ -209,5 +152,73 @@ export const FEATURES_KANBAN: Feature[] = [
 		color: 'text-[#F59E0B]',
 		lead: 'Встраивание в платформу',
 		bullets: ['Изолированный модуль', 'Интеграция в OneMate', 'Прокси-страница', 'Unit-тесты на Vitest'],
+	},
+];
+
+export const PROJECTS: Project[] = [
+	{
+		id: 'onemate',
+		slug: 'onemate',
+		title: 'Onemate',
+		date: 'Сентябрь 2025',
+		description:
+			'Модульная веб-платформа для личной продуктивности с расширяемой архитектурой и набором инструментов (заметки, календарь, погода, переводчик и др.), поддерживающая подключение независимых функциональных модулей.',
+		img: OM.OHomeD,
+		techs: getTechs(['React', 'TypeScript', 'FSD', 'Tailwind CSS', 'MobX', 'Supabase', 'Vite']),
+		git: 'https://github.com/defrazo/onemate',
+		link: 'https://letunoff.ru/onemate',
+		status: 'В разработке',
+		target: 'Создать масштабируемую платформу для личной продуктивности с фокусом на модульную архитектуру и расширяемость.',
+		solution:
+			'Реализовано модульное рабочее пространство с единой дизайн-системой, независимыми виджетами и Supabase для хранения и синхронизации пользовательских данных.',
+		/* prettier-ignore */
+		gallery: [OM.OHomeD, OM.ODashD, OM.OOverviewD, OM.OPersonalD, OM.OAvatarsD, OM.OContactsD, OM.OSecureD, OM.OLoginD, OM.ORegisterD, OM.OAboutD, OM.OTermsD],
+		/* prettier-ignore */
+		galleryM: [OM.OHomeM, OM.ODash1M, OM.ODash2M, OM.OSheetM, OM.OPersonalM, OM.OAvatarsM, OM.OSecureM, OM.OLoginM, OM.ORegisterM, OM.OAboutM],
+		features: FEATURES_ONEMATE,
+		previous: 'kanban',
+		next: 'portfolio',
+	},
+	{
+		id: 'portfolio',
+		slug: 'portfolio',
+		title: 'Портфолио',
+		date: 'Октябрь 2025',
+		description:
+			'Персональное портфолио на React + TypeScript с адаптивным интерфейсом, темизацией и переиспользуемой дизайн-системой, созданное на базе архитектурных решений OneMate.',
+		img: PF.PHomeD,
+		techs: getTechs(['React', 'TypeScript', 'FSD', 'Tailwind CSS', 'MobX', 'Vite']),
+		git: 'https://github.com/defrazo/portfolio',
+		link: 'https://letunoff.ru',
+		status: 'Завершено',
+		target: 'Адаптировать архитектуру OneMate под статичный сайт, сохранив качество кода и дизайн-систему.',
+		solution:
+			'Переиспользована и расширена дизайн-система OneMate, упрощены FSD-слои, добавлены lazy loading и code splitting, выполнен деплой на VPS через Docker + Nginx.',
+		gallery: [PF.PHomeD, PF.PAboutD, PF.PSkillsD, PF.PProjectsD, PF.PContactsD, PF.PDetailsD],
+		galleryM: [PF.PHomeM, PF.PAboutM, PF.PSkillsM, PF.PProjectsM, PF.PContactsM, PF.PDetailsM, PF.PDrawerM],
+		features: FEATURES_PORTFOLIO,
+		previous: 'onemate',
+		next: 'kanban',
+	},
+	{
+		id: 'kanban',
+		slug: 'kanban',
+		title: 'Kanban Board',
+		date: 'Апрель 2026',
+		description:
+			'Kanban-модуль на чистом TypeScript: собственный state, кастомный drag-and-drop и управляемый lifecycle компонентов. Спроектирован как изолированный модуль и интегрирован в OneMate.',
+		img: KB.KMainD,
+		techs: getTechs(['TypeScript', 'FSD', 'Tailwind CSS', 'Supabase', 'Vite']),
+		git: 'https://github.com/defrazo/onemate/tree/main/src/pages/kanban',
+		link: 'https://letunoff.ru/onemate/kanban',
+		status: 'Завершено',
+		target: 'Создать фреймворк-независимый модуль управления задачами с собственным state, drag-and-drop и lifecycle компонентов.',
+		solution:
+			'Разработан изолированный TS-модуль с локальным state на замыканиях и подписках, кастомным DnD и прозрачным жизненным циклом компонентов. Спроектирован для независимого использования и встроен в OneMate через прокси-страницу.',
+		gallery: [KB.KMainD, KB.KTaskD, KB.KViewD, KB.KColumnD, KB.KDeleteD],
+		galleryM: [KB.KMainM, KB.KTaskM, KB.KViewM, KB.KColumnM, KB.KDeleteM],
+		features: FEATURES_KANBAN,
+		previous: 'portfolio',
+		next: 'onemate',
 	},
 ];

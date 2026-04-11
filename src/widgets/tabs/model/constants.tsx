@@ -86,18 +86,18 @@ export const CONTACTS_BADGES: ContactsBadge[] = [
 		icon: USER_PROFILE.contacts.telegram.icon,
 	},
 	{
-		id: 'max',
-		title: 'MAX',
-		content: USER_PROFILE.contacts.max.value,
-		href: USER_PROFILE.contacts.max.href,
-		icon: USER_PROFILE.contacts.max.icon,
-	},
-	{
 		id: 'vcard',
 		title: 'vCard',
 		content: USER_PROFILE.vcard.label,
 		href: USER_PROFILE.vcard.href,
 		icon: USER_PROFILE.vcard.icon,
+	},
+	{
+		id: 'max',
+		title: 'MAX',
+		content: USER_PROFILE.contacts.max.value,
+		href: USER_PROFILE.contacts.max.href,
+		icon: USER_PROFILE.contacts.max.icon,
 	},
 ];
 

@@ -22,7 +22,7 @@ export function Layout({ hideRightOnMobile = false, rightSide, children }: Layou
 		>
 			<div className="flex gap-4">
 				<main className="flex flex-1">{children}</main>
-				{right && <aside className="w-[250px]">{right}</aside>}
+				{right && <aside className="w-62.5">{right}</aside>}
 			</div>
 		</div>
 	);

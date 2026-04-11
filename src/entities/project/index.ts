@@ -1,1 +1,1 @@
-export { FEATURES_KANBAN, FEATURES_ONEMATE, FEATURES_PORTFOLIO, PROJECTS } from './model';
+export { PROJECTS } from './model';
