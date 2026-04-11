@@ -1,12 +1,12 @@
 import { ExternalLink } from 'lucide-react';
 
-import type { Feature, Project } from '@/entities/project';
+import type { Project } from '@/entities/project';
 import { useDeviceType } from '@/shared/lib/hooks';
 import { Button, DesktopGallery, MobileGallery } from '@/shared/ui';
 
 import { Features, StatusPanel, TargetSolution, Technologies } from '.';
 
-export const ProjectOverview = ({ project, features }: { project: Project; features: Feature[] }) => {
+export const ProjectOverview = ({ project }: { project: Project }) => {
 	const device = useDeviceType();
 
 	return (
@@ -35,7 +35,7 @@ export const ProjectOverview = ({ project, features }: { project: Project; featu
 						target="_blank"
 						variant="accent"
 					>
-						Попробовать {project.title}
+						Открыть {project.title}
 					</Button>
 					<div className="h-px w-10 bg-linear-to-r from-(--color-accent) to-transparent md:w-16" />
 				</div>
@@ -52,7 +52,7 @@ export const ProjectOverview = ({ project, features }: { project: Project; featu
 				)}
 				<Technologies techs={project.techs} />
 			</div>
-			{features && <Features features={features} />}
+			{project.features && <Features features={project.features} />}
 		</div>
 	);
 };

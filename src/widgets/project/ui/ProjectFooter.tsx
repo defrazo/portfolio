@@ -12,7 +12,7 @@ export const ProjectFooter = ({ previous, next }: { previous: string; next: stri
 					className="group py-2 text-center text-xs md:text-base lg:pl-2"
 					leftIcon={<ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1" />}
 					size="custom"
-					to={`/project/${previous}`}
+					to={`/projects/${previous}`}
 					variant="mobile"
 					onClick={handleScrollTop}
 				>
@@ -22,7 +22,7 @@ export const ProjectFooter = ({ previous, next }: { previous: string; next: stri
 					className="group py-2 text-center text-xs md:text-base lg:pr-2"
 					rightIcon={<ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />}
 					size="custom"
-					to={`/project/${next}`}
+					to={`/projects/${next}`}
 					variant="mobile"
 					onClick={handleScrollTop}
 				>

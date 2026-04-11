@@ -23,7 +23,7 @@ export const ProjectPage = () => {
 			<div className="core-border hide-scrollbar flex flex-1 cursor-default flex-col overflow-auto rounded-xl bg-(--bg-secondary) shadow-(--shadow) select-none">
 				<div className="relative flex flex-1 flex-col gap-4">
 					<ProjectHeader linkDemo={project.link} linkGit={project.git} />
-					<ProjectOverview features={project.features} project={project} />
+					<ProjectOverview project={project} />
 					<ProjectFooter next={project.next} previous={project.previous} />
 				</div>
 				<ScrollToTop />

@@ -11,8 +11,8 @@ export const TabProjects = () => {
 		<>
 			<SectionTitle title="Проекты" />
 			<div className="flex flex-col gap-4">
-				{PROJECTS.map(({ id, title, date, description, img, git, link }, idx) => (
-					<React.Fragment key={id}>
+				{PROJECTS.map(({ slug, title, date, description, img, git, link }, idx) => (
+					<React.Fragment key={slug}>
 						{idx > 0 && <Divider />}
 						<div
 							className={cn(
@@ -21,7 +21,7 @@ export const TabProjects = () => {
 							)}
 						>
 							<div className="flex-1 overflow-hidden rounded-4xl border border-solid border-(--border-color) bg-(--bg-primary)">
-								<Link className="bg-black" to={`/project/${id}`} variant="custom">
+								<Link className="bg-black" to={`/projects/${slug}`} variant="custom">
 									<img
 										alt={`Иллюстрация: главный экран ${title}`}
 										className="no-touch-callout aspect-(490/277) scale-130 object-cover transition-transform duration-500 hover:scale-110"
@@ -46,7 +46,7 @@ export const TabProjects = () => {
 									<Link
 										className="flex-1 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
 										size="custom"
-										to={`/project/${id}`}
+										to={`/projects/${slug}`}
 										variant="accent"
 									>
 										Подробнее

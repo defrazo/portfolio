@@ -1,42 +1,13 @@
 import type { LucideIcon } from 'lucide-react';
 
-export type UserProfile = {
-	contacts: Contacts;
-	vcard: VCard;
-};
+export type UserProfile = { contacts: Contacts };
 
 type Contacts = {
-	email: {
-		value: string;
-		icon: LucideIcon;
-		href: string;
-	};
-	telegram: {
-		value: string;
-		icon: LucideIcon;
-		href: string;
-	};
-	location: {
-		value: string;
-		icon: LucideIcon;
-	};
-	max: {
-		value: string;
-		icon: LucideIcon;
-		href: string;
-	};
-	vk: {
-		value: string;
-		href: string;
-	};
-	git: {
-		value: string;
-		href: string;
-	};
-};
-
-type VCard = {
-	label: string;
-	icon: LucideIcon;
-	href: string;
+	email: { value: string; href: string; icon: LucideIcon };
+	telegram: { value: string; href: string; icon: LucideIcon };
+	location: { value: string; icon: LucideIcon };
+	max: { value: string; href: string; icon: LucideIcon };
+	vk: { value: string; href: string };
+	git: { value: string; href: string };
+	vcard: { value: string; href: string; icon: LucideIcon };
 };
