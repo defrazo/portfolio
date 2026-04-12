@@ -15,7 +15,9 @@ export const ProjectOverview = ({ project }: { project: Project }) => {
 				<h1 className="text-2xl font-bold tracking-tight md:text-3xl xl:text-5xl">{project.title}</h1>
 				<div className="mx-auto h-1 w-16 animate-pulse rounded-full bg-linear-to-r from-(--accent-primary) to-(--color-accent) lg:w-24" />
 			</div>
-			<p className="mx-auto max-w-4xl leading-tight md:text-lg xl:text-xl">{project.description}</p>
+			<p className="mx-auto max-w-4xl text-justify leading-tight md:text-center md:text-lg xl:text-xl">
+				{project.description}
+			</p>
 			<StatusPanel date={project.date} status={project.status} statusLink={project.git} />
 			<div className="group relative">
 				<div className="absolute -inset-3 rounded-2xl bg-linear-to-r from-(--accent-primary-op) to-(--accent-primary-op) opacity-0 blur-md transition-all duration-500 group-hover:opacity-100 group-hover:blur-md" />

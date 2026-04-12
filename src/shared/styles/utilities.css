@@ -4,7 +4,7 @@
 	}
 
 	.card-surface {
-		@apply rounded-2xl border border-(--accent-primary-hover-op) bg-(--bg-accent) p-3 shadow-(--shadow) transition-colors hover:border-(--accent-primary-hover-op) md:border-transparent md:p-4;
+		@apply rounded-2xl bg-(--bg-accent) p-3 shadow-(--shadow) transition-colors md:border md:border-transparent md:p-4 md:hover:border-(--accent-primary-hover-op);
 	}
 
 	.project-header {

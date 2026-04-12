@@ -12,18 +12,16 @@ export const Education = () => {
 			</p>
 			<div className="flex flex-col gap-2 lg:gap-4">
 				{EDUCATION_HISTORY.map(({ id, degree, period, major, university, focus }) => (
-					<article key={id} className="card-surface flex flex-col gap-1.5 p-6!">
+					<article key={id} className="card-surface flex flex-col gap-1.5 lg:p-6!">
 						<header className="flex items-baseline gap-2">
-							<h3 className="text-2xl leading-tight font-semibold lg:leading-4">{degree}</h3>
+							<h3 className="text-xl leading-tight font-semibold lg:text-2xl lg:leading-4">{degree}</h3>
 							<time className="text-xs text-(--color-secondary) lg:text-base">({period})</time>
 						</header>
 						<div className="flex flex-col text-sm leading-tight lg:text-base lg:leading-normal">
 							<p className="text-(--color-accent)">{major}</p>
 							<p className="leading-tight text-(--color-secondary)">{university}</p>
 						</div>
-						{focus && (
-							<p className="text-sm leading-tight lg:-mb-1.5 lg:text-base lg:leading-normal">{focus}</p>
-						)}
+						<p className="text-sm leading-tight lg:-mb-1.5 lg:text-base lg:leading-normal">{focus}</p>
 					</article>
 				))}
 			</div>

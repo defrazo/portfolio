@@ -38,17 +38,17 @@ export const TabHome = () => {
 
 	return (
 		<>
-			<div className="flex min-h-[80svh] flex-1 flex-col items-center justify-center gap-4 select-none md:min-h-0">
+			<div className="flex flex-1 flex-col items-center justify-center gap-4 select-none">
 				<h1 className="text-4xl font-semibold tracking-widest md:text-5xl md:tracking-[0.2em] xl:text-6xl">
 					L E T U N O V
 				</h1>
 				<h2 className="text-xl text-(--color-tertiary) md:text-2xl xl:text-3xl">Frontend Developer</h2>
 				<div className="h-1 w-32 animate-pulse rounded-full bg-linear-to-r from-(--accent-secondary-hover) to-(--accent-secondary)" />
-				<div className="flex gap-4 md:gap-4 xl:gap-6">{SocialButtons}</div>
+				<div className="flex gap-2 md:gap-4 xl:gap-6">{SocialButtons}</div>
 			</div>
-			<div className="flex justify-between gap-4">
+			<div className="flex justify-between gap-2 lg:gap-4">
 				<Button
-					className="text-sm leading-4 shadow-(--shadow) md:min-w-56 md:px-4 md:text-base md:leading-normal"
+					className="w-full text-sm leading-4 shadow-(--shadow) md:px-4 md:text-base md:leading-normal lg:max-w-56"
 					leftIcon={device === 'desktop' && <Download className="size-4" />}
 					variant="outline"
 					onClick={handleDownload}
@@ -56,7 +56,7 @@ export const TabHome = () => {
 					Скачать резюме
 				</Button>
 				<Button
-					className="text-sm leading-4 shadow-(--shadow) md:min-w-56 md:px-4 md:text-base md:leading-normal"
+					className="w-full text-sm leading-4 shadow-(--shadow) md:px-4 md:text-base md:leading-normal lg:max-w-56"
 					leftIcon={device === 'desktop' && <Printer className="size-4" />}
 					variant="outline"
 					onClick={handlePrint}

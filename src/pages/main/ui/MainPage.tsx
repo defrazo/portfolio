@@ -7,7 +7,7 @@ const MainPage = () => {
 	const device = useDeviceType();
 
 	return (
-		<div className="relative flex flex-1 flex-col gap-4">
+		<div className="relative flex min-h-0 flex-1 flex-col gap-4">
 			{device === 'mobile' && <MobileSidebar />}
 			<TabContainer />
 			<Footer />

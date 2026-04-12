@@ -17,9 +17,11 @@ const AppInitializer = observer(() => {
 	}, []);
 
 	return (
-		<div className="relative">
+		<div className="relative flex min-h-svh w-full flex-col">
 			{isLoading && <PreloaderExt />}
-			<div className={`transition-opacity duration-700 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+			<div
+				className={`flex min-h-0 flex-1 flex-col transition-opacity duration-700 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+			>
 				<App />
 			</div>
 		</div>

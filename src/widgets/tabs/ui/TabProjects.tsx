@@ -42,7 +42,7 @@ export const TabProjects = () => {
 									</h2>
 								</div>
 								<p className="-mt-2 text-justify text-sm xl:mt-0 xl:text-base">{description}</p>
-								<div className="flex justify-between gap-2">
+								<div className="flex flex-col justify-between gap-2 md:flex-row">
 									<Link
 										className="flex-1 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
 										size="custom"
@@ -51,26 +51,28 @@ export const TabProjects = () => {
 									>
 										Подробнее
 									</Link>
-									<Button
-										className="min-w-28 shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
-										href={link}
-										rel="noopener noreferrer"
-										size="custom"
-										target="_blank"
-										variant="outline"
-									>
-										Live Demo
-									</Button>
-									<Button
-										className="min-w-28 shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
-										href={git}
-										rel="noopener noreferrer"
-										size="custom"
-										target="_blank"
-										variant="outline"
-									>
-										GitHub
-									</Button>
+									<div className="flex gap-2">
+										<Button
+											className="min-w-28 flex-1 shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
+											href={link}
+											rel="noopener noreferrer"
+											size="custom"
+											target="_blank"
+											variant="outline"
+										>
+											Live Demo
+										</Button>
+										<Button
+											className="min-w-28 flex-1 shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
+											href={git}
+											rel="noopener noreferrer"
+											size="custom"
+											target="_blank"
+											variant="outline"
+										>
+											GitHub
+										</Button>
+									</div>
 								</div>
 							</div>
 						</div>
