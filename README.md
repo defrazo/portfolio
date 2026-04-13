@@ -58,6 +58,8 @@
     <img src="./docs/screenshots/about.webp" alt="About" width="800">
     <br>
     <img src="./docs/screenshots/projects.webp" alt="Projects" width="800">
+    <br>
+    <img src="./docs/screenshots/project.webp" alt="Project" width="800">
   </p>
 </details>
 
