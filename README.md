@@ -1,4 +1,4 @@
-[![React](https://img.shields.io/badge/React-19-blue)](#) [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](#) [![TailwindCSS](https://img.shields.io/badge/Tailwind-4.x-38B2AC)](#) [![MobX](https://img.shields.io/badge/MobX-6.x-orange)](#) [![Vite](https://img.shields.io/badge/Vite-6.x-646CFF)](#) [![version](https://badgen.net/badge/version/v.1.0.0?icon=tag&scale=1)](#)
+[![React](https://img.shields.io/badge/React-19-blue)](#) [![TypeScript](https://img.shields.io/badge/TypeScript-6.x-blue)](#) [![TailwindCSS](https://img.shields.io/badge/Tailwind-4.x-38B2AC)](#) [![MobX](https://img.shields.io/badge/MobX-6.x-orange)](#) [![Vite](https://img.shields.io/badge/Vite-8.x-646CFF)](#) [![version](https://badgen.net/badge/version/v.1.1.0?icon=tag&scale=1)](#)
 
 # Портфолио разработчика – Евгений Летунов
 
