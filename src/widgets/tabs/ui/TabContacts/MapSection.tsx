@@ -1,5 +1,3 @@
-import { ExternalLink } from 'lucide-react';
-
 import { USER_PROFILE } from '@/entities/user';
 import { Map } from '@/shared/assets/images';
 import { Button } from '@/shared/ui';
@@ -14,10 +12,9 @@ export const MapSection = () => {
 					return (
 						<Button
 							key={id}
-							className="pointer-events-auto inline-flex items-center rounded-xl bg-(--bg-global-op) text-center text-xs hover:text-(--accent-secondary-text) xl:text-left xl:text-base"
+							className="pointer-events-auto inline-flex items-center rounded-xl bg-(--bg-global-op) text-center text-xs hover:text-(--accent-secondary-text) xl:text-left xl:text-sm"
 							href={link}
 							rel="noreferrer"
-							rightIcon={<ExternalLink className="size-4" />}
 							size="sm"
 							target="_blank"
 						>
@@ -31,7 +28,6 @@ export const MapSection = () => {
 					<img
 						alt="Пионерский район"
 						className="no-touch-callout scale-110 rounded-2xl object-cover opacity-70 transition-all duration-500 hover:scale-100 hover:opacity-100"
-						decoding="async"
 						loading="lazy"
 						src={Map}
 					/>

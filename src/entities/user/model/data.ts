@@ -14,6 +14,6 @@ export const USER_PROFILE: UserProfile = {
 		},
 		vk: { value: 'defrazo', href: 'https://vk.com/defrazo' },
 		git: { value: 'defrazo', href: 'https://github.com/defrazo' },
+		vcard: { value: 'vCard', icon: IdCard, href: '/Letunov.vcf' },
 	},
-	vcard: { label: 'vCard', icon: IdCard, href: '#' },
 };

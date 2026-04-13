@@ -12,6 +12,7 @@ import {
 	IconGithub,
 	IconHTML,
 	IconJS,
+	IconMax,
 	IconMobX,
 	IconPost,
 	IconPS,
@@ -86,18 +87,18 @@ export const CONTACTS_BADGES: ContactsBadge[] = [
 		icon: USER_PROFILE.contacts.telegram.icon,
 	},
 	{
+		id: 'vcard',
+		title: 'vCard',
+		content: USER_PROFILE.contacts.vcard.value,
+		href: USER_PROFILE.contacts.vcard.href,
+		icon: USER_PROFILE.contacts.vcard.icon,
+	},
+	{
 		id: 'max',
 		title: 'MAX',
 		content: USER_PROFILE.contacts.max.value,
 		href: USER_PROFILE.contacts.max.href,
 		icon: USER_PROFILE.contacts.max.icon,
-	},
-	{
-		id: 'vcard',
-		title: 'vCard',
-		content: USER_PROFILE.vcard.label,
-		href: USER_PROFILE.vcard.href,
-		icon: USER_PROFILE.vcard.icon,
 	},
 ];
 
@@ -196,6 +197,7 @@ export const SKILL_GROUP: SkillGroup[] = [
 export const SOCIAL_BUTTONS = [
 	{ id: 'vk', href: USER_PROFILE.contacts.vk.href, icon: IconVK },
 	{ id: 'tg', href: USER_PROFILE.contacts.telegram.href, icon: IconTG },
+	{ id: 'max', href: USER_PROFILE.contacts.max.href, icon: IconMax },
 	{ id: 'email', href: USER_PROFILE.contacts.email.href, icon: IconEmail },
 	{ id: 'git', href: USER_PROFILE.contacts.git.href, icon: IconGit },
 ];

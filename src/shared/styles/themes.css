@@ -43,6 +43,7 @@
 	--status-warning: #ffa515;
 	--status-warning-op: rgba(255, 165, 21, 0.1);
 	--status-info: #2c90c7;
+	--status-info-op: rgb(44, 144, 199, 0.1);
 
 	/* Разделители и бордеры */
 	--border-color: rgba(250, 250, 250, 0.07);

@@ -29,7 +29,7 @@ export const TabsNav = observer(({ onTabClick }: { onTabClick?: () => void }) =>
 						<Button
 							key={id}
 							className={cn(
-								'rounded-xl border border-solid border-transparent bg-(--bg-secondary) shadow-(--shadow) transition-all duration-300 ease-in-out hover:translate-x-1 hover:border-(--accent-primary-hover) hover:text-(--color-accent) hover:shadow-md md:rounded-4xl',
+								'rounded-4xl border border-solid border-transparent bg-(--bg-secondary) shadow-(--shadow) transition-all duration-300 ease-in-out hover:translate-x-1 hover:border-(--accent-primary-hover) hover:text-(--color-accent) hover:shadow-md',
 								tabsStore.tab === id &&
 									'bg-(--accent-primary) text-(--accent-secondary-text) hover:text-(--accent-secondary-text)'
 							)}

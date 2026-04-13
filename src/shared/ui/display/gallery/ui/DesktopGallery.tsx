@@ -24,7 +24,7 @@ export const DesktopGallery = ({ images, className }: { images: string[]; classN
 				onTouchStart={touchStart}
 			>
 				<div
-					className="flex max-h-[510px] transition-transform duration-500"
+					className="flex max-h-127.5 transition-transform duration-500"
 					style={{ transform: `translateX(-${current * 100}%)` }}
 				>
 					{images.map((img, idx) => (

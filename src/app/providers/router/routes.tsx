@@ -1,28 +1,15 @@
 import type { RouteObject } from 'react-router-dom';
 
-import { PROJECTS } from '@/entities/project';
 import MainPage from '@/pages/main';
 import NotFoundPage from '@/pages/not-found';
-import { OnematePage, PortfolioPage } from '@/pages/projects';
-import { Layout, ProjectPageLayout } from '@/shared/layouts';
+import { ProjectPage } from '@/pages/project';
+import { Layout } from '@/shared/layouts';
 import { Sidebar } from '@/widgets/sidebar';
 
 export const routes: RouteObject[] = [
 	{
-		path: '/project/onemate',
-		element: (
-			<ProjectPageLayout title={PROJECTS[0].title}>
-				<OnematePage />
-			</ProjectPageLayout>
-		),
-	},
-	{
-		path: '/project/portfolio',
-		element: (
-			<ProjectPageLayout title={PROJECTS[1].title}>
-				<PortfolioPage />
-			</ProjectPageLayout>
-		),
+		path: '/projects/:slug',
+		element: <ProjectPage />,
 	},
 	{
 		path: '/',

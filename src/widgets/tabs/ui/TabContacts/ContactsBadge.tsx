@@ -4,24 +4,30 @@ import { useCopy } from '@/shared/lib/hooks';
 import { Button } from '@/shared/ui';
 
 interface ContactsBadgeProps {
+	id: string;
 	icon: LucideIcon;
 	title: string;
 	href?: string;
 	content: string;
 }
 
-export const ContactsBadge = ({ icon: Icon, title, href, content }: ContactsBadgeProps) => {
+export const ContactsBadge = ({ id, icon: Icon, title, href, content }: ContactsBadgeProps) => {
 	const copy = useCopy();
-	const isVCard = title === 'vCard';
+	const isVCard = id === 'vcard';
 
-	const handleButton = () => {
+	const handleAction = (e?: React.MouseEvent<HTMLElement>) => {
 		if (!isVCard) {
 			copy(content, 'Данные скопированы!');
 			return;
 		}
 
+		e?.preventDefault();
+
+		if (!href) return;
+
 		const link = document.createElement('a');
-		link.href = '/Letunov.vcf';
+		link.href = href;
+		link.download = href;
 		link.download = 'Letunov.vcf';
 		document.body.appendChild(link);
 		link.click();
@@ -41,9 +47,11 @@ export const ContactsBadge = ({ icon: Icon, title, href, content }: ContactsBadg
 					<div className="flex w-full flex-col justify-between gap-2 xl:flex-row xl:items-end">
 						<a
 							className="transition-colors group-hover:text-(--color-accent)"
+							download={isVCard ? 'Letunov.vcf' : undefined}
 							href={href}
-							rel="noopener noreferrer"
-							target="_blank"
+							rel={isVCard ? undefined : 'noopener noreferrer'}
+							target={isVCard ? undefined : '_blank'}
+							onClick={isVCard ? handleAction : undefined}
 						>
 							{content}
 						</a>
@@ -52,7 +60,7 @@ export const ContactsBadge = ({ icon: Icon, title, href, content }: ContactsBadg
 							leftIcon={isVCard ? <Download className="size-3.5" /> : <Copy className="size-3.5" />}
 							size="custom"
 							variant="ghost"
-							onClick={handleButton}
+							onClick={handleAction}
 						>
 							{isVCard ? 'Скачать' : 'Копировать'}
 						</Button>

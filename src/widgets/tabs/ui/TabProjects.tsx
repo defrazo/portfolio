@@ -1,22 +1,18 @@
 import React from 'react';
-import { ExternalLink, SquareMousePointer } from 'lucide-react';
 
 import { PROJECTS } from '@/entities/project';
-import { useDeviceType } from '@/shared/lib/hooks';
 import { cn } from '@/shared/lib/utils';
 import { Button, Divider, Link } from '@/shared/ui';
 
 import { SectionTitle } from '.';
 
 export const TabProjects = () => {
-	const device = useDeviceType();
-
 	return (
 		<>
 			<SectionTitle title="Проекты" />
 			<div className="flex flex-col gap-4">
-				{PROJECTS.map(({ id, title, date, description, img, git, link }, idx) => (
-					<React.Fragment key={id}>
+				{PROJECTS.map(({ slug, title, date, description, img, git, link }, idx) => (
+					<React.Fragment key={slug}>
 						{idx > 0 && <Divider />}
 						<div
 							className={cn(
@@ -25,11 +21,10 @@ export const TabProjects = () => {
 							)}
 						>
 							<div className="flex-1 overflow-hidden rounded-4xl border border-solid border-(--border-color) bg-(--bg-primary)">
-								<Link className="bg-black" to={`/project/${id}`} variant="custom">
+								<Link className="bg-black" to={`/projects/${slug}`} variant="custom">
 									<img
 										alt={`Иллюстрация: главный экран ${title}`}
 										className="no-touch-callout aspect-(490/277) scale-130 object-cover transition-transform duration-500 hover:scale-110"
-										decoding="async"
 										height={277}
 										loading="eager"
 										src={img}
@@ -41,44 +36,43 @@ export const TabProjects = () => {
 								<div className="border-solid border-(--accent-secondary) lg:border-b lg:pb-1.5">
 									<h2 className="text-2xl leading-tight font-bold text-(--accent-secondary) lg:text-(--color-primary) xl:text-3xl xl:leading-normal">
 										{title}
-										<span className="ml-1.5 align-super text-xs text-(--color-disabled) xl:text-sm">
+										<span className="ml-1.5 align-super text-xs font-normal text-(--color-disabled) xl:text-sm">
 											{date}
 										</span>
 									</h2>
 								</div>
 								<p className="-mt-2 text-justify text-sm xl:mt-0 xl:text-base">{description}</p>
-								<div className="flex justify-between gap-2">
+								<div className="flex flex-col justify-between gap-2 md:flex-row">
 									<Link
 										className="flex-1 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
-										rightIcon={device === 'desktop' && <SquareMousePointer className="size-5" />}
 										size="custom"
-										to={`/project/${id}`}
+										to={`/projects/${slug}`}
 										variant="accent"
 									>
 										Подробнее
 									</Link>
-									<Button
-										className="shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
-										href={link}
-										rel="noopener noreferrer"
-										rightIcon={device === 'desktop' && <ExternalLink className="size-5" />}
-										size="custom"
-										target="_blank"
-										variant="outline"
-									>
-										Live Demo
-									</Button>
-									<Button
-										className="shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
-										href={git}
-										rel="noopener noreferrer"
-										rightIcon={device === 'desktop' && <ExternalLink className="size-5" />}
-										size="custom"
-										target="_blank"
-										variant="outline"
-									>
-										GitHub
-									</Button>
+									<div className="flex gap-2">
+										<Button
+											className="min-w-28 flex-1 shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
+											href={link}
+											rel="noopener noreferrer"
+											size="custom"
+											target="_blank"
+											variant="outline"
+										>
+											Live Demo
+										</Button>
+										<Button
+											className="min-w-28 flex-1 shrink-0 px-3 py-2 text-xs shadow-(--shadow) md:px-4 md:text-sm"
+											href={git}
+											rel="noopener noreferrer"
+											size="custom"
+											target="_blank"
+											variant="outline"
+										>
+											GitHub
+										</Button>
+									</div>
 								</div>
 							</div>
 						</div>

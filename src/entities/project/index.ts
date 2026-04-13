@@ -1,1 +1,1 @@
-export { PROJECTS } from './model';
+export { type Feature, type Project, PROJECTS } from './model';
