@@ -1,8 +1,10 @@
 services:
-    web:
+    frontend:
         build:
             context: .
             dockerfile: Dockerfile
-        ports:
-            - '3001:80'
+        image: portfolio-frontend:latest
+        container_name: portfolio-frontend
         restart: unless-stopped
+        ports:
+            - '127.0.0.1:3000:80'
