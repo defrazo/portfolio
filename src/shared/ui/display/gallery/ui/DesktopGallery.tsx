@@ -1,15 +1,18 @@
 import { Pause, Play } from 'lucide-react';
 
-import { useStore } from '@/app/providers';
 import { IconBack, IconForward } from '@/shared/assets/icons';
 import { cn } from '@/shared/lib/utils';
-import { Button, ImageViewer } from '@/shared/ui';
+import { Button } from '@/shared/ui';
 
 import { useGallery } from '../model';
 
-export const DesktopGallery = ({ images, className }: { images: string[]; className?: string }) => {
-	const { modalStore } = useStore();
+interface DesktopGalleryProps {
+	images: string[];
+	onImageClick?: (image: string) => void;
+	className?: string;
+}
 
+export const DesktopGallery = ({ images, onImageClick, className }: DesktopGalleryProps) => {
 	const { current, setCurrent, setActive, containerRef, autoscroll, toggleScroll, touchStart, touchEnd, next, prev } =
 		useGallery({ images: images.length });
 
@@ -35,7 +38,7 @@ export const DesktopGallery = ({ images, className }: { images: string[]; classN
 							decoding="async"
 							loading="lazy"
 							src={img}
-							onClick={() => modalStore.setModal(<ImageViewer alt={`Slide ${idx}`} src={img} />)}
+							onClick={() => onImageClick?.(img)}
 						/>
 					))}
 				</div>

@@ -11,10 +11,59 @@
 		@apply text-left text-2xl font-bold xl:text-3xl;
 	}
 
+	.hide-scrollbar {
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+
+	.hide-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Кастомизация скроллбара */
+	.project-scroll::-webkit-scrollbar {
+		width: 6px;
+		padding-right: 8px;
+	}
+
+	.project-scroll::-webkit-scrollbar-track {
+		background: transparent;
+		border-radius: 8px;
+	}
+
+	.project-scroll::-webkit-scrollbar-thumb {
+		background: var(--border-color);
+		border-radius: 8px;
+	}
+
+	.project-scroll::-webkit-scrollbar-thumb:hover {
+		background: var(--accent-default);
+	}
+
+	.project-scroll {
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-tertiary) var(--border-color);
+		padding-right: 8px;
+	}
+
 	/* Отключение touch эффекта на элементе */
 	.no-touch-callout {
 		@apply select-none;
 		-webkit-touch-callout: none;
 		-webkit-tap-highlight-color: transparent;
+	}
+
+	/* Маркер тире */
+	.list-dash {
+		@apply list-none;
+	}
+
+	.list-dash li {
+		@apply relative pl-4 md:pl-6;
+	}
+
+	.list-dash li::before {
+		content: '—';
+		@apply absolute left-0;
 	}
 }
