@@ -30,7 +30,7 @@ export const Features = ({ features }: { features: Feature[] }) => {
 									{bullets.map((bullet, idx) => (
 										<li
 											key={idx}
-											className="flex items-center gap-2 text-sm leading-relaxed text-(--color-secondary) hover:text-(--color-primary) lg:text-base"
+											className="flex items-center gap-2 text-left text-sm leading-relaxed text-(--color-secondary) hover:text-(--color-primary) lg:text-base"
 										>
 											<CheckCircle2 className="mt-0.5 size-4 shrink-0 text-(--accent-secondary)" />
 											{bullet}

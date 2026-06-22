@@ -1,24 +1,35 @@
+import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
+import { useStore } from '@/app/providers';
 import { IconGit } from '@/shared/assets/icons';
 import { useDeviceType } from '@/shared/lib/hooks';
-import { Button, Link } from '@/shared/ui';
+import { Button } from '@/shared/ui';
 
 export const ProjectHeader = ({ linkDemo, linkGit }: { linkDemo: string; linkGit: string }) => {
+	const navigate = useNavigate();
+
 	const device = useDeviceType();
+
+	const { tabsStore } = useStore();
+
+	const handleReturn = () => {
+		navigate('/?tab=projects');
+		tabsStore.setTab('projects');
+	};
 
 	return (
 		<div className="border-b border-(--border-color) bg-(--bg-secondary)">
 			<div className="mx-4 flex items-center justify-between py-2 text-center lg:mx-12 lg:py-4">
-				<Link
+				<Button
 					className="group py-2 pr-2 text-xs leading-tight md:text-base lg:leading-normal"
 					leftIcon={<ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1" />}
 					size="custom"
-					to="/?tab=projects"
 					variant="mobile"
+					onClick={() => handleReturn()}
 				>
 					Все проекты
-				</Link>
+				</Button>
 				<div className="flex gap-4">
 					<Button
 						className="text-xs leading-tight shadow-(--shadow) md:text-base lg:leading-normal"
@@ -28,7 +39,7 @@ export const ProjectHeader = ({ linkDemo, linkGit }: { linkDemo: string; linkGit
 						target="_blank"
 						variant="outline"
 					>
-						Live Demo
+						{device !== 'mobile' ? 'Перейти на сайт' : 'Открыть сайт'}
 					</Button>
 					<Button
 						className="text-xs leading-tight shadow-(--shadow) md:text-base lg:leading-normal"
