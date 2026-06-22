@@ -30,5 +30,5 @@ export const getRootStore = (): RootStore => {
 };
 
 export const resetRootStore = (): void => {
-	if (process.env.NODE_ENV !== 'production') return;
+	if (!import.meta.env.PROD) return;
 };

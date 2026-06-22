@@ -1,6 +1,7 @@
+import { ModalStore } from '@/features/modal';
+import { NotifyStore } from '@/features/notification';
+import { TabsStore } from '@/features/tabs';
 import { ThemeStore } from '@/features/theme-switcher';
-import { ModalStore, NotifyStore } from '@/shared/stores';
-import { TabsStore } from '@/widgets/tabs';
 
 import { CoreStores } from '.';
 
