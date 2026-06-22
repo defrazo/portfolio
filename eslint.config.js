@@ -6,13 +6,16 @@ import typescriptParser from '@typescript-eslint/parser';
 
 export default [
 	{
+		ignores: ['dist', 'node_modules','env.d.ts', 'vite.config.ts', 'tailwind.config.js'],
+	},
+	{
 		files: ['**/*.ts', '**/*.tsx'],
 		languageOptions: {
 			parser: typescriptParser,
 			parserOptions: {
 				ecmaVersion: 'latest',
 				sourceType: 'module',
-				project: './tsconfig.json',
+				project: './tsconfig.eslint.json'
 			},
 			globals: {
 				window: 'readonly',
@@ -58,15 +61,5 @@ export default [
 				},
 			],
 		},
-	},
-	{
-		files: ['**/*.css'],
-		plugins: { prettier: eslintPluginPrettier },
-		rules: {
-			'prettier/prettier': 'error',
-		},
-	},
-	{
-		ignores: ['dist', 'node_modules','env.d.ts', 'vite.config.ts', 'tailwind.config.js'],
-	},
+	},	
 ];
