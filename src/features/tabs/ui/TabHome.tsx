@@ -42,7 +42,7 @@ export const TabHome = () => {
 				<h1 className="text-4xl font-semibold tracking-widest md:text-5xl md:tracking-[0.2em] xl:text-6xl">
 					L E T U N O V
 				</h1>
-				<h2 className="text-xl text-(--color-tertiary) md:text-2xl xl:text-3xl">Frontend Developer</h2>
+				<h2 className="text-xl text-(--color-tertiary) md:text-2xl xl:text-3xl">Fullstack Developer</h2>
 				<div className="h-1 w-32 animate-pulse rounded-full bg-linear-to-r from-(--accent-secondary-hover) to-(--accent-secondary)" />
 				<div className="flex gap-2 md:gap-4 xl:gap-6">{SocialButtons}</div>
 			</div>

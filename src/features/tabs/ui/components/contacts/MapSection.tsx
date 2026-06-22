@@ -2,7 +2,7 @@ import { USER_PROFILE } from '@/entities/user';
 import { Map } from '@/shared/assets/images';
 import { Button } from '@/shared/ui';
 
-import { MAP_LINKS } from '../../model';
+import { MAP_LINKS } from '../../../model';
 
 export const MapSection = () => {
 	return (

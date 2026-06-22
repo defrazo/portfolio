@@ -1,17 +1,13 @@
-import { Copy, Download, type LucideIcon } from 'lucide-react';
+import { Copy, Download } from 'lucide-react';
 
 import { useCopy } from '@/shared/lib/hooks';
 import { Button } from '@/shared/ui';
 
-interface ContactsBadgeProps {
-	id: string;
-	icon: LucideIcon;
-	title: string;
-	href?: string;
-	content: string;
-}
+import type { ProfileCard } from '../../../model';
 
-export const ContactsBadge = ({ id, icon: Icon, title, href, content }: ContactsBadgeProps) => {
+export const ContactsCard = ({ card }: { card: ProfileCard }) => {
+	const { id, icon: Icon, title, href, content } = card;
+
 	const copy = useCopy();
 	const isVCard = id === 'vcard';
 
