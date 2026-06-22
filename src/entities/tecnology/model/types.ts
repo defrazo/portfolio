@@ -1,7 +1,8 @@
 import type { FC, SVGProps } from 'react';
 
 export type Technology = {
-	name: string;
+	label: string;
 	icon: FC<SVGProps<SVGSVGElement>>;
 	description?: string;
+	skill: number;
 };

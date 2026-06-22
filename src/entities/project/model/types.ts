@@ -1,5 +1,7 @@
 import type { Technology } from '@/entities/tecnology';
 
+export type ProjectId = 'onemate' | 'portfolio' | 'kanban' | 'toolbox';
+
 export type Feature = {
 	title: string;
 	icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -9,9 +11,10 @@ export type Feature = {
 };
 
 export type Project = {
-	id: string;
+	id: ProjectId;
 	slug: string;
 	title: string;
+	role: string;
 	date: string;
 	description: string;
 	img: string;
@@ -22,7 +25,7 @@ export type Project = {
 	target: string;
 	solution: string;
 	gallery: string[];
-	galleryM?: string[];
+	galleryM: string[];
 	features: Feature[];
 	previous: string;
 	next: string;
