@@ -1,2 +1,2 @@
 export { getTechs } from './lib';
-export { technologies, type Technology } from './model';
+export { TECHNOLOGIES, type Technology, TECHS_EXTRA } from './model';

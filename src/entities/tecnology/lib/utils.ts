@@ -1,4 +1,4 @@
-import { technologies, type Technology } from '../model';
+import { TECHNOLOGIES, type Technology } from '../model';
 
-export const getTechs = (names: string[]): Technology[] =>
-	names.map((name) => technologies.find((tech) => tech.name === name)).filter(Boolean) as Technology[];
+export const getTechs = (labels: string[]): Technology[] =>
+	labels.map((label) => TECHNOLOGIES.find((tech) => tech.label === label)).filter(Boolean) as Technology[];
