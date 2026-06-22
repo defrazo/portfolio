@@ -1,9 +1,9 @@
 import { observer } from 'mobx-react-lite';
 
 import { useStore } from '@/app/providers';
+import type { TabId } from '@/features/tabs';
 import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui';
-import type { TabId } from '@/widgets/tabs';
 
 const TABS: ReadonlyArray<{ id: TabId; title: string }> = [
 	{ id: 'home', title: 'Главная' },

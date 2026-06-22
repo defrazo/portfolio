@@ -1,5 +1,5 @@
 import { useStore } from '@/app/providers';
-import { ImageViewer } from '@/shared/ui';
+import { ImageViewer } from '@/features/modal';
 
 export const UserCard = () => {
 	const { modalStore } = useStore();
@@ -20,7 +20,7 @@ export const UserCard = () => {
 			</div>
 			<div className="flex cursor-default flex-col items-center justify-center leading-4">
 				<span className="text-xl font-bold lg:text-2xl">Евгений Летунов</span>
-				<span className="text-lg text-(--color-tertiary)">Frontend Developer</span>
+				<span className="text-lg text-(--accent-secondary)/70">Fullstack Developer</span>
 			</div>
 		</div>
 	);
