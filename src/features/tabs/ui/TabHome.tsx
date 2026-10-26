@@ -23,7 +23,7 @@ export const TabHome = () => {
 	const handleDownload = () => {
 		const link = document.createElement('a');
 		link.href = '/resume.jpg';
-		link.download = 'Letunov E.D. Resume.jpg';
+		link.download = 'Letunov_Evgeniy_Fullstack_Developer_CV.jpg';
 		link.click();
 	};
 

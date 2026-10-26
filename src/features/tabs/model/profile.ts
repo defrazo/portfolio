@@ -1,7 +1,7 @@
 import { BriefcaseBusiness } from 'lucide-react';
 
 import { USER_PROFILE } from '@/entities/user';
-import { IconEmail, IconGit, IconMax, IconTG, IconVK } from '@/shared/assets/icons';
+import { IconEmail, IconGitHub, IconMax, IconTG, IconVK } from '@/shared/assets/icons';
 
 import type { ProfileCard } from '.';
 
@@ -71,7 +71,7 @@ export const SOCIAL_BUTTONS = [
 	{ id: 'tg', href: USER_PROFILE.contacts.telegram.href, icon: IconTG },
 	{ id: 'max', href: USER_PROFILE.contacts.max.href, icon: IconMax },
 	{ id: 'email', href: USER_PROFILE.contacts.email.href, icon: IconEmail },
-	{ id: 'git', href: USER_PROFILE.contacts.git.href, icon: IconGit },
+	{ id: 'git', href: USER_PROFILE.contacts.git.href, icon: IconGitHub },
 ];
 
 const COORD = { lat: 56.8389, lon: 60.6057 };

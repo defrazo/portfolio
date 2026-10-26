@@ -12,7 +12,7 @@ export const MapSection = () => {
 					return (
 						<Button
 							key={id}
-							className="pointer-events-auto inline-flex items-center rounded-xl bg-(--bg-global-op) text-center text-xs hover:text-(--accent-secondary-text) xl:text-left xl:text-sm"
+							className="pointer-events-auto inline-flex items-center rounded-lg bg-(--bg-global-op) text-center text-xs hover:text-(--accent-secondary-text) xl:text-left xl:text-sm"
 							href={link}
 							rel="noreferrer"
 							size="sm"

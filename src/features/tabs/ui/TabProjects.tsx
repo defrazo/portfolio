@@ -1,16 +1,17 @@
 import React from 'react';
 
 import { PROJECTS } from '@/entities/project';
+import { cn } from '@/shared/lib/utils';
 import { Button, Divider, Link } from '@/shared/ui';
 
 export const TabProjects = () => {
 	return (
 		<div className="flex flex-col gap-4">
-			{PROJECTS.map(({ slug, title, date, description, img, git, link }, idx) => (
+			{PROJECTS.map(({ slug, title, description, img, link, status }, idx) => (
 				<React.Fragment key={slug}>
 					{idx > 0 && <Divider />}
 					<div className="flex flex-col items-center gap-2 lg:flex-row lg:gap-4">
-						<div className="h-full flex-1 overflow-hidden rounded-xl border border-solid border-(--border-color) bg-(--bg-tertiary) p-0.5 transition-transform duration-500 hover:scale-105">
+						<div className="h-full flex-1 overflow-hidden rounded-xl border border-solid border-(--border-color) bg-(--bg-tertiary) p-0.5 transition-transform duration-500 hover:scale-105 xl:min-h-52.5">
 							<Link size="custom" to={`/projects/${slug}`} variant="custom">
 								<img
 									alt={`Иллюстрация: главный экран ${title}`}
@@ -23,8 +24,15 @@ export const TabProjects = () => {
 							<div className="border-solid border-(--accent-secondary) lg:border-b lg:pb-1.5">
 								<h2 className="text-2xl leading-tight font-bold text-(--accent-secondary) lg:text-(--color-primary) xl:text-3xl xl:leading-normal">
 									{title}
-									<span className="ml-1.5 align-super text-xs font-normal text-(--color-disabled) xl:text-sm">
-										{date}
+									<span
+										className={cn(
+											'trim ml-1.5 inline-block rounded-md px-2 py-1.5 align-super text-xs leading-none font-medium whitespace-nowrap',
+											status === 'Завершено'
+												? 'bg-(--tone-strong) text-(--color-secondary)'
+												: 'bg-(--status-success-op) text-(--status-success)'
+										)}
+									>
+										{status}
 									</span>
 								</h2>
 							</div>
@@ -38,28 +46,16 @@ export const TabProjects = () => {
 								>
 									Подробнее
 								</Link>
-								<div className="flex gap-2">
-									<Button
-										className="min-w-28 flex-1 shrink-0 px-3 py-2 text-xs whitespace-nowrap shadow-(--shadow) xl:px-4 xl:text-sm"
-										href={link}
-										rel="noopener noreferrer"
-										size="custom"
-										target="_blank"
-										variant="outline"
-									>
-										Перейти на сайт
-									</Button>
-									<Button
-										className="min-w-28 flex-1 shrink-0 px-3 py-2 text-xs shadow-(--shadow) lg:flex-0 xl:px-4 xl:text-sm"
-										href={git}
-										rel="noopener noreferrer"
-										size="custom"
-										target="_blank"
-										variant="outline"
-									>
-										GitHub
-									</Button>
-								</div>
+								<Button
+									className="flex-1 px-3 py-2 text-xs whitespace-nowrap shadow-(--shadow) xl:px-4 xl:text-sm"
+									href={link}
+									rel="noopener noreferrer"
+									size="custom"
+									target="_blank"
+									variant="outline"
+								>
+									Перейти на сайт
+								</Button>
 							</div>
 						</div>
 					</div>

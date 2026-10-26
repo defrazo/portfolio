@@ -3,7 +3,7 @@ import IconCSS from './css.svg?react';
 import IconDocker from './docker.svg?react';
 import IconFigma from './figma.svg?react';
 import IconFSD from './fsd.svg?react';
-import IconGithub from './github.svg?react';
+import IconGit from './git.svg?react';
 import IconHTML from './html.svg?react';
 import IconJS from './js.svg?react';
 import IconLaravel from './laravel.svg?react';
@@ -28,7 +28,7 @@ export {
 	IconDocker,
 	IconFigma,
 	IconFSD,
-	IconGithub,
+	IconGit,
 	IconHTML,
 	IconJS,
 	IconLaravel,

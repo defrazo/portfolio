@@ -64,7 +64,7 @@ export const PROJECTS: Project[] = [
 		description:
 			'Модуль управления задачами для OneMate на чистом TypeScript с собственным state, drag-and-drop и lifecycle компонентов',
 		img: KB.KMainD,
-		techs: getTechs(['TypeScript', 'JavaScript', 'FSD', 'Tailwind CSS', 'Supabase', 'Vite']),
+		techs: getTechs(['TypeScript', 'JavaScript', 'FSD', 'Tailwind CSS', 'Laravel', 'Vite']),
 		git: 'https://github.com/defrazo/onemate/tree/main/src/pages/kanban',
 		link: 'https://onemate.letunoff.ru/kanban',
 		status: 'Завершено',

@@ -1,5 +1,7 @@
 import { Calendar, User } from 'lucide-react';
 
+import { cn } from '@/shared/lib/utils';
+
 interface StatusPanelProps {
 	role: string;
 	date: string;
@@ -13,15 +15,20 @@ export const StatusPanel = ({ role, date, status, statusLink }: StatusPanelProps
 			<div className="h-0.5 w-full bg-linear-to-l from-(--accent-secondary)" />
 			<div className="flex w-fit shrink-0 flex-wrap items-center justify-center gap-3 rounded-full border-2 border-solid border-(--accent-secondary) bg-(--bg-secondary) px-4 py-2 text-sm">
 				<div className="flex items-center gap-1">
-					<User className="size-4" />
+					<User className="size-3.5" />
 					<span>{role}</span>
 				</div>
-				<div className="flex items-center gap-1">
-					<Calendar className="size-4" />
+				<div className="flex items-center gap-1" title="Дата создания">
+					<Calendar className="size-3.5" />
 					<span>{date}</span>
 				</div>
 				<div
-					className={`cursor-pointer rounded-full border border-transparent ${status === 'Завершено' ? 'bg-(--status-success-op) text-(--status-success) hover:border-(--status-success)' : 'bg-(--status-info-op) text-(--status-info) hover:border-(--status-info)'} px-3 py-1 font-medium transition-colors`}
+					className={cn(
+						'cursor-pointer rounded-full border border-transparent px-3 py-1 font-medium transition-colors',
+						status === 'Завершено'
+							? 'bg-(--tone-strong) text-(--color-secondary) hover:border-(--tone-strong-hover)'
+							: 'bg-(--status-success-op) text-(--status-success) hover:border-(--status-success)/30'
+					)}
 				>
 					{statusLink ? (
 						<a href={statusLink} rel="noopener noreferrer" target="_blank">
