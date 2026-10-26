@@ -1,8 +1,58 @@
-import { Blocks, Code2, Gauge, LayoutGrid, Move, Palette, PanelsTopLeft, Plug, Server, UserCog } from 'lucide-react';
+import { Blocks, Code2, LayoutGrid, Move, Palette, PanelsTopLeft, Plug, Server, UserCog } from 'lucide-react';
 
 import type { Feature, ProjectId } from '.';
 
 export const FEATURES = {
+	onemate: [
+		{
+			title: 'Инструменты',
+			icon: LayoutGrid,
+			color: 'text-[#3B82F6]',
+			lead: 'Сервисы для повседневной работы',
+			bullets: [
+				'Настраиваемый рабочий стол и виджеты',
+				'Заметки и управление задачами',
+				'Облачное хранилище файлов',
+				'Мониторинг доступности сервисов',
+			],
+		},
+		{
+			title: 'Архитектура',
+			icon: Blocks,
+			color: 'text-[#10B981]',
+			lead: 'Модульная архитектура приложения',
+			bullets: [
+				'Независимые функциональные модули',
+				'Feature-Sliced Design',
+				'Переиспользуемые UI-компоненты',
+				'Laravel REST API и PostgreSQL',
+			],
+		},
+		{
+			title: 'Платформа и доступ',
+			icon: PanelsTopLeft,
+			color: 'text-[#8B5CF6]',
+			lead: 'Единый интерфейс и управление доступом',
+			bullets: [
+				'Email-авторизация через Laravel Sanctum',
+				'OAuth 2.0 и интеграция с ToolBox',
+				'Dark / Light режимы',
+				'Адаптив под desktop и mobile',
+			],
+		},
+		{
+			title: 'Аккаунт',
+			icon: UserCog,
+			color: 'text-[#F59E0B]',
+			lead: 'Профиль, безопасность и demo-доступ',
+			bullets: [
+				'Редактирование личных данных',
+				'История входов и сессий',
+				'Смена пароля и удаление профиля',
+				'Demo-режим без регистрации',
+			],
+		},
+	],
 	toolbox: [
 		{
 			title: 'Инструменты',
@@ -32,10 +82,10 @@ export const FEATURES = {
 			title: 'Платформа и доступ',
 			icon: PanelsTopLeft,
 			color: 'text-[#8B5CF6]',
-			lead: 'Общий аккаунт и единый пользовательский опыт',
+			lead: 'Единый интерфейс и управление доступом',
 			bullets: [
 				'Email-авторизация и верификация',
-				'Персональный профиль пользователя',
+				'Вход через OneMate по OAuth 2.0',
 				'Интернационализация интерфейса',
 				'Dark / Light режимы',
 			],
@@ -70,9 +120,9 @@ export const FEATURES = {
 			title: 'Чистый TypeScript',
 			icon: Code2,
 			color: 'text-[#10B981]',
-			lead: 'Без фреймворков',
+			lead: 'Без UI-фреймворков',
 			bullets: [
-				'Imperative DOM-рендеринг',
+				'Императивный DOM-рендеринг',
 				'State на замыканиях',
 				'Система подписок',
 				'Контроль над жизненным циклом',
@@ -84,7 +134,7 @@ export const FEATURES = {
 			color: 'text-[#8B5CF6]',
 			lead: 'Кастомное взаимодействие с DOM',
 			bullets: [
-				'Pointer events',
+				'Pointer Events',
 				'Поддержка разных устройств',
 				'Точная работа с координатами',
 				'Реакция на изменения данных',
@@ -115,12 +165,12 @@ export const FEATURES = {
 			title: 'Архитектура',
 			icon: Blocks,
 			color: 'text-[#10B981]',
-			lead: 'Переиспользование и масштабируемость',
+			lead: 'Адаптация и переиспользование компонентов',
 			bullets: [
 				'Основано на архитектуре OneMate',
-				'Упрощённые FSD-слои',
+				'Адаптированные FSD-слои',
 				'Переиспользуемые UI-компоненты',
-				'Чистая структура проекта',
+				'Структурированные данные проектов',
 			],
 		},
 		{
@@ -136,60 +186,15 @@ export const FEATURES = {
 			],
 		},
 		{
-			title: 'Производительность',
-			icon: Gauge,
+			title: 'Реализация',
+			icon: Code2,
 			color: 'text-[#F59E0B]',
-			lead: 'Оптимизированная загрузка',
-			bullets: ['Lazy loading страниц', 'Code splitting', 'Оптимизация бандла', 'Быстрая initial загрузка'],
-		},
-	],
-	onemate: [
-		{
-			title: 'Инструменты',
-			icon: LayoutGrid,
-			color: 'text-[#3B82F6]',
-			lead: 'Ежедневные операции в одном месте',
+			lead: 'Компонентная структура приложения',
 			bullets: [
-				'Калькулятор с историей',
-				'Календарь с экспортом периодов',
-				'Заметки с Drag & Drop',
-				'Погода, переводчик и валюты',
-			],
-		},
-		{
-			title: 'Архитектура',
-			icon: Blocks,
-			color: 'text-[#10B981]',
-			lead: 'Модульная основа для виджетов',
-			bullets: [
-				'Независимые функциональные модули',
-				'Feature-Sliced Design',
-				'Переиспользуемые UI-компоненты',
-				'Синхронизация данных через Supabase',
-			],
-		},
-		{
-			title: 'Платформа и доступ',
-			icon: PanelsTopLeft,
-			color: 'text-[#8B5CF6]',
-			lead: 'Единый опыт на разных устройствах',
-			bullets: [
-				'OAuth 2.0 + Email авторизация',
-				'Dark / Light режимы',
-				'Адаптив под desktop и mobile',
-				'Кроссбраузерная совместимость',
-			],
-		},
-		{
-			title: 'Аккаунт',
-			icon: UserCog,
-			color: 'text-[#F59E0B]',
-			lead: 'Профиль, безопасность и demo-доступ',
-			bullets: [
-				'Редактирование личных данных',
-				'История входов и сессий',
-				'Смена пароля и удаление профиля',
-				'Demo-режим без регистрации',
+				'Маршрутизация между разделами',
+				'Динамические страницы проектов',
+				'Типизированные данные на TypeScript',
+				'Переиспользуемые шаблоны страниц',
 			],
 		},
 	],

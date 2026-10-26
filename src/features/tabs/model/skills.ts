@@ -15,14 +15,14 @@ export const TECH_GROUPS: TechGroup[] = [
 	{
 		id: 'backend',
 		title: 'Backend',
-		skills: getTechs(['Laravel', 'PHP', 'REST API', 'PostgreSQL', 'Redis', 'Supabase']),
+		skills: getTechs(['Laravel', 'PHP', 'REST API', 'PostgreSQL']),
 		icon: Database,
 		color: '#10B981',
 	},
 	{
 		id: 'devops',
 		title: 'DevOps & Tools',
-		skills: getTechs(['Docker', 'Nginx', 'GitHub', 'Vite']),
+		skills: getTechs(['Docker', 'Nginx', 'Git', 'Vite']),
 		icon: Server,
 		color: '#8B5CF6',
 	},
@@ -31,20 +31,14 @@ export const TECH_GROUPS: TechGroup[] = [
 export const KEY_AREAS = [
 	'React',
 	'TypeScript',
-	'Feature-Sliced Design',
+	'FSD',
 	'MobX',
 	'Tailwind CSS',
 	'Laravel',
 	'PHP',
 	'PostgreSQL',
-	'Redis',
 	'REST API',
-	'Supabase',
 	'Docker',
-	'Nginx',
-	'VPS Deployment',
-	'Vite',
-	'Responsive Design',
 ];
 
 export const SKILL_LEVELS = {
