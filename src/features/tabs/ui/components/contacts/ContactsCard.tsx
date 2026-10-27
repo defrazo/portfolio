@@ -34,7 +34,7 @@ export const ContactsCard = ({ card }: { card: ProfileCard }) => {
 		<div className="group card-surface flex items-start gap-2">
 			<Icon className="mt-px size-4 text-(--color-secondary) transition-colors group-hover:text-(--color-accent)" />
 			<div className="flex w-full flex-col">
-				<span className="text-xs font-semibold tracking-wider text-(--color-secondary) uppercase">{title}</span>
+				<span className="text-sm font-semibold tracking-wider text-(--color-secondary) uppercase">{title}</span>
 				<div className="flex w-full flex-col justify-between gap-2 xl:flex-row xl:items-end">
 					<a
 						className="transition-colors group-hover:text-(--color-accent)"
