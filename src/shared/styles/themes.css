@@ -45,6 +45,12 @@
 	--status-info: #2c90c7;
 	--status-info-op: rgb(44, 144, 199, 0.1);
 
+	/* Специальные */
+	--tone: #ffffff08;
+	--tone-hover: #ffffff0f;
+	--tone-strong: #ffffff0d;
+	--tone-strong-hover: #ffffff1a;
+
 	/* Разделители и бордеры */
 	--border-color: rgba(250, 250, 250, 0.07);
 	--border-light: transparent;
@@ -59,7 +65,7 @@
 .light-theme {
 	/* Текст */
 	--color-primary: #2f3441;
-	--color-secondary: #1d1c1c;
+	--color-secondary: #626873;
 	--color-tertiary: #64666b;
 	--color-accent: #0069a8;
 	--color-disabled: #666666;
@@ -101,6 +107,12 @@
 	--status-warning: #dd8c00;
 	--status-warning-op: rgba(255, 165, 21, 0.3);
 	--status-info: #31b7ff;
+
+	/* Специальные */
+	--tone: #00000008;
+	--tone-hover: #0000000f;
+	--tone-strong: #0000000d;
+	--tone-strong-hover: #0000001a;
 
 	/* Разделители и бордеры */
 	--border-color: rgba(0, 0, 0, 0.15);

@@ -6,7 +6,7 @@ export const UserCard = () => {
 
 	return (
 		<div className="flex flex-col gap-3">
-			<div className="group relative mx-auto inline-flex size-44 cursor-pointer items-center justify-center xl:size-52">
+			<div className="group relative mx-auto inline-flex size-44 cursor-pointer items-center justify-center 2xl:size-52">
 				<div className="pointer-events-none absolute -inset-0.5 rounded-full bg-linear-to-r from-(--accent-primary-op) to-(--accent-primary-hover-op) opacity-0 blur-md transition-all duration-500 group-hover:opacity-100" />
 				<div className="relative z-10 size-full overflow-hidden rounded-full border-2 border-solid border-(--border-color) shadow-lg">
 					<img

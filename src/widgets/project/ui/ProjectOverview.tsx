@@ -1,9 +1,6 @@
-import { ExternalLink } from 'lucide-react';
-
 import { useStore } from '@/app/providers';
 import type { Project } from '@/entities/project';
 import { ImageViewer } from '@/features/modal';
-import { useDeviceType } from '@/shared/lib/hooks';
 import { Button, DesktopGallery, MobileGallery } from '@/shared/ui';
 
 import { Features, StatusPanel, TargetSolution, Technologies } from './components';
@@ -11,8 +8,6 @@ import { Features, StatusPanel, TargetSolution, Technologies } from './component
 export const ProjectOverview = ({ project }: { project: Project }) => {
 	const { title, role, date, description, techs, git, link, status, target, solution, gallery, galleryM, features } =
 		project;
-
-	const device = useDeviceType();
 
 	const { modalStore } = useStore();
 
@@ -40,7 +35,6 @@ export const ProjectOverview = ({ project }: { project: Project }) => {
 						className="text-sm leading-tight font-semibold shadow-(--shadow) md:text-base md:leading-normal"
 						href={link}
 						rel="noopener noreferrer"
-						rightIcon={device !== 'mobile' && <ExternalLink className="size-5" />}
 						target="_blank"
 						variant="accent"
 					>

@@ -2,6 +2,25 @@ import type { WorkHistoryItem } from '.';
 
 export const WORK_HISTORY: WorkHistoryItem[] = [
 	{
+		id: 'onemate-2026-08',
+		role: 'Fullstack-разработчик',
+		type: 'fullstack',
+		company: 'OneMate',
+		period: 'Август 2026 – Октябрь 2026',
+		summary:
+			'Модернизировал платформу OneMate: заменил Supabase собственным backend на Laravel, переработал архитектуру и интерфейс, расширил функциональность и реализовал интеграцию с ToolBox через OAuth 2.0.',
+		highlights: [
+			/* prettier-ignore */
+			{ title: 'Мигрировал с Supabase на Laravel', desc: 'собственный REST API, авторизация и бизнес-логика' },
+			{ title: 'Модернизировал frontend', desc: 'рефакторинг FSD, обновление интерфейса и дизайн-системы' },
+			/* prettier-ignore */
+			{ title: 'Создал облачное хранилище', desc: 'загрузка, управление файлами и общий доступ с предпросмотром' },
+			{ title: 'Разработал мониторинг сервисов', desc: 'проверка доступности сайтов и отслеживание сбоев' },
+			{ title: 'Создал систему уведомлений', desc: 'централизованная обработка событий и браузерные оповещения' },
+			{ title: 'Интегрировал OneMate и ToolBox', desc: 'OAuth 2.0, единый вход и управление связями аккаунтов' },
+		],
+	},
+	{
 		id: 'toolbox',
 		role: 'Fullstack-разработчик',
 		type: 'fullstack',
@@ -30,7 +49,7 @@ export const WORK_HISTORY: WorkHistoryItem[] = [
 			{ title: 'Построил независимый TS-модуль', desc: 'чистая архитектура без фреймворков' },
 			{ title: 'Разработал кастомный state', desc: 'на замыканиях и подписках, без сторонних библиотек' },
 			{ title: 'Реализовал drag-and-drop', desc: 'перемещение и сортировка колонок и задач' },
-			{ title: 'Спроектировал lifecycle', desc: '(init / destroy) с управлением подписками и очисткой ресурсов' },
+			{ title: 'Спроектировал lifecycle', desc: 'init / destroy с управлением подписками и очисткой ресурсов' },
 			{ title: 'Обеспечил тестируемость', desc: 'unit-тесты на Vitest для основной бизнес-логики' },
 			{ title: 'Интегрировал в React', desc: 'через прокси-страницу без изменения внешней архитектуры' },
 		],
@@ -51,7 +70,7 @@ export const WORK_HISTORY: WorkHistoryItem[] = [
 		],
 	},
 	{
-		id: 'onemate',
+		id: 'onemate-2025-01',
 		role: 'Frontend-разработчик',
 		type: 'frontend',
 		company: 'OneMate',

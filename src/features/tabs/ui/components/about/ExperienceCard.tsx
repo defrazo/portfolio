@@ -39,7 +39,7 @@ export const ExperienceCard = ({ experience }: { experience: WorkHistoryItem }) 
 			<ul className="space-y-4">
 				{highlights.map((highlight, idx) => (
 					<li key={idx} className="relative pl-4 text-sm leading-4 lg:text-justify lg:text-base">
-						<span className="absolute top-2 left-0 size-1 rounded-full bg-(--color-accent)" />
+						<span className="absolute top-1.5 left-0 size-1 rounded-full bg-(--color-accent)" />
 						<div className="flex flex-col gap-0.5 lg:flex-row">
 							<span className="font-semibold">{highlight.title}</span>
 							<span className="hidden text-(--color-secondary) lg:inline-block">—</span>

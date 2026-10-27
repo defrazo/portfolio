@@ -2,6 +2,8 @@ import type { ReactNode } from 'react';
 
 import { useDeviceType, useOrientation } from '@/shared/lib/hooks';
 
+import { cn } from '../lib/utils';
+
 interface LayoutProps {
 	rightSide?: ReactNode;
 	hideRightOnMobile?: boolean;
@@ -13,16 +15,17 @@ export function Layout({ hideRightOnMobile = false, rightSide, children }: Layou
 	const orientation = useOrientation();
 
 	const right = hideRightOnMobile && device === 'mobile' ? null : rightSide;
-	const capMin = 600;
 
 	return (
 		<div
-			className={`mx-auto flex min-h-0 w-full flex-1 flex-col xl:max-w-6xl ${orientation === 'landscape' ? 'px-[20dvw] lg:px-[5dvw] xl:px-0' : 'px-4'}`}
-			style={{ paddingBlock: `max(calc((100svh - ${capMin}px)/2), ${device === 'mobile' ? '40px' : '24px'})` }}
+			className={cn(
+				'mx-auto flex min-h-svh w-full flex-col p-4 md:pt-(--sidebar-top) md:[--sidebar-top:max(24px,calc((100svh-600px)/2))] xl:max-w-6xl xl:px-0',
+				orientation === 'landscape' ? 'px-[20dvw] lg:px-[5dvw] xl:px-0' : ''
+			)}
 		>
-			<div className="flex min-h-0 flex-1 gap-4">
-				<main className="flex min-h-0 flex-1">{children}</main>
-				{right && <aside className="w-62.5">{right}</aside>}
+			<div className="flex w-full flex-1 items-stretch gap-4">
+				<main className="flex min-w-0 flex-1 flex-col">{children}</main>
+				{right && <aside className="flex w-62.5 shrink-0 flex-col">{right}</aside>}
 			</div>
 		</div>
 	);
