@@ -24,10 +24,8 @@ export const PROJECTS: Project[] = [
 		target: 'Создать единое персональное пространство с независимыми сервисами, настраиваемым интерфейсом и возможностью дальнейшего расширения.',
 		solution:
 			'Разработана модульная платформа на React и Laravel. Реализованы собственный REST API, авторизация, облачное хранилище, мониторинг сервисов, уведомления и интеграция с ToolBox через OAuth 2.0.',
-		/* prettier-ignore */
-		gallery: [OM.OHomeD, OM.ODashD, OM.OOverviewD, OM.OPersonalD, OM.OAvatarsD, OM.OContactsD, OM.OSecureD, OM.OLoginD, OM.ORegisterD, OM.OAboutD, OM.OTermsD],
-		/* prettier-ignore */
-		galleryM: [OM.OHomeM, OM.ODash1M, OM.ODash2M, OM.OSheetM, OM.OPersonalM, OM.OAvatarsM, OM.OSecureM, OM.OLoginM, OM.ORegisterM, OM.OAboutM],
+		gallery: [OM.OHomeD, OM.ODashD, OM.OOverviewD, OM.OPersonalD, OM.OContactsD, OM.OSecureD, OM.OInterfaceD],
+		galleryM: [OM.OHomeM, OM.ODash1M, OM.ODash2M, OM.ODash3M, OM.OSheetM],
 		features: FEATURES.onemate,
 		previous: 'portfolio',
 		next: 'toolbox',
@@ -71,8 +69,8 @@ export const PROJECTS: Project[] = [
 		target: 'Создать независимый модуль управления задачами с возможностью интеграции в OneMate.',
 		solution:
 			'Реализован модуль на чистом TypeScript с собственной системой управления состоянием и drag-and-drop. Интегрирован в OneMate через прокси-страницу.',
-		gallery: [KB.KMainD, KB.KTaskD, KB.KViewD, KB.KColumnD, KB.KDeleteD],
-		galleryM: [KB.KMainM, KB.KTaskM, KB.KViewM, KB.KColumnM, KB.KDeleteM],
+		gallery: [KB.KMainD, KB.KTaskD, KB.KViewD, KB.KColumnD],
+		galleryM: [KB.KMainM, KB.KTaskM, KB.KViewM, KB.KColumnM],
 		features: FEATURES.kanban,
 		previous: 'toolbox',
 		next: 'portfolio',
