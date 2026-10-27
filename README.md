@@ -1,75 +1,97 @@
-[![React](https://img.shields.io/badge/React-19-blue)](#) [![TypeScript](https://img.shields.io/badge/TypeScript-6.x-blue)](#) [![TailwindCSS](https://img.shields.io/badge/Tailwind-4.x-38B2AC)](#) [![MobX](https://img.shields.io/badge/MobX-6.x-orange)](#) [![Vite](https://img.shields.io/badge/Vite-8.x-646CFF)](#) [![version](https://badgen.net/badge/version/v1.2.0?icon=tag&scale=1)](#)
+[![React](https://img.shields.io/badge/React-19-149ECA)](#технологический-стек)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.x-3178C6)](#технологический-стек)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.x-06B6D4)](#технологический-стек)
+[![MobX](https://img.shields.io/badge/MobX-6.x-FF9955)](#технологический-стек)
+[![Vite](https://img.shields.io/badge/Vite-8.x-646CFF)](#технологический-стек)
+[![Version](https://img.shields.io/badge/version-1.2.0-0084d1)](#)
 
-# LETUNOV – цифровая визитка Fullstack-разработчика
+<div align="center">
 
-**LETUNOV** – персональный сайт-портфолио, реализованный как самостоятельный продукт: с собственной архитектурой, удобным UI и возможностью легко расширять функциональность.
+# LETUNOV – портфолио Fullstack-разработчика
 
-> [!IMPORTANT]
->
-> Посмотреть проект в деле:
->
-> [![LETUNOV](https://img.shields.io/badge/LETUNOV-Перейти_на_сайт-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://letunoff.ru)
+</div>
+
+**LETUNOV** – персональный сайт-портфолио с адаптивным интерфейсом, интерактивными разделами и подробным представлением проектов, технологий и профессионального опыта.
+
+<p align="center">
+  <a href="https://letunoff.ru">
+    <img src="https://img.shields.io/badge/Открыть_портфолио-0A66C2?style=for-the-badge" alt="Открыть портфолио">
+  </a>
+</p>
+
+<div align="center">
+  <img src="./docs/screenshots/home.webp" alt="Главная страница" width="800">
+</div>
+
+## Разделы
+
+### Главная
+
+**Стартовая страница** с краткой информацией о разработчике, основными технологиями и быстрым доступом к другим разделам портфолио.
+
+### Обо мне
+
+**Информация о разработчике** с описанием профессионального пути, образования и опыта работы над проектами.
+
+### Навыки
+
+**Каталог технологий** с группировкой по направлениям разработки и визуальным отображением уровня владения инструментами.
+
+### Проекты
+
+**Галерея разработанных приложений** с краткими описаниями, используемыми технологиями и переходом к подробной информации.
+
+Каждый проект представлен на отдельной странице, включающей:
+
+- описание проекта и решаемых задач;
+- особенности реализации и принятые решения;
+- используемые технологии;
+- галереи скриншотов для desktop и mobile;
+- дополнительные технические детали.
+
+### Контакты
+
+**Способы связи** и ссылки на профессиональные профили для быстрого перехода к общению.
 
 ## Технологический стек
 
 ### Frontend
 
-- **React** + **TypeScript** – компонентная архитектура и строгая типизация;
-- **FSD (Feature-Sliced Design)** – четкое разделение ответственности и масштабируемая структура;
-- **Tailwind CSS** – единый визуальный стиль и быстрая адаптивная вёрстка;
-- **MobX** – реактивное управление состоянием с лаконичным синтаксисом;
+- **React** и **TypeScript** – компонентная архитектура и строгая типизация;
+- **FSD (Feature-Sliced Design)** – чёткое разделение ответственности и масштабируемая структура;
+- **Tailwind CSS** – единый визуальный стиль и адаптивная вёрстка;
+- **MobX** – реактивное управление состоянием приложения;
+- **React Router** – маршрутизация между страницами и проектами;
 - **Vite** – быстрый запуск и оптимизированная сборка.
 
 ### DevOps & Infrastructure
 
-- **Docker** – контейнеризация приложений и унификация окружения;
-- **Docker Compose** – управление многоконтейнерной инфраструктурой;
-- **Nginx** – reverse proxy и раздача приложений;
-- **VPS** – деплой и администрирование проекта.
+- **Docker** и **Docker Compose** – контейнеризация приложения и управление окружением;
+- **Nginx** – reverse proxy и раздача статических ресурсов;
+- **VPS** – развёртывание и администрирование проекта.
 
 ## Возможности
 
-- адаптивный интерфейс для любых экранов и устройств (от iPhone SE до 2K-мониторов);
-- кроссбраузерная совместимость и корректная работа на touch-устройствах;
-- светлая и тёмная тема.
-
-## Разделы
-
-**Информационные табы** – разделы с информацией о разработчике.
-
-- **Home** – приветствие, краткая информация и быстрые ссылки;
-- **About** – информация о разработчике, образовании и профессиональном пути;
-- **Skills** – шкалы навыков с визуальной оценкой уровня владения;
-- **Projects** – галерея реальных проектов с описаниями и ссылками;
-- **Contacts** – все способы связи в одном месте.
-
-**Страница проекта** – детальная карточка с информацией о конкретном проекте.
-
-- название и краткое описание проекта;
-- задача и применённое решение;
-- отдельные галереи изображений для desktop и mobile;
-- список использованных технологий;
-- дополнительные детали о проекте (опционально).
+- **Адаптивный интерфейс** – отображение на мобильных устройствах, планшетах и десктопах;
+- **Навигация** – переключение между информационными разделами и отдельными страницами проектов;
+- **Темы оформления** – поддержка светлой и тёмной темы;
+- **Интерактивность** – адаптация элементов управления под мышь и сенсорные устройства;
+- **Галереи проектов** – просмотр скриншотов приложений с учётом формата устройства.
 
 ## Скриншоты
 
 <details>
   <summary>Показать</summary>
    <p align="center">
-    <img src="./docs/screenshots/home.webp" alt="Home" width="800">
-    <br>
-    <img src="./docs/screenshots/about.webp" alt="About" width="800">
-    <br>
-    <img src="./docs/screenshots/projects.webp" alt="Projects" width="800">
-    <br>
-    <img src="./docs/screenshots/project.webp" alt="Project" width="800">
+      <img src="./docs/screenshots/about.webp" alt="About" width="800">
+      <br>
+      <img src="./docs/screenshots/projects.webp" alt="Projects" width="800">
+      <br>
+      <img src="./docs/screenshots/project.webp" alt="Project" width="800">
   </p>
 </details>
 
 ## Автор
 
-> [!TIP]
->
-> #### Евгений Летунов
->
-> [![Евгений Летунов](https://img.shields.io/badge/%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9_%D0%9B%D0%B5%D1%82%D1%83%D0%BD%D0%BE%D0%B2-Frontend_Dev-0A66C2?style=for-the-badge&logo=react&logoColor=white)](https://letunoff.ru) [![Telegram](https://img.shields.io/badge/@defrazo-Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/defrazo)
+[![Евгений Летунов](https://img.shields.io/badge/%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9_%D0%9B%D0%B5%D1%82%D1%83%D0%BD%D0%BE%D0%B2-Fullstack_Dev-0A66C2?style=for-the-badge&logo=github&logoColor=white)](https://letunoff.ru)
+[![Telegram](https://img.shields.io/badge/@defrazo-Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/defrazo)
