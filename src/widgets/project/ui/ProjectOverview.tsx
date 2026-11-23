@@ -1,13 +1,12 @@
 import { useStore } from '@/app/providers';
 import type { Project } from '@/entities/project';
 import { ImageViewer } from '@/features/modal';
-import { Button, DesktopGallery, MobileGallery } from '@/shared/ui';
+import { Button, DesktopGallery } from '@/shared/ui';
 
 import { Features, StatusPanel, TargetSolution, Technologies } from './components';
 
 export const ProjectOverview = ({ project }: { project: Project }) => {
-	const { title, role, date, description, techs, git, link, status, target, solution, gallery, galleryM, features } =
-		project;
+	const { title, role, date, description, techs, git, link, status, target, solution, gallery, features } = project;
 
 	const { modalStore } = useStore();
 
@@ -43,16 +42,14 @@ export const ProjectOverview = ({ project }: { project: Project }) => {
 					<div className="h-px w-10 bg-linear-to-r from-(--color-accent) to-transparent md:w-16" />
 				</div>
 			)}
-			<div
-				className={`grid grid-rows-[auto_1fr] gap-2 lg:gap-4 ${galleryM ? 'grid-cols-1 md:grid-cols-[auto_1fr]' : 'grid-cols-2'} `}
-			>
+			<div className="flex flex-col gap-2 lg:gap-4">
 				<TargetSolution solution={solution} target={target} />
-				{galleryM && (
+				{/* {galleryM && (
 					<div className="row-span-2 hidden flex-col gap-2 md:flex lg:gap-4">
 						<h2 className="project-header">Мобильная версия</h2>
 						<MobileGallery images={galleryM} />
 					</div>
-				)}
+				)} */}
 				<Technologies techs={techs} />
 			</div>
 			{features && <Features features={features} />}
