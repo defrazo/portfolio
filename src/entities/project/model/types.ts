@@ -25,7 +25,7 @@ export type Project = {
 	target: string;
 	solution: string;
 	gallery: string[];
-	galleryM: string[];
+	// galleryM: string[];
 	features: Feature[];
 	previous: string;
 	next: string;

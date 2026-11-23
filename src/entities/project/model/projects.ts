@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
 		id: 'onemate',
 		slug: 'onemate',
 		title: 'Onemate',
-		role: 'Frontend Developer',
+		role: 'Fullstack Developer',
 		date: 'Сентябрь 2025',
 		description:
 			'Модульная платформа для организации личного рабочего пространства с набором сервисов для повседневной работы',
@@ -21,11 +21,11 @@ export const PROJECTS: Project[] = [
 		git: 'https://github.com/defrazo/onemate',
 		link: 'https://onemate.letunoff.ru',
 		status: 'Развивается',
-		target: 'Создать единое персональное пространство с независимыми сервисами, настраиваемым интерфейсом и возможностью дальнейшего расширения.',
+		target: 'Создать единое персональное пространство для организации повседневной работы с настраиваемым интерфейсом, независимыми модулями и возможностью расширения.',
 		solution:
-			'Разработана модульная платформа на React и Laravel. Реализованы собственный REST API, авторизация, облачное хранилище, мониторинг сервисов, уведомления и интеграция с ToolBox через OAuth 2.0.',
-		gallery: [OM.OHomeD, OM.ODashD, OM.OOverviewD, OM.OPersonalD, OM.OContactsD, OM.OSecureD, OM.OInterfaceD],
-		galleryM: [OM.OHomeM, OM.ODash1M, OM.ODash2M, OM.ODash3M, OM.OSheetM],
+			'Разработана модульная платформа на React и Laravel с настраиваемым рабочим пространством и независимыми модулями. Реализованы REST API, авторизация, облачное хранилище, мониторинг, уведомления и интеграция ИИ. Платформа выступает OAuth 2.0-провайдером для ToolBox.',
+		gallery: [OM.OHomeD, OM.ODashD, OM.OTodoD, OM.OKanbanD, OM.OSecureD, OM.OInterfaceD],
+		// galleryM: [OM.OHomeM, OM.ODash1M, OM.ODash2M, OM.ODash3M, OM.OSheetM],
 		features: FEATURES.onemate,
 		previous: 'portfolio',
 		next: 'toolbox',
@@ -47,8 +47,8 @@ export const PROJECTS: Project[] = [
 		target: 'Создать расширяемую платформу независимых веб-инструментов с единым аккаунтом и общей инфраструктурой.',
 		solution:
 			'Разработана fullstack-платформа на React и Laravel с модульной архитектурой, собственным REST API, авторизацией и интеграцией с OneMate через OAuth 2.0.',
-		gallery: [TB.THomeD, TB.TRenamerD, TB.TShortenerD, TB.TLinkD, TB.TSettingsD],
-		galleryM: [TB.THomeM, TB.TRenamerM, TB.TShortenerM, TB.TLinkM, TB.TSettingsM],
+		gallery: [TB.THomeD, TB.TImagesD, TB.TShortenerD, TB.TCompareD, TB.TRenamerD, TB.TLinkD],
+		// galleryM: [TB.THomeM, TB.TRenamerM, TB.TShortenerM, TB.TLinkM, TB.TSettingsM],
 		features: FEATURES.toolbox,
 		previous: 'onemate',
 		next: 'kanban',
@@ -70,7 +70,7 @@ export const PROJECTS: Project[] = [
 		solution:
 			'Реализован модуль на чистом TypeScript с собственной системой управления состоянием и drag-and-drop. Интегрирован в OneMate через прокси-страницу.',
 		gallery: [KB.KMainD, KB.KTaskD, KB.KViewD, KB.KColumnD],
-		galleryM: [KB.KMainM, KB.KTaskM, KB.KViewM, KB.KColumnM],
+		// galleryM: [KB.KMainM, KB.KTaskM, KB.KViewM, KB.KColumnM],
 		features: FEATURES.kanban,
 		previous: 'toolbox',
 		next: 'portfolio',
@@ -92,7 +92,7 @@ export const PROJECTS: Project[] = [
 		solution:
 			'Адаптирована архитектура OneMate под задачи портфолио, переработана структура приложения и расширена дизайн-система. Реализованы адаптивный интерфейс, темизация и детальные страницы проектов.',
 		gallery: [PF.PHomeD, PF.PAboutD, PF.PSkillsD, PF.PProjectsD, PF.PContactsD, PF.PDetailsD],
-		galleryM: [PF.PHomeM, PF.PAboutM, PF.PSkillsM, PF.PProjectsM, PF.PContactsM, PF.PDetailsM, PF.PDrawerM],
+		// galleryM: [PF.PHomeM, PF.PAboutM, PF.PSkillsM, PF.PProjectsM, PF.PContactsM, PF.PDetailsM, PF.PDrawerM],
 		features: FEATURES.portfolio,
 		previous: 'kanban',
 		next: 'onemate',
