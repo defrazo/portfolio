@@ -3,7 +3,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.x-06B6D4)](#технологический-стек)
 [![MobX](https://img.shields.io/badge/MobX-6.x-FF9955)](#технологический-стек)
 [![Vite](https://img.shields.io/badge/Vite-8.x-646CFF)](#технологический-стек)
-[![Version](https://img.shields.io/badge/version-1.2.0-0084d1)](#)
+[![Version](https://img.shields.io/badge/version-1.5.1-0084d1)](#)
 
 <div align="center">
 
